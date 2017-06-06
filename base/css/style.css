@@ -1,0 +1,8 @@
+/* line 1, ../sass/style.scss */
+h1 {
+  color: #009ee5;
+}
+/* line 3, ../sass/style.scss */
+h1 span {
+  font-size: 14px;
+}
