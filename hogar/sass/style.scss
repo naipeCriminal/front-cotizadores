@@ -1,0 +1,35 @@
+$stepspanbg:#000;
+$stepspan:blue;
+$steph3:blue;
+$stepactivespanbg:#ddd;
+$stepactivespan:red;
+$stepactiveh3:red;
+.steps{
+
+	.step{
+		padding-top:15px;
+		p{
+			span{
+			background:$stepspanbg;
+			font-size:12px;
+			color:$stepspan;
+			padding:11px;
+			padding-left: 15px;
+			padding-right: 15px;
+			border-radius: 18px 18px 18px 18px;
+			-moz-border-radius: 18px 18px 18px 18px;
+			-webkit-border-radius: 18px 18px 18px 18px;			
+			}
+		}
+		&.active{
+			span{
+			background:$stepactivespanbg;
+			color:$stepactivespan;
+			}
+			h3{
+			color:$stepactiveh3;
+			}
+
+		}
+	}
+}
