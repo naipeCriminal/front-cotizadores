@@ -275,65 +275,74 @@ html(lang="en")
 						button CONTINUAR
 		hr
 		h1 contrata
-
+		.container
+			.row
+				h2 CONTRATA
 		.container.bggris
-			h2.subtitulo contrata
 			.row
 				.col-md-12
-					h4 datos personales
+					P Para contratar tu póliza es necesario completar la información que se solicita a continuación:
+						.space
+					h4 Datos personales
+					br
 				form
 					.row
 						.col-md-8
 							.col-md-6
 								.form-group
-									label Apellido Paterno
+									p.label Apellido Paterno
 									input.form-control(type="text",placeholder="Email")
 								.form-group
-									label Nombre(s)
+									p.label Nombre(s)
 									input.form-control(type="text",placeholder="Nombre(s)")
 								.form-group
-									label CURP*
+									p.label CURP*
 									input.form-control(type="text",placeholder="CURP")
 								.form-group
-									label Correo electronico
+									p.label Correo electronico
 									input.form-control(type="text",placeholder="Correo electronico")
 							.col-md-6
 								.form-group
-									label Apellido Materno
+									p.label Apellido Materno
 									input.form-control(type="text",placeholder="Apellido Materno")
-								.radio
-									label
-										input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
-										|Femenino
-								.radio
-									label
-										input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
-										|     Masculino
+							.col-md-6
+								.form-inline
+									p.label Genero*
+									br
+									.radio
+										p.label
+											input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+											|Femenino
+									.radio
+										p.label
+											input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
+											|     Masculino
+								.space
 								.form-group
-									label R.F.C*
+									p.label R.F.C*
 									input.form-control(type="text",placeholder="RFC")
 							.row
 								.col-md-12
-									
-									h4 domicilio
+									.col-md-8
+										h4 Domicilio
 									.col-md-6
 										.form-group
-											label Calle
+											p.label Calle
 											input.form-control(type="text",placeholder="Calle")
 									.col-md-3
 										.form-group
-											label No. Exterior
+											p.label No. Exterior
 											input.form-control(type="text",placeholder="Apellido Materno")									
 									.col-md-3
 										.form-group
-											label no. Int
+											p.label no. Int
 											input.form-control(type="text",placeholder="No. Int")
 									.col-md-6
 										.form-group
-											label C.P*
+											p.label C.P*
 											input.form-control(type="text",placeholder="Codigo postal")
 									.col-md-6
-										label Colonia
+										p.label Colonia
 										select.form-control
 											option(value="opcion-1") Colonia
 											option(value="opcion-2") b
@@ -342,40 +351,98 @@ html(lang="en")
 											option(value="opcion-5") e
 									.col-md-6
 										.form-group
-											label Delegación/municipio
+											p.label Delegación/municipio
 											input.form-control(type="text",placeholder="Delegación/municipio")
 									.col-md-6
 										.form-group
-											label Ciudad
+											p.label Ciudad
 											input.form-control(type="text",placeholder="Ciudad")
 									.col-md-6
 										.form-group
-											label Estado
+											p.label Estado
 											input.form-control(type="text",placeholder="Estado")
 									.col-md-6
 										.form-group
-											label Teléfono fijo
+											p.label Teléfono fijo
 											input.form-control(type="text",placeholder="Teléfono fijo")
 									.col-md-6
 										.form-group
-											label Teléfono movil
-											input.form-control(type="text",placeholder="Teléfono movil")										
+											p.label Teléfono movil
+											input.form-control(type="text",placeholder="Teléfono movil")
+							.col-md-12
+								.form-inline
+									p ¿Deseas recibir tu póliza en el domicilio registrado?
+									.col-md-1
+										.radio.text-center
+											label
+												input(type='radio',name='domicilio',value='si',checked='true')
+												| Si
+									.col-md-1
+										.radio.text-center
+											label
+												input(type='radio',name='domicilio',value='no')
+												| No
+
+
 						.col-md-4
 							.col-md-12
-								p no. de Poliza
-								p 123456789A
-							p.text-center Mi cotización
-							p.text-center Plan B
-							p.text-center Cobertura
-							ul
-								li -------
-								li -------
-								li -------
+								p No. de cotización
+								h2 123456789A
+								.space
+								hr
+							h4.text-center Mi cotización
+							.space
+							h4.text-center Plan B
+							.space
+							h4.text-center Cobertura
+							.col-md-4
+							.col-md-8
+								ul
+									li -------
+									li -------
+									li -------
+								.space
 							.col-xs-6 
 								p Pago por prima
 							.col-xs-6
 								p $0000
 								p mensual
+								.space
+								.space
+							.col-md-12.text-center
+								button.btn-lg CAMBIAR COTIZACIÓN
+								.space
+								.space
+							.col-md-12.text-center
+								button.btn-lg CONTRATAR VIA TELEFÓNICA
+					.row.text-center
+						.space
+						.col-md-12
+							button.btn-lg(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
+			// Modal
+		#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						h4 Te solicitamos que ingreses tu número telefonico y un horario adecuado para contactarte
+						.col-md-12.text-center
+							.col-md-3
+							.col-md-5
+								p.label Número telefonico
+								input#contrata.form-control(type='text' placeholder='55-98-98-98')
+						.col-md-12.text-center
+							.col-md-3
+							.col-md-5
+								p.label Horario a contactar
+								input#contrata.form-control(type='text' placeholder='12:00-16:00')						
+						button.btn-lg CONTACTARME
+					//.modal-footer
+						button.btn.btn-default(type='button', data-dismiss='modal') Close
+						button.btn.btn-primary(type='button') Save changes
 
 
 		.container
