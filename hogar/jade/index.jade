@@ -280,14 +280,110 @@ html(lang="en")
 			.row
 				h2 PAGO DE CONTRATACIÓN
 		.container.bggris
+			.row
+				.col-md-8
+					STRONG RESUMEN DE CONTRATACIÓN
+				.col-md-2.text-right
+					p No. de cotización.
+				.col-md-2.bqblanco
+					h6 123456789A
+			.row
+				.col-md-12
+					h4 DATOS PERSONALES
+			.row
+				.col-md-3
+					p.label Nombre del cliente
+					p.dato XRamiréz Ayala Juan LuisX
+				.col-md-4
+					p.label Correo eléctronico
+					p.dato Xjuan@mail.comX
+				.col-md-3
+					p.label CURP
+					p.dato XRAYU123412MMDH09X
+				.col-md-2
+					p.label RFC
+					p.dato XRAYU123412MMX
+			.row
+				.col-md-12
+					h4 DOMICILIO
+					P.dato Exploradores Tonatiuh No. 304, Col. Alamos, C.p. 034500, Bénito Juárez, CDMX.
+					br
+					p
+						hr
+			.row
+				.col-md-12
+					h4 DATOS DEL SEGURO DE HOGAR
+			.row
+				.col-md-4.text-center
+					h2 Plan B
+				.col-md-4
+					h4 Cobertura
+					ul
+						li -.-.-.-
+						li -.-.--.-
+						li -.-.-.-.
+				.col-md-4.text-center
+					h3 Pago por prima
+					h2 $250.00
+					h3 mensual
+		.container
+			.space
 			form
 				.row
-					.col-md-8
-						STRONG RESUMEN DE CONTRATACIÓN
-					.col-md-2.text-right
-						p No. de cotización.
-					.col-md-2.bqblanco
-						h6 123456789A
+					.col-md-12
+						h4 COMPRAR
+						p Para realizar tu compra y descargar tu póliza, es necesario que ingreses los siguientes datos.
+				.row
+					.col-md-6
+						.col-md-10
+							p.label Nombre del titular
+							input#contrata.form-control(type='text' placeholder='Escribe tu nombre')
+					.col-md-6
+						.col-md-10
+							p.label Tipo de tarjeta*
+							select.form-control
+								option(value="opcion-1") VISA
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d	
+				.row
+					.col-md-6
+						.col-md-10
+							p.label No. de tarjeta*
+							input#contrata.form-control(type='text' placeholder='12312341234234123')
+					.col-md-6
+						.col-md-10
+							p.label CVV*
+							input#contrata.form-control(type='text' placeholder='000')
+				.row
+					.col-md-6
+						.col-md-12
+							p.label Fecha de vencimiento*
+						.col-md-4
+							select.form-control
+								option(value="opcion-1") 06
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+						.col-md-6
+							select.form-control
+								option(value="opcion-1") 2019
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+				.row
+					.col-md-6
+						.checkbox
+							label
+								input(type='checkbox')
+								p Acepto	
+									a(target="_BLANK",href="#") Términos y condiciones
+				.row
+					.col-md-6.text-right
+						button REGRESAR
+					.col-md-6.text-left
+						button PAGAR
+
 		hr
 		h1 poliza
 
