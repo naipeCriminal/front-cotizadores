@@ -65,7 +65,12 @@ html(lang="en")
 							input#nombre.form-control(type='text', placeholder='C.P.*')
 					.row
 						.col-md-4
-							input#nombre.form-control(type='text', placeholder='Colonia')
+							select.form-control
+								option(value="opcion-1") Elige tu colonia
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+								option(value="opcion-5") e
 						.col-md-4
 							input#nombre.form-control(type='text', placeholder='Delegación/Municipio')
 						.col-md-4
@@ -74,10 +79,18 @@ html(lang="en")
 						.col-md-4
 							input#nombre.form-control(type='text', placeholder='Estado')
 					.row
+						.col-md-12
 						h4 Suma asegurada
 						.col-md-4
-
-
+							select.form-control
+								option(value="opcion-1") Elige la suma asegurada
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+								option(value="opcion-5") e
+					.row
+						.col-md-12.text-center
+							button cotizar
 
 		hr
 		h1 cotiza
