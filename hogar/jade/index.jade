@@ -38,59 +38,62 @@ html(lang="en")
 		hr
 		h1 registro
 		h2.subtitulo ingreso de datos
-		.bggris
-			.container
-				form
-					.row
-						.col-md-12
-							p Para conocer la opción de Hogar que tenemos para ti, por favor completa los siguientes campos:
-							h4 Datos personales
-					
-						.col-md-4
-							input#nombre.form-control(type='text', placeholder='Nombre')
-						.col-md-4
-							input#nombre.form-control(type='text', placeholder='Correo electrónico')					
-					.row
-						.col-md-12
-							h4 Domicilio
+		
+		.container.bggris
+			form
+				.row
+					.col-md-12
+						p Para conocer la opción de Hogar que tenemos para ti, por favor completa los siguientes campos:
+						h4 Datos personales
+				
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='Nombre')
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='Correo electrónico')					
+				.row
+					.col-md-12
+						h4 Domicilio
 
-					.row
-						.col-md-4
-							input#nombre.form-control(type='text', placeholder='Calle')
-						.col-md-2
-							input#nombre.form-control(type='text', placeholder='No.Ext')
-						.col-md-2
-							input#nombre.form-control(type='text', placeholder='No.Int')
-						.col-md-4
-							input#nombre.form-control(type='text', placeholder='C.P.*')
-					.row
-						.col-md-4
-							select.form-control
-								option(value="opcion-1") Elige tu colonia
-								option(value="opcion-2") b
-								option(value="opcion-3") c
-								option(value="opcion-4") d
-								option(value="opcion-5") e
-						.col-md-4
-							input#nombre.form-control(type='text', placeholder='Delegación/Municipio')
-						.col-md-4
-							input#nombre.form-control(type='text', placeholder='Ciudad')
-					.row
-						.col-md-4
-							input#nombre.form-control(type='text', placeholder='Estado')
-					.row
-						.col-md-12
+				.row
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='Calle')
+					.col-md-2
+						input#nombre.form-control(type='text', placeholder='No.Ext')
+					.col-md-2
+						input#nombre.form-control(type='text', placeholder='No.Int')
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='C.P.*')
+				.row
+					.col-md-4
+						select.form-control
+							option(value="opcion-1") Elige tu colonia
+							option(value="opcion-2") b
+							option(value="opcion-3") c
+							option(value="opcion-4") d
+							option(value="opcion-5") e
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='Delegación/Municipio')
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='Ciudad')
+				.row
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='Estado')
+				.row
+					.col-md-12
 						h4 Suma asegurada
-						.col-md-4
-							select.form-control
-								option(value="opcion-1") Elige la suma asegurada
-								option(value="opcion-2") b
-								option(value="opcion-3") c
-								option(value="opcion-4") d
-								option(value="opcion-5") e
-					.row
-						.col-md-12.text-center
-							button cotizar
+					.col-md-4
+						select.form-control
+							option(value="opcion-1") Elige la suma asegurada
+							option(value="opcion-2") b
+							option(value="opcion-3") c
+							option(value="opcion-4") d
+							option(value="opcion-5") e
+				.row
+					.col-md-12.text-center
+						button.btn-lg cotizar
+				.row
+					.col-md-12
+						p *campos obligatorios
 
 		hr
 		h1 cotiza
