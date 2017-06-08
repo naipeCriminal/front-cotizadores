@@ -100,84 +100,83 @@ html(lang="en")
 		.container
 			.row
 				h2.subtitulo COTIZACIÓN
-		.bggris
-			.container
-				form
-					.row
-						.col-md-12
-							p
-								strong Hola XXXXXX
-								, ésta es la mejor opción que encontramos para tí:
-					.row
-						.col-md-4
-							.col-md-10
-								.bqplanes
-									.radio.text-center
-									label
-										input(type='radio',name='planes',value='option1',checked='true')
-									h3.text-center Plan A
-									ul
-										h3.text-left Cobertura
-										li -.-.-.-.
-										li -.-.-.-.
-										li -.-.-.-.
-						.col-md-4
-							.col-md-10
-								.bqplanes
-									.radio.text-center
-									label
-										input(type='radio',name='planes',value='option2')
-									h3.text-center Plan B
-									ul
-										h3.text-left Cobertura
-										li -.-.-.-.
-										li -.-.-.-.
-										li -.-.-.-.
+		.container.bggris
+			form
+				.row
+					.col-md-12
+						p
+							strong Hola XXXXXX
+							, ésta es la mejor opción que encontramos para tí:
+				.row
+					.col-md-4
+						.col-md-10
+							.bqplanes
 								.radio.text-center
-									label
-										input(type='radio',name='terremoto',value='option3',checked='true')
-										|	Con terremoto
+								label
+									input(type='radio',name='planes',value='option1',checked='true')
+								h3.text-center Plan A
+								ul
+									h3.text-left Cobertura
+									li -.-.-.-.
+									li -.-.-.-.
+									li -.-.-.-.
+					.col-md-4
+						.col-md-10
+							.bqplanes
 								.radio.text-center
-									label
-										input(type='radio',name='terremoto',value='option2')
-										|	Sin terremoto
-						.col-md-4
-							.col-md-10
-								.bqplanes
-									.radio.text-center
-									label
-										input(type='radio',name='planes',value='option1')
-									h3.text-center Plan PLUS
-									ul
-										h3.text-left Cobertura
-										li -.-.-.-.
-										li -.-.-.-.
-										li -.-.-.-.
-					.row
-						.col-md-12
-							.col-md-3.text-right
-								h4 Pagos por prima:
-								h6 Elige el plan que más te 
-									br 
-									h6 interesa
-							.col-md-9
-								.col-md-3
-									br
-									button.btn.btn-info(type='button') $ 0.00 Mensual
-								.col-md-3
-									br
-									button.btn.btn-info(type='button') $ 0.00 quincenal
-								.col-md-3
-									br
-									button.btn.btn-info(type='button') $ 0.00 Semestral
-								.col-md-3
-									br
-									button.btn.btn-info(type='button') $ 0.00 Anual		
-					.row
-						.col-md-6.text-right
-							button.btn-lg NO ME INTERESA
-						.col-md-6.text-left
-							button.btn-lg(type='button', data-toggle='modal', data-target='#myModal') CONTINUAR
+								label
+									input(type='radio',name='planes',value='option2')
+								h3.text-center Plan B
+								ul
+									h3.text-left Cobertura
+									li -.-.-.-.
+									li -.-.-.-.
+									li -.-.-.-.
+							.radio.text-center
+								label
+									input(type='radio',name='terremoto',value='option3',checked='true')
+									|	Con terremoto
+							.radio.text-center
+								label
+									input(type='radio',name='terremoto',value='option2')
+									|	Sin terremoto
+					.col-md-4
+						.col-md-10
+							.bqplanes
+								.radio.text-center
+								label
+									input(type='radio',name='planes',value='option1')
+								h3.text-center Plan PLUS
+								ul
+									h3.text-left Cobertura
+									li -.-.-.-.
+									li -.-.-.-.
+									li -.-.-.-.
+				.row
+					.col-md-12
+						.col-md-3.text-right
+							h4 Pagos por prima:
+							h6 Elige el plan que más te 
+								br 
+								h6 interesa
+						.col-md-9
+							.col-md-3
+								br
+								button.btn.btn-info(type='button') $ 0.00 Mensual
+							.col-md-3
+								br
+								button.btn.btn-info(type='button') $ 0.00 quincenal
+							.col-md-3
+								br
+								button.btn.btn-info(type='button') $ 0.00 Semestral
+							.col-md-3
+								br
+								button.btn.btn-info(type='button') $ 0.00 Anual		
+				.row
+					.col-md-6.text-right
+						button.btn-lg NO ME INTERESA
+					.col-md-6.text-left
+						button.btn-lg(type='button', data-toggle='modal', data-target='#myModal') CONTINUAR
 
 
 
@@ -214,69 +213,69 @@ html(lang="en")
 		.container
 			.row
 				h2 CUESTIONARIO
-		.bggris
-			.container
-				form
-					.row
-						.col-md-offset-8.col-md-2.text-center
-							strong NO
-						.col-md-2.text-center
-							strong SI
-					.row
-						.col-md-8
-							p ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
+		.container.bggris
+			form
+				.row
+					.col-md-offset-8.col-md-2.text-center
+						strong NO
+					.col-md-2.text-center
+						strong SI
+				.row
+					.col-md-8
+						p ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP1',value='no',checked='true')
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP1',value='si')
+				.row
+					.col-md-8
+						p ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP2',value='no',checked='true')
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP2',value='si')
+				.row
+					.col-md-8
+						p ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP3',value='no',checked='true')
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP3',value='si')
+				.row
+					.form-inline
+						.col-md-12
+							p El domicilio a asegurar es:
+				.row
 						.col-md-2
-							.radio.text-center
+							.radio
 								label
-									input(type='radio',name='cuestionarioP1',value='no',checked='true')
-						.col-md-2
-							.radio.text-center
+									input(type='radio',name='cuestionarioP4',value='Casa',checked='true')
+									| Casa
+						.col-md-4
+							.radio
 								label
-									input(type='radio',name='cuestionarioP1',value='si')
-					.row
-						.col-md-8
-							p ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
-						.col-md-2
-							.radio.text-center
-								label
-									input(type='radio',name='cuestionarioP2',value='no',checked='true')
-						.col-md-2
-							.radio.text-center
-								label
-									input(type='radio',name='cuestionarioP2',value='si')
-					.row
-						.col-md-8
-							p ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
-						.col-md-2
-							.radio.text-center
-								label
-									input(type='radio',name='cuestionarioP3',value='no',checked='true')
-						.col-md-2
-							.radio.text-center
-								label
-									input(type='radio',name='cuestionarioP3',value='si')
-					.row
-						.form-inline
-							.col-md-12
-								p El domicilio a asegurar es:
-					.row
-							.col-md-2
-								.radio
-									label
-										input(type='radio',name='cuestionarioP4',value='Casa',checked='true')
-										| Casa
-							.col-md-4
-								.radio
-									label
-										input(type='radio',name='cuestionarioP4',value='Dep')
-										| Departamento
-					.row
-						.col-md-6.text-right
-							button REGRESAR
-						.col-md-6.text-left
-							button CONTINUAR
+									input(type='radio',name='cuestionarioP4',value='Dep')
+									| Departamento
+				.row
+					.col-md-6.text-right
+						button REGRESAR
+					.col-md-6.text-left
+						button CONTINUAR
 		hr
 		h1 contrata
+
 		.container.bggris
 			h2.subtitulo contrata
 			.row
@@ -377,9 +376,140 @@ html(lang="en")
 								.form-group
 									label Teléfono
 									input.form-control(type="text",placeholder="Teléfono")
+
+		.container
+			.row
+				h2 PAGO DE CONTRATACIÓN
+		.container.bggris
+			.row
+				.col-md-8
+					STRONG RESUMEN DE CONTRATACIÓN
+				.col-md-2.text-right
+					p No. de cotización.
+				.col-md-2.bqblanco
+					h6 123456789A
+			.row
+				.col-md-12
+					h4 DATOS PERSONALES
+			.row
+				.col-md-3
+					p.label Nombre del cliente
+					p.dato XRamiréz Ayala Juan LuisX
+				.col-md-4
+					p.label Correo eléctronico
+					p.dato Xjuan@mail.comX
+				.col-md-3
+					p.label CURP
+					p.dato XRAYU123412MMDH09X
+				.col-md-2
+					p.label RFC
+					p.dato XRAYU123412MMX
+			.row
+				.col-md-12
+					h4 DOMICILIO
+					P.dato Exploradores Tonatiuh No. 304, Col. Alamos, C.p. 034500, Bénito Juárez, CDMX.
+					br
+					p
+						hr
+			.row
+				.col-md-12
+					h4 DATOS DEL SEGURO DE HOGAR
+			.row
+				.col-md-4.text-center
+					h2 Plan B
+				.col-md-4
+					h4 Cobertura
+					ul
+						li -.-.-.-
+						li -.-.--.-
+						li -.-.-.-.
+				.col-md-4.text-center
+					h3 Pago por prima
+					h2 $250.00
+					h3 mensual
+		.container
+			.space
+			form
+				.row
+					.col-md-12
+						h4 COMPRAR
+						p Para realizar tu compra y descargar tu póliza, es necesario que ingreses los siguientes datos.
+				.row
+					.col-md-6
+						.col-md-10
+							p.label Nombre del titular
+							input#contrata.form-control(type='text' placeholder='Escribe tu nombre')
+					.col-md-6
+						.col-md-10
+							p.label Tipo de tarjeta*
+							select.form-control
+								option(value="opcion-1") VISA
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d	
+				.row
+					.col-md-6
+						.col-md-10
+							p.label No. de tarjeta*
+							input#contrata.form-control(type='text' placeholder='12312341234234123')
+					.col-md-6
+						.col-md-10
+							p.label CVV*
+							input#contrata.form-control(type='text' placeholder='000')
+				.row
+					.col-md-6
+						.col-md-12
+							p.label Fecha de vencimiento*
+						.col-md-4
+							select.form-control
+								option(value="opcion-1") 06
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+						.col-md-6
+							select.form-control
+								option(value="opcion-1") 2019
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+				.row
+					.col-md-6
+						.checkbox
+							label
+								input(type='checkbox')
+								p Acepto	
+									a(target="_BLANK",href="#") Términos y condiciones
+				.row
+					.col-md-6.text-right
+						button REGRESAR
+					.col-md-6.text-left
+						button PAGAR
+
+
 		hr
 		h1 poliza
-
+		.container.bggris
+			.row
+				.col-md-12.text-center
+					//- img(src="", alt="")
+					h2 ¡FELICIDADES!
+					.space
+					h3 Tu compra se ha realizado sin problemas y tu PÓLIZA se ha generado correctamente.
+					.space
+					h2 PÓLIZA NO. 24689012
+					.space
+			.space
+			.row
+				.col-md-6.text-right
+					button ENVIAR POR MAIL
+				.col-md-6.text-left
+					button DESCARGAR PDF
+			.space
+			.space
+			.space
+			.row
+				.col-md-12.text-center
+					button SALIR
 		hr
 
 	script(src="http://code.jquery.com/jquery.js")

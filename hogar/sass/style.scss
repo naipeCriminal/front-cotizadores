@@ -33,15 +33,24 @@ $stepactiveh3:red;
 		}
 	}
 }
+.label{
+	color: #000;
+}
 .bggris{
 	background: #eee;
 	border:solid 1px #ddd;
 	padding-bottom: 20px;
 	padding-top: 20px;
+	hr{
+		border-top: 1px solid #000;
+	}
 
 }
 .form-control{
 	margin-bottom: 21px;
+}
+.space{
+	height: 30px;
 }
 .bqplanes{
 	background: #ddd;
@@ -51,4 +60,9 @@ $stepactiveh3:red;
 			padding-bottom: 10px;
 		}
 	}
+}
+.bqblanco{
+	background: #fff;
+	bottom: 7px;
+    right: 10px;
 }
