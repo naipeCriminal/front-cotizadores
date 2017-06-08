@@ -159,12 +159,16 @@ html(lang="en")
 									h6 interesa
 							.col-md-9
 								.col-md-3
+									br
 									button.btn.btn-info(type='button') $ 0.00 Mensual
 								.col-md-3
+									br
 									button.btn.btn-info(type='button') $ 0.00 quincenal
 								.col-md-3
+									br
 									button.btn.btn-info(type='button') $ 0.00 Semestral
 								.col-md-3
+									br
 									button.btn.btn-info(type='button') $ 0.00 Anual		
 					.row
 						.col-md-6.text-right
@@ -173,7 +177,70 @@ html(lang="en")
 							button CONTINUAR
 		hr
 		h1 cuestionario
-
+		.container
+			.row
+				h2 CUESTIONARIO
+		.bggris
+			.container
+				form
+					.row
+						.col-md-offset-8.col-md-2.text-center
+							strong NO
+						.col-md-2.text-center
+							strong SI
+					.row
+						.col-md-8
+							p ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
+						.col-md-2
+							.radio.text-center
+								label
+									input(type='radio',name='cuestionarioP1',value='no',checked='true')
+						.col-md-2
+							.radio.text-center
+								label
+									input(type='radio',name='cuestionarioP1',value='si')
+					.row
+						.col-md-8
+							p ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
+						.col-md-2
+							.radio.text-center
+								label
+									input(type='radio',name='cuestionarioP2',value='no',checked='true')
+						.col-md-2
+							.radio.text-center
+								label
+									input(type='radio',name='cuestionarioP2',value='si')
+					.row
+						.col-md-8
+							p ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
+						.col-md-2
+							.radio.text-center
+								label
+									input(type='radio',name='cuestionarioP3',value='no',checked='true')
+						.col-md-2
+							.radio.text-center
+								label
+									input(type='radio',name='cuestionarioP3',value='si')
+					.row
+						.form-inline
+							.col-md-12
+								p El domicilio a asegurar es:
+					.row
+							.col-md-2
+								.radio
+									label
+										input(type='radio',name='cuestionarioP4',value='Casa',checked='true')
+										| Casa
+							.col-md-4
+								.radio
+									label
+										input(type='radio',name='cuestionarioP4',value='Dep')
+										| Departamento
+					.row
+						.col-md-6.text-right
+							button REGRESAR
+						.col-md-6.text-left
+							button CONTINUAR
 		hr
 		h1 contrata
 
