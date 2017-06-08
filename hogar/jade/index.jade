@@ -171,9 +171,40 @@ html(lang="en")
 									button.btn.btn-info(type='button') $ 0.00 Anual		
 					.row
 						.col-md-6.text-right
-							button NO ME INTERESA
+							button.btn-lg NO ME INTERESA
 						.col-md-6.text-left
-							button CONTINUAR
+							button.btn-lg(type='button', data-toggle='modal', data-target='#myModal') CONTINUAR
+
+
+
+		// Modal
+		#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body
+						h4
+							strong
+								¡Buena elección!
+						p Para poder continuar y proteger tu informacion es importante que leas y aceptes las politicas de provacidad .
+						.checkbox
+							label
+								input(type='checkbox')
+								a(target="_BLANK",href="#") Aviso de Privacidad
+						h5 he leído y conozco el alcance del tratamiento de mis datos personales.
+
+						
+						button.btn-lg.text-center aceptar
+
+
+
+					//.modal-footer
+						button.btn.btn-default(type='button', data-dismiss='modal') Close
+						button.btn.btn-primary(type='button') Save changes
+
 		hr
 		h1 cuestionario
 
