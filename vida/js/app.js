@@ -10,7 +10,6 @@ $(document).ready(function(){
 			splitDate = date.split("-")
 			day = splitDate[0];
 			$('#day').val(splitDate[0])
-			console.log(day)
 			$('#moth').val(splitDate[1])
 			$('#year').val(splitDate[2])
 		} 
