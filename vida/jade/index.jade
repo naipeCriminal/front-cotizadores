@@ -1,0 +1,561 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		meta(name="viewport",content="width=device-width, initial-scale=1")
+		meta(name="description",content="")
+		meta(name="author",content="")
+		title Cotizador de...
+		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
+		link(rel="stylesheet",href="style.css")
+	body
+		hr
+		h1 pasos
+		.steps
+			.container
+				.row
+					.col-md-offset-1.col-md-2.step.active
+						p.text-center
+							span 1
+						h3.text-center registro
+					.col-md-2.step
+						p.text-center
+							span 2
+						h3.text-center cotiza
+					.col-md-2.step
+						p.text-center
+							span 3
+						h3.text-center cuestionario
+					.col-md-2.step
+						p.text-center
+							span 4
+						h3.text-center contrata
+					.col-md-2.step
+						p.text-center
+							span 5
+						h3.text-center póliza
+		hr
+		h1 registro
+		h2.subtitulo REGISTRO
+		
+		.container.bggris
+			form
+				.row
+					.col-md-12
+						p Para conocer la opción de Vida Segura que tenemos para ti, por favor completa los siguientes campos:
+				.row
+					.col-md-offset-3.col-md-5
+						input#nombre.form-control(type='text', placeholder='Nombre completo')
+				.row
+					.col-md-offset-3.col-md-5
+						p Fecha de nacimiento*
+						.col-md-4
+							select.form-control
+								option(value="opcion-1") Día
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+								option(value="opcion-5") e
+						.col-md-4
+							select.form-control
+								option(value="opcion-1") Mes
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+								option(value="opcion-5") e
+						.col-md-4
+							select.form-control
+								option(value="opcion-1") Año
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+								option(value="opcion-5") e
+				.row
+					.col-md-offset-3.col-md-5
+						input#nombre.form-control(type='text', placeholder='Correo electrónico*')					
+				.row
+					.col-md-offset-3.col-md-5
+						p Suma asegurada*
+						select.form-control
+							option(value="opcion-1") Eligir suma
+							option(value="opcion-2") b
+							option(value="opcion-3") c
+							option(value="opcion-4") d
+							option(value="opcion-5") e
+				.row
+					.col-md-12.text-center
+						button.btn-lg cotizar
+
+		hr
+		h1 cotiza
+		.container
+			.row
+				h2.subtitulo COTIZACIÓN
+		.container.bggris
+			form
+				.row
+					.col-md-12
+						p
+							strong Hola XXXXXX
+							, ésta es la mejor opción que encontramos para tí:
+				.row
+					.col-md-6.text-right
+						h4 Suma asegurada:
+					.col-md-6.text-left
+							h4 $0,000
+				br
+				.row
+					.col-md-6.text-right
+						p Suma asegurada por fallecimiento:
+					.col-md-6.text-left
+							p $0,000
+				.row
+					.col-md-6.text-right
+						p Suma asegurada por muerte accidental:
+					.col-md-6.text-left
+							p $0,000
+				.row
+					.col-md-6.text-right
+						p Suma asegurada para gastos funerarios:
+					.col-md-6.text-left
+							p $0,000
+				.row
+					br
+					.form-inline
+						.col-md-5.text-right
+							p Elige el tipo de plan:
+						.col-md-3.text-center
+							.radio
+								label
+									input(type='radio',name='tipoPlan',value='Plan-Creciente',checked='true')
+									| Plan Creciente
+						.col-md-3.text-left
+							.radio
+								label
+									input(type='radio',name='tipoPlan',value='Plan-fijo')
+									| Plan fijo
+				.row
+					br
+					.col-md-12
+						.col-md-3.text-right
+							h4 Pagos por prima:
+							h6 Elige el plan que más te 
+								br 
+								h6 interesa
+						.col-md-9
+							.col-md-3
+								br
+								button.btn.btn-info(type='button') $ 0.00 Mensual
+							.col-md-3
+								br
+								button.btn.btn-info(type='button') $ 0.00 quincenal
+							.col-md-3
+								br
+								button.btn.btn-info(type='button') $ 0.00 Semestral
+							.col-md-3
+								br
+								button.btn.btn-info(type='button') $ 0.00 Anual		
+				.space
+				.row
+					br
+					.col-md-6.text-right
+						button.btn-lg NO ME INTERESA
+					.col-md-6.text-left
+						button.btn-lg(type='button', data-toggle='modal', data-target='#myModal') CONTINUAR
+
+
+
+		// Modal
+		#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body
+						h4
+							strong
+								¡Buena elección!
+						p Para poder continuar y proteger tu informacion es importante que leas y aceptes las politicas de provacidad .
+						.checkbox.text-center
+							label
+								input(type='checkbox')
+								a(target="_BLANK",href="#") Aviso de Privacidad
+						h5.text-center he leído y conozco el alcance del tratamiento de mis datos personales.
+
+						button.btn-lg aceptar
+
+
+
+					//.modal-footer
+						button.btn.btn-default(type='button', data-dismiss='modal') Close
+						button.btn.btn-primary(type='button') Save changes
+
+		hr
+		h1 cuestionario
+		.container
+			.row
+				h2 CUESTIONARIO
+		.container.bggris
+			.row
+				.col-md-12
+					p Por favor responde la siguiente pregunta:
+					h4 ¿Tienes o has tenido alguna de estas enfermedades?
+			form
+				.row
+					.col-md-offset-7.col-md-2.text-center
+						strong NO
+					.col-md-2.text-center
+						strong SI
+				.row
+					.col-md-offset-3.col-md-4
+						p Cáncer, tumores malignos, leucemia o lupus
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP1',value='no',checked='true')
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP1',value='si')
+				.row
+					.col-md-offset-3.col-md-4
+						p Aunerisma, trombosis, embolia, derrame cerebral o cardiopatía (infarto o isquemia o arritmia) Efisema pulmonar, bronquitis crónica o tuberculosis.
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP2',value='no',checked='true')
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP2',value='si')
+				.row
+					.col-md-offset-3.col-md-4
+						p Insuficiencia hepática, cirrosis hepática, hepatitis crónica ("B" o "C"), insuficiencia renal crónica o pancreatitis.
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP3',value='no',checked='true')
+					.col-md-2
+						.radio.text-center
+							label
+								input(type='radio',name='cuestionarioP3',value='si')
+				.row
+					br
+					.col-md-6.text-right
+						button REGRESAR
+					.col-md-6.text-left
+						button CONTINUAR
+				.space
+		hr
+		h1 contrata
+		.container
+			.row
+				h2 CONTRATA
+		.container.bggris
+			.row
+				.col-md-9
+					P Para contratar tu póliza es necesario completar la información que se solicita a continuación:
+				.col-md-3.text-right
+					p.label No. de cotización
+					br
+					p.label 123456789A
+						.space
+					hr
+				.col-md-8
+					h4 Datos personales
+					br
+				form
+					.col-md-8
+						.col-md-6
+							.form-group
+								p.label Nombre(s)*
+								input.form-control(type="text",placeholder="Nombre(s)")
+							.form-group
+								p.label Segundo apellido*
+								input.form-control(type="text",placeholder="Nombre(s)")
+						.col-md-6
+							.form-group
+								p.label Primer apellido*
+								input.form-control(type="text",placeholder="Apellido Materno")
+						.col-md-6
+							.form-group
+								p.label Genero*
+								br
+							.col-md-3
+								.radio
+									p.label
+										input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
+										|Femenino
+							.col-md-6
+								.radio
+									p.label
+										input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
+										|     Masculino
+							.space
+						.col-md-8
+							.form-group
+								p.label Fecha de nacimiento*
+								input.form-control(type="text",placeholder="RFC")
+						.col-md-6
+							.form-group
+								p.label Pais de nacimiento*
+								input.form-control(type="text",placeholder="Nombre(s)")
+							.form-group
+								p.label CURP*
+								input.form-control(type="text",placeholder="Nombre(s)")
+						.col-md-8
+							h4 Domicilio
+						.col-md-6
+							.form-group
+								p.label Calle
+								input.form-control(type="text",placeholder="Calle")
+						.col-md-3
+							.form-group
+								p.label No. Exterior
+								input.form-control(type="text",placeholder="Apellido Materno")									
+						.col-md-3
+							.form-group
+								p.label no. Int
+								input.form-control(type="text",placeholder="No. Int")
+						.col-md-6
+							.form-group
+								p.label C.P*
+								input.form-control(type="text",placeholder="Codigo postal")
+						.col-md-6
+							p.label Colonia
+							select.form-control
+								option(value="opcion-1") Colonia
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+								option(value="opcion-5") e
+						.col-md-6
+							.form-group
+								p.label Delegación/municipio
+								input.form-control(type="text",placeholder="Delegación/municipio")
+						.col-md-6
+							.form-group
+								p.label Ciudad
+								input.form-control(type="text",placeholder="Ciudad")
+						.col-md-6
+							.form-group
+								p.label Estado
+								input.form-control(type="text",placeholder="Estado")
+						.col-md-6
+							.form-group
+								p.label Teléfono fijo
+								input.form-control(type="text",placeholder="Teléfono fijo")
+						.col-md-6
+							.form-group
+								p.label Teléfono movil
+								input.form-control(type="text",placeholder="Teléfono movil")
+					.col-md-4
+							.col-md-10
+								h4.text-center Mi cotización
+									.space
+								h4.text-center Plan B
+									.space
+								h4.text-center Cobertura
+								.col-md-4
+								.col-md-8
+									ul
+										li -------
+										li -------
+										li -------
+									.space
+							.col-xs-6 
+								p Pago por prima
+							.col-xs-6
+								p $0000
+								p mensual
+								.space
+								.space
+							.col-md-9.text-center
+								button.btn-lg CAMBIAR COTIZACIÓN
+								.space
+								.space
+							.col-md-9.text-center
+								button.btn-lg CONTRATAR VIA TELEFÓNICA
+				.col-md-12
+					.form-inline
+						p ¿Deseas recibir tu póliza en el domicilio registrado?
+						.col-md-1
+							.radio.text-center
+								label
+									input(type='radio',name='domicilio',value='si',checked='true')
+									| Si
+						.col-md-1
+							.radio.text-center
+								label
+									input(type='radio',name='domicilio',value='no')
+									| No
+					.row.text-center
+						.space
+						.col-md-12
+							button.btn-lg(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
+			// Modal
+		#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						h4 Te solicitamos que ingreses tu número telefonico y un horario adecuado para contactarte
+						.col-md-12.text-center
+							.col-md-3
+							.col-md-5
+								p.label Número telefonico
+								input#contrata.form-control(type='text' placeholder='55-98-98-98')
+						.col-md-12.text-center
+							.col-md-3
+							.col-md-5
+								p.label Horario a contactar
+								input#contrata.form-control(type='text' placeholder='12:00-16:00')						
+						button.btn-lg CONTACTARME
+					//.modal-footer
+						button.btn.btn-default(type='button', data-dismiss='modal') Close
+						button.btn.btn-primary(type='button') Save changes
+
+
+		.container
+			.row
+				h2 PAGO DE CONTRATACIÓN
+		.container.bggris
+			.row
+				.col-md-8
+					STRONG RESUMEN DE CONTRATACIÓN
+				.col-md-2.text-right
+					p No. de cotización.
+				.col-md-2.bqblanco
+					h6 123456789A
+			.row
+				.col-md-12
+					h4 DATOS PERSONALES
+			.row
+				.col-md-3
+					p.label Nombre del cliente
+					p.dato XRamiréz Ayala Juan LuisX
+				.col-md-4
+					p.label Correo eléctronico
+					p.dato Xjuan@mail.comX
+				.col-md-3
+					p.label CURP
+					p.dato XRAYU123412MMDH09X
+				.col-md-2
+					p.label RFC
+					p.dato XRAYU123412MMX
+			.row
+				.col-md-12
+					h4 DOMICILIO
+					P.dato Exploradores Tonatiuh No. 304, Col. Alamos, C.p. 034500, Bénito Juárez, CDMX.
+					br
+					p
+						hr
+			.row
+				.col-md-12
+					h4 DATOS DEL SEGURO DE HOGAR
+			.row
+				.col-md-4.text-center
+					h2 Plan B
+				.col-md-4
+					h4 Cobertura
+					ul
+						li -.-.-.-
+						li -.-.--.-
+						li -.-.-.-.
+				.col-md-4.text-center
+					h3 Pago por prima
+					h2 $250.00
+					h3 mensual
+		.container
+			.space
+			form
+				.row
+					.col-md-12
+						h4 COMPRAR
+						p Para realizar tu compra y descargar tu póliza, es necesario que ingreses los siguientes datos.
+				.row
+					.col-md-6
+						.col-md-10
+							p.label Nombre del titular
+							input#contrata.form-control(type='text' placeholder='Escribe tu nombre')
+					.col-md-6
+						.col-md-10
+							p.label Tipo de tarjeta*
+							select.form-control
+								option(value="opcion-1") VISA
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d	
+				.row
+					.col-md-6
+						.col-md-10
+							p.label No. de tarjeta*
+							input#contrata.form-control(type='text' placeholder='12312341234234123')
+					.col-md-6
+						.col-md-10
+							p.label CVV*
+							input#contrata.form-control(type='text' placeholder='000')
+				.row
+					.col-md-6
+						.col-md-12
+							p.label Fecha de vencimiento*
+						.col-md-4
+							select.form-control
+								option(value="opcion-1") 06
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+						.col-md-6
+							select.form-control
+								option(value="opcion-1") 2019
+								option(value="opcion-2") b
+								option(value="opcion-3") c
+								option(value="opcion-4") d
+				.row
+					.col-md-6
+						.checkbox
+							label
+								input(type='checkbox')
+								p Acepto	
+									a(target="_BLANK",href="#") Términos y condiciones
+				.row
+					.col-md-6.text-right
+						button REGRESAR
+					.col-md-6.text-left
+						button PAGAR
+
+
+		hr
+		h1 poliza
+		.container.bggris
+			.row
+				.col-md-12.text-center
+					//- img(src="", alt="")
+					h2 ¡FELICIDADES!
+					.space
+					h3 Tu compra se ha realizado sin problemas y tu PÓLIZA se ha generado correctamente.
+					.space
+					h2 PÓLIZA NO. 24689012
+					.space
+			.space
+			.row
+				.col-md-6.text-right
+					button ENVIAR POR MAIL
+				.col-md-6.text-left
+					button DESCARGAR PDF
+			.space
+			.space
+			.space
+			.row
+				.col-md-12.text-center
+					button SALIR
+		hr
+
+	script(src="http://code.jquery.com/jquery.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
