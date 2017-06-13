@@ -253,7 +253,7 @@ html(lang="en")
 		h1 contrata
 		.container
 			.row
-				h2 CONTRATA
+				h2 CONTRATAR
 		.container.bggris
 			.row
 				.col-md-9
@@ -281,18 +281,18 @@ html(lang="en")
 								p.label Primer apellido*
 								input.form-control(type="text",placeholder="Apellido Materno")
 						.col-md-6
-							.form-group
-								p.label Genero*
-								br
-							.col-md-3
-								.radio
-									p.label
-										input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
-										|Femenino
+							.col-md-4
+								.form-group
+									p.label Genero*
+									br
 							.col-md-6
 								.radio
 									p.label
-										input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
+										input#optionsRadios1(type='radio', name='optionsRadios', value='femenino', checked='')
+										|Femenino
+								.radio
+									p.label
+										input#optionsRadios2(type='radio', name='optionsRadios', value='masculino')
 										|     Masculino
 							.space
 						.col-md-8
@@ -302,100 +302,190 @@ html(lang="en")
 						.col-md-6
 							.form-group
 								p.label Pais de nacimiento*
-								input.form-control(type="text",placeholder="Nombre(s)")
+								select.form-control
+									option(value="opcion-1") Seleccionar
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
 							.form-group
 								p.label CURP*
 								input.form-control(type="text",placeholder="Nombre(s)")
+						.col-md-6
+							.form-group
+								p.label Entidad de nacimiento*
+								select.form-control
+									option(value="opcion-1") Seleccionar
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
 						.col-md-8
 							h4 Domicilio
+						.col-md-8
+							.form-inline
+							p ¿Deseas recibir tu póliza en el domicilio registrado?
+							.col-md-2
+								.radio.text-center
+									label
+										input(type='radio',name='domicilio',value='si',checked='true')
+										| Si
+							.col-md-2
+								.radio.text-center
+									label
+										input(type='radio',name='domicilio',value='no')
+										| No
 						.col-md-6
 							.form-group
-								p.label Calle
+								p.label C.P.
 								input.form-control(type="text",placeholder="Calle")
-						.col-md-3
 							.form-group
-								p.label No. Exterior
-								input.form-control(type="text",placeholder="Apellido Materno")									
-						.col-md-3
+								p.label Entidad federativa*
+								select.form-control
+									option(value="opcion-1") Seleccionar
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
 							.form-group
-								p.label no. Int
-								input.form-control(type="text",placeholder="No. Int")
+								p.label Delegación o municipio*
+								select.form-control
+									option(value="opcion-1") Seleccionar
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
+							.form-group
+								p.label Calle*
+								select.form-control
+									option(value="opcion-1") Seleccionar
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
+							.form-group
+								p.label No. Interior*
+								input.form-control(type="text",placeholder="No. Interior")
 						.col-md-6
 							.form-group
-								p.label C.P*
-								input.form-control(type="text",placeholder="Codigo postal")
-						.col-md-6
-							p.label Colonia
-							select.form-control
-								option(value="opcion-1") Colonia
-								option(value="opcion-2") b
-								option(value="opcion-3") c
-								option(value="opcion-4") d
-								option(value="opcion-5") e
+								p.label Entidad federativa
+								select.form-control
+									option(value="opcion-1") Colonia
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
+							.form-group
+								p.label Ciudad*
+								select.form-control
+									option(value="opcion-1") Seleccionar
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
+							.form-group
+								p.label Colonia*
+								select.form-control
+									option(value="opcion-1") Seleccionar
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
+							.form-group
+								p.label No. Exterior*
+								input.form-control(type="text",placeholder="No. Exterior")
+							.form-group
+								p.label No. teléfonico*
+								input.form-control(type="text",placeholder="Telefono")
+						.col-md-8
+							h4 BENEFICIARIOS
+							br
+							p Recomendaciones para registrar a tus beneficiarios:
+							ul
+								li "Revisar rubro"
+								li "Revisar rubro"
+
+						.col-md-12
+							h4 DATOS BENEFICIARIO 1
 						.col-md-6
 							.form-group
-								p.label Delegación/municipio
-								input.form-control(type="text",placeholder="Delegación/municipio")
+								p.label Nombre(s)*
+								input.form-control(type="text",placeholder="Nombre(s)")
+							.form-group
+								p.label Segundo apellido*
+								input.form-control(type="text",placeholder="Nombre(s)")
+							.form-group
+								p.label Parentesco*
+								select.form-control
+									option(value="opcion-1") Selecciona
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
 						.col-md-6
 							.form-group
-								p.label Ciudad
-								input.form-control(type="text",placeholder="Ciudad")
-						.col-md-6
+								p.label Primer apellido*
+								input.form-control(type="text",placeholder="Apellido Materno")
 							.form-group
-								p.label Estado
-								input.form-control(type="text",placeholder="Estado")
-						.col-md-6
-							.form-group
-								p.label Teléfono fijo
-								input.form-control(type="text",placeholder="Teléfono fijo")
-						.col-md-6
-							.form-group
-								p.label Teléfono movil
-								input.form-control(type="text",placeholder="Teléfono movil")
-					.col-md-4
-							.col-md-10
+								p.label Porcentaje que le corresponde*
+								select.form-control
+									option(value="opcion-1") Selecciona
+									option(value="opcion-2") b
+									option(value="opcion-3") c
+									option(value="opcion-4") d
+									option(value="opcion-5") e
+						.col-md-12
+							br
+							.col-md-6.text-right
+								button CONTINUAR DESPUES
+							.col-md-6.text-left
+								button(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
+								.space
+					.col-md-4.text-center
+							.col-md-10.bqplanes
 								h4.text-center Mi cotización
 									.space
-								h4.text-center Plan B
+								.col-md-8.text-right
+									h4 Suma asegurada:
+								.col-md-4.text-left
+									h4 $0,000 
 									.space
-								h4.text-center Cobertura
-								.col-md-4
-								.col-md-8
-									ul
-										li -------
-										li -------
-										li -------
+								.col-md-8.text-right
+									p Suma asegurada por fallecimiento:
+								.col-md-4.text-left
+									p $0,000 
 									.space
-							.col-xs-6 
-								p Pago por prima
-							.col-xs-6
-								p $0000
-								p mensual
+								.col-md-8.text-right
+									p Suma asegurada por muerte accidental:
+								.col-md-4.text-left
+									p $0,000 
+									.space
+								.col-md-8.text-right
+									p Suma asegurada para gastos funerarios:
+								.col-md-4.text-left
+									p $0,000 
+									.space
+								.col-md-12.text-right
+									.radio
+										p.label
+											input#optionsRadios1(type='radio', name='optionsRadios', value='Plan', checked='true')
+											|Plan reciente
+									.space
+								.col-md-8.text-right 
+									p Pago por prima:
+								.col-md-4.text-left
+									p $0000
+									p mensual
+									.space
+									.space
+								.col-md-10.text-center
+									.col-md-4
+										button.btn-lg CAMBIAR COTIZACIÓN
+										.space
+							.col-md-12.text-center
 								.space
-								.space
-							.col-md-9.text-center
-								button.btn-lg CAMBIAR COTIZACIÓN
-								.space
-								.space
-							.col-md-9.text-center
-								button.btn-lg CONTRATAR VIA TELEFÓNICA
-				.col-md-12
-					.form-inline
-						p ¿Deseas recibir tu póliza en el domicilio registrado?
-						.col-md-1
-							.radio.text-center
-								label
-									input(type='radio',name='domicilio',value='si',checked='true')
-									| Si
-						.col-md-1
-							.radio.text-center
-								label
-									input(type='radio',name='domicilio',value='no')
-									| No
-					.row.text-center
-						.space
-						.col-md-12
-							button.btn-lg(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
+								.col-md-10
+									button.btn-lg CONTRATAR VIA TELEFÓNICA
 			// Modal
 		#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog(role='document')
