@@ -41,6 +41,7 @@ html(lang="en")
 		
 		.container.bggris
 			form
+				.triangulo
 				.row
 					.col-md-12
 						p Para conocer la opción de Hogar que tenemos para ti, por favor completa los siguientes campos:
@@ -112,8 +113,8 @@ html(lang="en")
 						.col-md-10
 							.bqplanes
 								.radio.text-center
-								label
-									input(type='radio',name='planes',value='option1',checked='true')
+								input(type='radio',id="radio-1",name='planes',value='option1',checked='true' class="regular-radio")
+								label(for='radio-1')
 								h3.text-center Plan A
 								ul
 									h3.text-left Cobertura
@@ -124,8 +125,8 @@ html(lang="en")
 						.col-md-10
 							.bqplanes
 								.radio.text-center
-								label
-									input(type='radio',name='planes',value='option2')
+								input(type='radio',id="radio-2",name='planes',value='option2' class="regular-radio")
+								label(for='radio-2')
 								h3.text-center Plan B
 								ul
 									h3.text-left Cobertura
@@ -134,18 +135,20 @@ html(lang="en")
 									li -.-.-.-.
 							.radio.text-center
 								label
-									input(type='radio',name='terremoto',value='option3',checked='true')
-									|	Con terremoto
+									input(type='radio',id="radio-terr",name='terremoto',value='conterre' class="regular-radio",checked='true')		
+									label(for='radio-terr')
+								label Con terremoto
 							.radio.text-center
 								label
-									input(type='radio',name='terremoto',value='option2')
-									|	Sin terremoto
+									input(type='radio',id="radio-sterr",name='terremoto',value='sinterre' class="regular-radio")		
+									label(for='radio-sterr')
+								label Con terremoto
 					.col-md-4
 						.col-md-10
 							.bqplanes
 								.radio.text-center
-								label
-									input(type='radio',name='planes',value='option1')
+								input(type='radio',id="radio-3",name='planes',value='option3' class="regular-radio")
+								label(for='radio-3')
 								h3.text-center Plan PLUS
 								ul
 									h3.text-left Cobertura
@@ -225,34 +228,34 @@ html(lang="en")
 						p ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP1',value='no',checked='true')
+							input(type='radio',id="radio-C1",name='cuestionarioP1',value='no', class="regular-radio",checked='true')		
+							label(for='radio-C1')
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP1',value='si')
+							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='si', class="regular-radio")		
+							label(for='radio-Cp1')
 				.row
 					.col-md-8
 						p ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP2',value='no',checked='true')
+							input(type='radio',id="radio-C2",name='cuestionarioP2',value='no', class="regular-radio",checked='true')		
+							label(for='radio-C2')
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP2',value='si')
+							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='si', class="regular-radio")		
+							label(for='radio-Cp2')
 				.row
 					.col-md-8
 						p ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP3',value='no',checked='true')
+							input(type='radio',id="radio-C3",name='cuestionarioP3',value='no', class="regular-radio",checked='true')		
+							label(for='radio-C3')
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP3',value='si')
+							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='si', class="regular-radio")		
+							label(for='radio-Cp3')
 				.row
 					.form-inline
 						.col-md-12
@@ -260,14 +263,14 @@ html(lang="en")
 				.row
 						.col-md-2
 							.radio
-								label
-									input(type='radio',name='cuestionarioP4',value='Casa',checked='true')
-									| Casa
+								input(type='radio',id="radio-C4",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')		
+								label(for='radio-C4')
+								label Casa
 						.col-md-4
 							.radio
-								label
-									input(type='radio',name='cuestionarioP4',value='Dep')
-									| Departamento
+								input(type='radio',id="radio-Cp4",name='cuestionarioP4',value='Dep', class="regular-radio")		
+								label(for='radio-Cp4')
+								label Departamento
 				.row
 					.col-md-6.text-right
 						button REGRESAR
@@ -309,14 +312,14 @@ html(lang="en")
 								.form-inline
 									p.label Genero*
 									br
-									.radio
-										p.label
-											input#optionsRadios1(type='radio', name='optionsRadios', value='option1', checked='')
-											|Femenino
-									.radio
-										p.label
-											input#optionsRadios2(type='radio', name='optionsRadios', value='option2')
-											|     Masculino
+									p.label
+										input(type='radio',id="radio-cs",name='optionsRadios', value='femenino', checked='' class="regular-radio")		
+										label(for='radio-cs')
+										| Femenino
+									p.label
+										input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")		
+										label(for='radio-cs2')
+										| Masculino
 								.space
 								.form-group
 									p.label R.F.C*
@@ -372,17 +375,14 @@ html(lang="en")
 							.col-md-12
 								.form-inline
 									p ¿Deseas recibir tu póliza en el domicilio registrado?
-									.col-md-1
-										.radio.text-center
-											label
-												input(type='radio',name='domicilio',value='si',checked='true')
-												| Si
-									.col-md-1
-										.radio.text-center
-											label
-												input(type='radio',name='domicilio',value='no')
-												| No
-
+									.col-md-2
+										input(type='radio',id="radiopd",name='domicilio',value='no', class="regular-radio",checked='')
+										label(for='radiopd')
+										label Si
+									.col-md-2
+										input(type='radio',id="radiopdm",name='domicilio',value='si', class="regular-radio")
+										label(for='radiopdm')
+										label No
 
 						.col-md-4
 							.col-md-12
