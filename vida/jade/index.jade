@@ -111,19 +111,18 @@ html(lang="en")
 							p $0,000
 				.row
 					br
-					.form-inline
-						.col-md-5.text-right
-							p Elige el tipo de plan:
-						.col-md-3.text-center
-							.radio
-								label
-									input(type='radio',name='tipoPlan',value='Plan-Creciente',checked='true')
-									| Plan Creciente
-						.col-md-3.text-left
-							.radio
-								label
-									input(type='radio',name='tipoPlan',value='Plan-fijo')
-									| Plan fijo
+					.col-md-5.text-right
+						p Elige el tipo de plan:
+					.col-md-3.text-center
+						.radio
+							input(type='radio',id="radio",name='tipoPlan',value='Plan-Creciente', class="regular-radio",checked='true')
+							label(for='radio')
+							label Plan Creciente
+					.col-md-3.text-left
+						.radio
+							input(type='radio',id="radio-1",name='tipoPlan',value='Plan-fijo', class="regular-radio")
+							label(for='radio-1')
+							label Plan fijo
 				.row
 					br
 					.col-md-12
@@ -203,34 +202,34 @@ html(lang="en")
 						p Cáncer, tumores malignos, leucemia o lupus
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP1',value='no',checked='true')
+							input(type='radio',id="radio-C1",name='cuestionarioP1',value='no', class="regular-radio",checked='true')		
+							label(for='radio-C1')
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP1',value='si')
+							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='si', class="regular-radio")		
+							label(for='radio-Cp1')
 				.row
 					.col-md-offset-3.col-md-4
 						p Aunerisma, trombosis, embolia, derrame cerebral o cardiopatía (infarto o isquemia o arritmia) Efisema pulmonar, bronquitis crónica o tuberculosis.
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP2',value='no',checked='true')
+							input(type='radio',id="radio-C2",name='cuestionarioP2',value='no', class="regular-radio",checked='true')		
+							label(for='radio-C2')
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP2',value='si')
+							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='si', class="regular-radio")		
+							label(for='radio-Cp2')
 				.row
 					.col-md-offset-3.col-md-4
 						p Insuficiencia hepática, cirrosis hepática, hepatitis crónica ("B" o "C"), insuficiencia renal crónica o pancreatitis.
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP3',value='no',checked='true')
+							input(type='radio',id="radio-C3",name='cuestionarioP3',value='no', class="regular-radio",checked='true')
+							label(for='radio-C3')
 					.col-md-2
 						.radio.text-center
-							label
-								input(type='radio',name='cuestionarioP3',value='si')
+							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='si', class="regular-radio")		
+							label(for='radio-Cp3')
 				.row
 					br
 					.col-md-6.text-right
@@ -274,15 +273,17 @@ html(lang="en")
 								.form-group
 									p.label Genero*
 									br
-							.col-md-6
+							.col-md-7
 								.radio
 									p.label
-										input#optionsRadios1(type='radio', name='optionsRadios', value='femenino', checked='')
-										|Femenino
+										input(type='radio',id="radio-cs",name='optionsRadios', value='femenino', checked='' class="regular-radio")
+										label(for='radio-cs')
+										| Femenino
 								.radio
 									p.label
-										input#optionsRadios2(type='radio', name='optionsRadios', value='masculino')
-										|     Masculino
+										input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")		
+										label(for='radio-cs2')
+										| Masculino
 							.space
 						.col-md-8
 							.form-group
@@ -321,16 +322,16 @@ html(lang="en")
 						.col-md-8
 							.form-inline
 							p ¿Deseas recibir tu póliza en el domicilio registrado?
-							.col-md-2
+							.col-md-4
 								.radio.text-center
-									label
-										input(type='radio',name='domicilio',value='si',checked='true')
-										| Si
-							.col-md-2
+									input(type='radio',id="radiopd",name='domicilio',value='si', class="regular-radio",checked='')
+									label(for='radiopd')
+									label Si
+							.col-md-4
 								.radio.text-center
-									label
-										input(type='radio',name='domicilio',value='no')
-										| No
+									input(type='radio',id="radiopdm",name='domicilio',value='No', class="regular-radio")
+									label(for='radiopdm')
+									label No
 						.col-md-6
 							.form-group
 								p.label C.P.
@@ -464,8 +465,9 @@ html(lang="en")
 								.col-md-12.text-right
 									.radio
 										p.label
-											input#optionsRadios1(type='radio', name='optionsRadios', value='Plan', checked='true')
-											|Plan reciente
+											input(type='radio',id="radioctrt",name='PlanOf', value='Plan', class="regular-radio", checked="")
+											label(for='radioctrt')
+											label Plan reciente
 									.space
 								.col-md-8.text-right 
 									p Pago por prima:
@@ -709,25 +711,25 @@ html(lang="en")
 								option(value="opcion-2") b
 								option(value="opcion-3") c
 								option(value="opcion-4") d
-					.col-md-4
-					.col-md-4.text-center
+					.col-md-offset-5.col-md-3
 						h4 Meses sin intereses:
-						.radio.text-center
-							label
-								input(type='radio',checked='true',name='MeseSinIntereses',value='3meses')
-								| 3 Meses
-						.radio.text-center
-							label
-								input(type='radio',name='MeseSinIntereses',value='6meses')
-								| 6 Meses
-						.radio.text-center
-							label
-								input(type='radio',name='MeseSinIntereses',value='9meses')
-								| 9 Meses
-						.radio.text-center
-							label
-								input(type='radio',name='MeseSinIntereses',value='12meses')
-								| 12 Meses
+						.col-md-10
+							.radio
+								input(type='radio',id="radioMS",name='MeseSinIntereses',value='3meses', class="regular-radio",checked='true')
+								label(for='radioMS')
+								label  3 Meses
+							.radio
+								input(type='radio',id="radioMS2",name='MeseSinIntereses',value='6meses', class="regular-radio")
+								label(for='radioMS2')
+								label  6 Meses
+							.radio
+								input(type='radio',id="radioMS3",name='MeseSinIntereses',value='9meses', class="regular-radio")
+								label(for='radioMS3')
+								label  9 Meses
+							.radio
+								input(type='radio',id="radioMS4",name='MeseSinIntereses',value='12meses', class="regular-radio")
+								label(for='radioMS4')
+								label 12 Meses
 				.space
 				.row
 					.col-md-4.text-center
@@ -761,6 +763,7 @@ html(lang="en")
 		hr
 		h1 poliza
 		.container.bggris
+			.triangulo
 			.row
 				.col-md-12.text-center
 					//- img(src="", alt="")
