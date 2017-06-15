@@ -39,52 +39,53 @@ html(lang="en")
 		h1 registro
 		h2.subtitulo ingreso de datos
 		
-		.container.bggris
+		.container.bgwhite
 			form
-				.triangulo
 				.row
 					.col-md-12
-						p Para conocer la opción de Hogar que tenemos para ti, por favor completa los siguientes campos:
+						h2.subt Para conocer la opción de Hogar que tenemos para ti, por favor completa los siguientes campos:
+						small
+							u * Campos obligatorios
 						h4 Datos personales
 				
 					.col-md-4
-						input#nombre.form-control(type='text', placeholder='Nombre')
+						input#nombre.form-control(type='text', placeholder='Nombre (s)')
 					.col-md-4
-						input#nombre.form-control(type='text', placeholder='Correo electrónico')					
+						input#nombre.form-control(type='text', placeholder='Apellido paterno * ')
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='Apellido materno *')
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='Correo electrónico *')					
 				.row
 					.col-md-12
 						h4 Domicilio
 
 				.row
 					.col-md-4
-						input#nombre.form-control(type='text', placeholder='Calle')
-					.col-md-2
-						input#nombre.form-control(type='text', placeholder='No.Ext')
-					.col-md-2
+						input#nombre.form-control(type='text', placeholder='Calle * ')
+					.col-md-4
+						input#nombre.form-control(type='text', placeholder='No.Ext *')
+					.col-md-4
 						input#nombre.form-control(type='text', placeholder='No.Int')
 					.col-md-4
-						input#nombre.form-control(type='text', placeholder='C.P.*')
-				.row
+						input#nombre.form-control(type='text', placeholder='C.P. *')
 					.col-md-4
 						select.form-control
-							option(value="opcion-1") Elige tu colonia
+							option(value="opcion-1") Colonia * 
 							option(value="opcion-2") b
 							option(value="opcion-3") c
 							option(value="opcion-4") d
 							option(value="opcion-5") e
 					.col-md-4
-						input#nombre.form-control(type='text', placeholder='Delegación/Municipio')
+						input#nombre.form-control(type='text', placeholder='Delegación/Municipio * ')
 					.col-md-4
-						input#nombre.form-control(type='text', placeholder='Ciudad')
-				.row
-					.col-md-4
-						input#nombre.form-control(type='text', placeholder='Estado')
+						input#nombre.form-control(type='text', placeholder='Ciudad *')
 				.row
 					.col-md-12
 						h4 Suma asegurada
 					.col-md-4
 						select.form-control
-							option(value="opcion-1") Elige la suma asegurada
+							option(value="opcion-1") Elige la suma asegurada *
 							option(value="opcion-2") b
 							option(value="opcion-3") c
 							option(value="opcion-4") d
@@ -92,89 +93,185 @@ html(lang="en")
 				.row
 					.col-md-12.text-center
 						button.btn-lg cotizar
-				.row
-					.col-md-12
-						p *campos obligatorios
+
 
 		hr
 		h1 cotiza
 		.container
 			.row
 				h2.subtitulo COTIZACIÓN
-		.container.bggris
+		.container.bgwhite
 			form
 				.row
 					.col-md-12
-						p
+						h2.subt
 							strong Hola XXXXXX
-							, ésta es la mejor opción que encontramos para tí:
+							, estas son las opciones que encontramos para tí:
 				.row
-					.col-md-4
-						.col-md-10
+					.col-md-7
+						.col-md-12
 							.bqplanes
-								.radio.text-center
-								input(type='radio',id="radio-1",name='planes',value='option1',checked='true' class="regular-radio")
-								label(for='radio-1')
-								h3.text-center Plan A
+								h3
+									.radio
+										input(type='radio',id="radio-1",name='planes',value='option1',checked='true' class="regular-radio")
+										label(for='radio-1')
+										span	Plan A
 								ul
 									h3.text-left Cobertura
 									li -.-.-.-.
 									li -.-.-.-.
 									li -.-.-.-.
-					.col-md-4
-						.col-md-10
+					.col-md-5
+						.col-md-12
 							.bqplanes
-								.radio.text-center
-								input(type='radio',id="radio-2",name='planes',value='option2' class="regular-radio")
-								label(for='radio-2')
-								h3.text-center Plan B
+								h3
+									.radio
+									input(type='radio',id="radio-2",name='planes',value='option2' class="regular-radio")
+									label(for='radio-2')
+									span Plan B
 								ul
 									h3.text-left Cobertura
 									li -.-.-.-.
 									li -.-.-.-.
 									li -.-.-.-.
-							.radio.text-center
-								label
-									input(type='radio',id="radio-terr",name='terremoto',value='conterre' class="regular-radio",checked='true')		
-									label(for='radio-terr')
-								label Con terremoto
-							.radio.text-center
-								label
-									input(type='radio',id="radio-sterr",name='terremoto',value='sinterre' class="regular-radio")		
-									label(for='radio-sterr')
-								label Con terremoto
-					.col-md-4
-						.col-md-10
-							.bqplanes
-								.radio.text-center
-								input(type='radio',id="radio-3",name='planes',value='option3' class="regular-radio")
-								label(for='radio-3')
-								h3.text-center Plan PLUS
-								ul
-									h3.text-left Cobertura
-									li -.-.-.-.
-									li -.-.-.-.
-									li -.-.-.-.
-				.row
+
+				.row.bggris.planes
 					.col-md-12
-						.col-md-3.text-right
-							h4 Pagos por prima:
-							h6 Elige el plan que más te 
-								br 
-								h6 interesa
-						.col-md-9
-							.col-md-3
-								br
-								button.btn.btn-info(type='button') $ 0.00 Mensual
-							.col-md-3
-								br
-								button.btn.btn-info(type='button') $ 0.00 quincenal
-							.col-md-3
-								br
-								button.btn.btn-info(type='button') $ 0.00 Semestral
-							.col-md-3
-								br
-								button.btn.btn-info(type='button') $ 0.00 Anual		
+							h4 Elige el plan que más te convenga:
+					.col-md-6
+						h2.subt Pagos por prima
+						h4 Con terremoto
+						.row.plan.active
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4  $ 250.00
+									p.label Mensual
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge $250.00
+										p.label Pagos subsecuentes 11 pagos de:
+									li.list-group-item.tp
+										span.badge $3,000.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 750.00
+									p.label Trimestral
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge $750.00
+										p.label Pagos subsecuentes 3 pagos de:
+									li.list-group-item.tp
+										span.badge $3,000.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 1,500.00 
+									p.label Semestral
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge $1,500.00
+										p.label Pagos subsecuentes 1 pago de:
+									li.list-group-item.tp
+										span.badge $3,000.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 3,000.00 
+									p.label Anual		
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge $3,000.00
+										p.label Pago único de:
+									li.list-group-item.tp
+										span.badge $3,000.00
+										p.label Total a pagar:
+					.col-md-6
+						h2.subt Pagos por prima
+						h4 Sin terremoto			
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 200.00 
+									p.label Mensual
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge $200.00
+										p.label Pagos subsecuentes 11 pagos de:
+									li.list-group-item.tp
+										span.badge $2,400.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 800.00 
+									p.label Trimestral
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge $800.00
+										p.label Pagos subsecuentes 3 pagos de:
+									li.list-group-item.tp
+										span.badge $2,400.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 1,200.00 
+									p.label Semestral
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge $1,200.00
+										p.label Pagos subsecuentes 1 pago de:
+									li.list-group-item.tp
+										span.badge $2,400.00
+										p.label Total a pagar:
+						.row.plan
+							.col-md-5
+								button.btn.btn-info.bigbutton(type='button')
+									.triangulo
+									h4 $ 2,400.00 
+									p.label Anual		
+							.col-md-6
+								ul.list-group
+									.triangulo
+										.triangulo2
+									li.list-group-item
+										span.badge $2,400.00
+										p.label Pagos único de:
+									li.list-group-item.tp
+										span.badge $2,400.00
+										p.label Total a pagar:
 				.row
 					.col-md-6.text-right
 						button.btn-lg NO ME INTERESA
@@ -207,25 +304,23 @@ html(lang="en")
 
 
 
-					//.modal-footer
-						button.btn.btn-default(type='button', data-dismiss='modal') Close
-						button.btn.btn-primary(type='button') Save changes
-
 		hr
 		h1 cuestionario
 		.container
 			.row
 				h2 CUESTIONARIO
-		.container.bggris
+		.container.bgwhite
+			.row
+				h2.subt Por favor responde las siguientes preguntas:
 			form
 				.row
 					.col-md-offset-8.col-md-2.text-center
-						strong NO
-					.col-md-2.text-center
 						strong SI
+					.col-md-2.text-center
+						strong NO
 				.row
 					.col-md-8
-						p ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
+						p.label ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
 					.col-md-2
 						.radio.text-center
 							input(type='radio',id="radio-C1",name='cuestionarioP1',value='no', class="regular-radio",checked='true')		
@@ -236,7 +331,7 @@ html(lang="en")
 							label(for='radio-Cp1')
 				.row
 					.col-md-8
-						p ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
+						p.label ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
 					.col-md-2
 						.radio.text-center
 							input(type='radio',id="radio-C2",name='cuestionarioP2',value='no', class="regular-radio",checked='true')		
@@ -247,7 +342,7 @@ html(lang="en")
 							label(for='radio-Cp2')
 				.row
 					.col-md-8
-						p ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
+						p.label ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
 					.col-md-2
 						.radio.text-center
 							input(type='radio',id="radio-C3",name='cuestionarioP3',value='no', class="regular-radio",checked='true')		
@@ -256,21 +351,25 @@ html(lang="en")
 						.radio.text-center
 							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='si', class="regular-radio")		
 							label(for='radio-Cp3')
-				.row
-					.form-inline
-						.col-md-12
-							p El domicilio a asegurar es:
-				.row
-						.col-md-2
-							.radio
-								input(type='radio',id="radio-C4",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')		
-								label(for='radio-C4')
-								label Casa
-						.col-md-4
-							.radio
-								input(type='radio',id="radio-Cp4",name='cuestionarioP4',value='Dep', class="regular-radio")		
-								label(for='radio-Cp4')
-								label Departamento
+				.bgazul.valida
+					.triangulo
+					.row
+						.form-inline
+							.col-md-12
+								h4 El domicilio a asegurar es:
+					.row
+							.col-md-2
+								.radio
+									input(type='radio',id="radio-C4",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')		
+									label(for='radio-C4')
+									label 
+										h4 Casa
+							.col-md-4
+								.radio
+									input(type='radio',id="radio-Cp4",name='cuestionarioP4',value='Dep', class="regular-radio")		
+									label(for='radio-Cp4')
+									label 
+										h4 Departamento
 				.row
 					.col-md-6.text-right
 						button REGRESAR
@@ -281,7 +380,7 @@ html(lang="en")
 		.container
 			.row
 				h2 CONTRATA
-		.container.bggris
+		.container.bgwhite
 			.row
 				.col-md-12
 					P Para contratar tu póliza es necesario completar la información que se solicita a continuación:
@@ -448,7 +547,7 @@ html(lang="en")
 		.container
 			.row
 				h2 PAGO DE CONTRATACIÓN
-		.container.bggris
+		.container.bgwhite
 			.row
 				.col-md-8
 					STRONG RESUMEN DE CONTRATACIÓN
@@ -556,7 +655,7 @@ html(lang="en")
 
 		hr
 		h1 poliza
-		.container.bggris
+		.container.bgwhite
 			.row
 				.col-md-12.text-center
 					//- img(src="", alt="")

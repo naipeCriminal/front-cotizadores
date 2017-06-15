@@ -12,12 +12,162 @@ $gris4:#CCCCCC;
 $gris5:#D8D8D8;
 $gris6:#F2F2F2;
 
+$h4Family:sans-serif;
+$h4Size:19px;
+$h4Color:$azul1;
+$pLabelFamily:sans-serif;
+$pLabelSize:15px;
+$pLabelColor:$gris3;
+$pLabelW:300;
+$pDatoFamily:sans-serif;
+$pDatoSize:30px;;
+$pDatoColor:$gris2;
+$h2SubFamily:sans-serif;
+$h2SubW:500;
+$h2SubSize:18px;
+$h2SubColor:$gris2;
+
+
 $stepspanbg:#000;
 $stepspan:blue;
 $steph3:blue;
 $stepactivespanbg:#ddd;
 $stepactivespan:red;
 $stepactiveh3:red;
+body{
+	background: $gris6;
+
+}
+h4{
+	font-family:$h4Family;
+	font-size:$h4Size;
+	color:$h4Color;
+}
+h2.subt{
+	font-family:$h2SubFamily ;
+	font-weight:$h2SubW ;
+	font-size:$h2SubSize ;
+	color:$h2SubColor ;
+
+}
+ul.list-group{
+	    border: 1px solid $azul4;
+	    -webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		p.label{
+    	font-size: 10px;
+		}
+		& li.list-group-item{
+			padding: 7px 5px 7px 10px;
+		}
+		& .badge{
+			color: $gris3;
+			background-color:transparent;
+			font-weight:400;
+	    	font-size: 15px;
+		}
+		&.tp{
+			p.label{
+				color: $azul3;
+			}
+			& .badge{
+				color: $azul3;
+			}
+		} 
+}
+.planes .plan.active {
+	& .btn-info,.planes .plan.active .btn-info.active:hover {
+	    color: #fff;
+	    background-color: $azul2;
+	    border-color: $azul2;
+	    & h4{
+
+	    }
+	}
+	& .btn-info .triangulo{
+		top: 15px;
+		margin: 0 auto;
+		width: 0;
+		height: 0;
+		border-right: 20px solid transparent;
+		border-left: 20px solid transparent;
+		border-bottom: 20px solid $azul2;
+		position: absolute;
+		right: -34px;
+	}
+
+	& ul.list-group{
+	    border: 3px solid $azul2;
+		& .triangulo{
+			top: 18px;
+			margin: 0 auto;
+			width: 0;
+			height: 0;
+			border-right: 13px solid transparent;
+			border-left: 13px solid transparent;
+			border-bottom: 13px solid $azul2;
+			position: absolute;
+			left: 28px;
+			z-index: 10;
+		}
+		& .triangulo2{
+			top: 5px;
+			margin: 0 auto;
+			width: 0;
+			height: 0;
+			border-right: 13px solid transparent;
+			border-left: 13px solid transparent;
+			border-bottom: 13px solid $gris5;
+			position: absolute;
+			left: -13px;
+			z-index: 10;
+		}		
+	}
+}
+.planes .triangulo{
+		top: -20px;
+		margin: 0 auto;
+		width: 0;
+		height: 0;
+		border-right: 20px solid transparent;
+		border-left: 20px solid transparent;
+		border-bottom: 20px solid transparent;
+		position: absolute;
+		right: 170px;
+}
+.bigbutton{
+	// padding: 20px;
+	width: 100%;
+	height: 100%;
+	& h4 {
+		color: #fff;
+		font-size: 30px;
+	}
+	& p.label{
+		color: #fff;
+		font-weight: 100;
+		font-size: 23px;
+	}
+}
+
+
+.bgazul{
+	background: $azul6;
+    padding: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    &.valida{
+    	& .radio{
+    		& label{
+    			& h4{
+    				color:$azul3;
+    			}
+    		}
+    	}
+    }
+}
+
 .steps{
 
 	.step{
@@ -48,13 +198,24 @@ $stepactiveh3:red;
 	}
 }
 .label{
-	color: #000;
+	font-family: $pLabelFamily;
+	font-size:$pLabelSize;
+	color: $pLabelColor;
+	font-weight: $pLabelW;
+	white-space: inherit;
 }
 .bggris{
-	background: #eee;
-	border:solid 1px #ddd;
-	padding-bottom: 20px;
-	padding-top: 20px;
+	padding: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background: $gris5;
+}
+.bgwhite{
+    background: #fff;
+    border: solid 2px $gris4;
+    padding: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 	hr{
 		border-top: 1px solid #000;
 	}
@@ -67,8 +228,12 @@ $stepactiveh3:red;
 	height: 30px;
 }
 .bqplanes{
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;	
 	background: #ddd;
 	padding-bottom: 40px;
+	padding: 15px;
 	ul{
 		li{
 			padding-bottom: 10px;
@@ -86,11 +251,14 @@ $stepactiveh3:red;
     border-left: 48px solid #fff;
     border-top: 39px solid transparent;
     border-bottom: 40px solid transparent;
-    position: absolute;
+    position: relative;
     transform: rotate(90deg);
-    top: 308px;
-    left: 166px;
 }
+.valida .triangulo{
+    top: -38px;
+    margin: 0 auto;
+}
+
 .regular-radio {
     display: none;
 }
@@ -98,7 +266,7 @@ $stepactiveh3:red;
 .regular-radio + label {
     -webkit-appearance: none;
     background-color: #fff;
-    border: 2px solid #009ee5;
+    border: 2px solid $azul1;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
     padding: 9px;
     border-radius: 50px;
@@ -113,7 +281,7 @@ $stepactiveh3:red;
     border-radius: 50px;
     position: absolute;
     top: 3px;
-    background: #009ee5;
+    background: $azul1;
     text-shadow: 0px;
     left: 3px;
     font-size: 32px;
@@ -121,13 +289,13 @@ $stepactiveh3:red;
 
 .regular-radio:checked + label {
     background-color: #fff;
-    color: #99a1a7;
-    border: 2px solid #009ee5;
+    color: $azul1;
+    border: 2px solid $azul1;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .regular-radio + label:active,
 .regular-radio:checked + label:active {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
-	border: 2px solid #009ee5;
+	border: 2px solid $azul1;
 }
