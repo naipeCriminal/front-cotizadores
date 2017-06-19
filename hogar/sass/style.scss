@@ -5,7 +5,8 @@ $azul4:#52BCEC;
 $azul5:#89D1F3;
 $azul6:#B5E5F9;
 
-$verde: #86c82d;
+$verde:#86C82D;
+$amarillo:#FDCA56;
 
 $gris1:#1A1A1A;
 $gris2:#363636;
@@ -42,6 +43,31 @@ $stepcompleteh3:$azul5;
 body{
 	background: $gris6;
 
+}
+.callme{
+	p{
+		font-size: 11px;
+		color: #fff;
+		position: relative;
+		top: 16px;
+	}
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	top: 25%;
+	right: 35px;
+	-webkit-box-shadow: 3px 3px 15px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 3px 15px -5px rgba(0,0,0,0.75);
+	box-shadow: 3px 3px 15px -5px rgba(0,0,0,0.75);
+	border-radius: 40px 40px 40px 40px;
+	-moz-border-radius: 40px 40px 40px 40px;
+	-webkit-border-radius: 40px 40px 40px 40px;
+	border: 0px solid #000000;	
+	background: $amarillo;
+	z-index: 10;
+	background-image: url(../assets/img/ico_llamame_0.png);
+	background-repeat: no-repeat;
+	background-position: center 10px;
 }
 .azul3{
 	color: $azul3; 
