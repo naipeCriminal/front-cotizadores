@@ -28,12 +28,15 @@ $h2SubSize:18px;
 $h2SubColor:$gris2;
 
 
-$stepspanbg:#000;
-$stepspan:blue;
-$steph3:blue;
-$stepactivespanbg:#ddd;
-$stepactivespan:red;
-$stepactiveh3:red;
+$stepspanbg:$gris4;
+$stepspan:$gris4;
+$steph3:$gris4;
+$stepactivespanbg:$azul1;
+$stepactivespan:$azul1;
+$stepactiveh3:$azul1;
+$stepcompletespanbg:$azul5;
+$stepcompletespan:$azul5;
+$stepcompleteh3:$azul5;
 body{
 	background: $gris6;
 
@@ -150,7 +153,95 @@ ul.list-group{
 		font-size: 23px;
 	}
 }
+.btn-borde{
+	width: 270px;
+	border: 2px solid $azul5;
+	color:$azul5;
+	background: #fff;
+	background-color: #fff;
+	outline: none;	
+}
+.btn-solid{
+	width: 270px;
+	border: 2px solid $azul2;
+	background: $azul2;
+	background-color: $azul2;
+	outline: none;
+	color:#fff;
+}
+.r-row{
+	padding: 10px;
+	.bgazul4{
+		border-bottom: none;
+	}
+	p.bgazul4{
+			padding: 5px;
+		}
+	h4,h1{
+		color:#fff;
+	}
+	p{
+		color:#fff;
+	}
+	ul.list-group{
+		border: 1px solid transparent;
+	}
+	    
+	.list-group-item {
+	    position: relative;
+	    display: block;
+	    padding: 10px 15px;
+	    margin-bottom: -1px;
+	    background-color: transparent;
+	    border: 1px solid transparent;
+	    	.badge,.label{
+				color:#fff;
+			}
+	}	
 
+}
+.bgazul1{
+	background: $azul1;
+	border-bottom: 1px solid #fff;
+	&.poliza{
+		color:#fff;
+		h2{
+			font-weight: 700;
+		}
+		span{padding: 10px;}
+	}
+
+}
+.bgazul2{
+	background: $azul2;
+	border-bottom: 1px solid #fff;
+	padding:20px;
+	h4{
+		color:$azul4;
+	}
+	p.label{
+		color:$azul4;
+	}	
+	p.dato{
+		color:#fff;
+	}
+}
+.bgazul3{
+	background: $azul3;
+	border-bottom: 1px solid #fff;
+	&.resumen{
+		h5{
+			color:$azul5;
+		}
+		ul li,p{
+			color:#fff;
+		}
+	}
+}
+.bgazul4{
+	background: $azul4;
+	border-bottom: 1px solid #fff;
+}
 
 .bgazul{
 	background: $azul6;
@@ -172,11 +263,14 @@ ul.list-group{
 
 	.step{
 		padding-top:15px;
+		h3{
+			color: $steph3;
+		}
 		p{
 			span{
 			background:$stepspanbg;
 			font-size:12px;
-			color:$stepspan;
+			color:$gris1;
 			padding:11px;
 			padding-left: 15px;
 			padding-right: 15px;
@@ -188,13 +282,23 @@ ul.list-group{
 		&.active{
 			span{
 			background:$stepactivespanbg;
-			color:$stepactivespan;
+			color:$gris1;
 			}
 			h3{
 			color:$stepactiveh3;
 			}
 
 		}
+		&.complete{
+			span{
+			background:$stepcompletespanbg;
+			color:$gris1;
+			}
+			h3{
+			color:$stepcompleteh3;
+			}
+
+		}		
 	}
 }
 .label{
@@ -241,9 +345,10 @@ ul.list-group{
 	}
 }
 .bqblanco{
-	background: #fff;
+	background:$azul5;
 	bottom: 7px;
     right: 10px;
+    color: #fff;
 }
 .triangulo {
      width: 0; 

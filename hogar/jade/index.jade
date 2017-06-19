@@ -19,7 +19,7 @@ html(lang="en")
 						p.text-center
 							span 1
 						h3.text-center registro
-					.col-md-2.step
+					.col-md-2.step.complete
 						p.text-center
 							span 2
 						h3.text-center cotiza
@@ -92,7 +92,7 @@ html(lang="en")
 							option(value="opcion-5") e
 				.row
 					.col-md-12.text-center
-						button.btn-lg cotizar
+						button.btn-lg.btn-solid cotizar
 
 
 		hr
@@ -273,10 +273,12 @@ html(lang="en")
 										span.badge $2,400.00
 										p.label Total a pagar:
 				.row
+					br
+					br
 					.col-md-6.text-right
-						button.btn-lg NO ME INTERESA
+						button.btn-lg.btn-borde NO ME INTERESA
 					.col-md-6.text-left
-						button.btn-lg(type='button', data-toggle='modal', data-target='#myModal') CONTINUAR
+						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModal') CONTINUAR
 
 
 
@@ -300,7 +302,7 @@ html(lang="en")
 						h5 he leído y conozco el alcance del tratamiento de mis datos personales.
 
 						
-						button.btn-lg.text-center aceptar
+						button.btn-lg.btn-solid.text-center aceptar
 
 
 
@@ -371,10 +373,12 @@ html(lang="en")
 									label 
 										h4 Departamento
 				.row
+					br
+					br
 					.col-md-6.text-right
-						button REGRESAR
+						button.btn-lg.btn-borde REGRESAR
 					.col-md-6.text-left
-						button CONTINUAR
+						button.btn-lg.btn-solid CONTINUAR
 		hr
 		h1 contrata
 		.container
@@ -483,41 +487,41 @@ html(lang="en")
 										label(for='radiopdm')
 										label No
 
-						.col-md-4
+						.col-md-4.bgazul1.r-row
 							.col-md-12
-								p No. de cotización
-								h2 123456789A
-								.space
-								hr
-							h4.text-center Mi cotización
+								p.bgazul4 No. de cotización: 
+									strong  123456789A
+							
+							h1 Plan B
+							h4 Cobertura
+							ul.list-group
+								li.list-group-item
+									span.badge $1,200.00
+									p.label Cobertura
+								li.list-group-item
+									span.badge $1,200.00
+									p.label Cobertura
+							br
+							ul.list-group
+								li.list-group-item
+									span.badge mensual
+									p.label Periodo
+								li.list-group-item
+									span.badge mensual
+									p.label Periodo
+								li.list-group-item
+									span.badge mensual
+									p.label Periodo
 							.space
-							h4.text-center Plan B
-							.space
-							h4.text-center Cobertura
-							.col-md-4
-							.col-md-8
-								ul
-									li -------
-									li -------
-									li -------
-								.space
-							.col-xs-6 
-								p Pago por prima
-							.col-xs-6
-								p $0000
-								p mensual
-								.space
-								.space
 							.col-md-12.text-center
-								button.btn-lg CAMBIAR COTIZACIÓN
+								button.btn-lg.btn-borde CAMBIAR COTIZACIÓN
 								.space
-								.space
-							.col-md-12.text-center
-								button.btn-lg CONTRATAR VIA TELEFÓNICA
+							//.col-md-12.text-center
+								button.btn-lg.btn-borde CONTRATAR VIA TELEFÓNICA
 					.row.text-center
 						.space
 						.col-md-12
-							button.btn-lg(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
+							button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
 			// Modal
 		#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog(role='document')
@@ -538,7 +542,7 @@ html(lang="en")
 							.col-md-5
 								p.label Horario a contactar
 								input#contrata.form-control(type='text' placeholder='12:00-16:00')						
-						button.btn-lg CONTACTARME
+						button.btn-lg.btn-borde CONTACTARME
 					//.modal-footer
 						button.btn.btn-default(type='button', data-dismiss='modal') Close
 						button.btn.btn-primary(type='button') Save changes
@@ -547,7 +551,7 @@ html(lang="en")
 		.container
 			.row
 				h2 PAGO DE CONTRATACIÓN
-		.container.bgwhite
+		.container.bgazul2
 			.row
 				.col-md-8
 					STRONG RESUMEN DE CONTRATACIÓN
@@ -577,24 +581,33 @@ html(lang="en")
 					P.dato Exploradores Tonatiuh No. 304, Col. Alamos, C.p. 034500, Bénito Juárez, CDMX.
 					br
 					p
-						hr
+		.container.bgazul3.resumen
 			.row
 				.col-md-12
 					h4 DATOS DEL SEGURO DE HOGAR
 			.row
-				.col-md-4.text-center
-					h2 Plan B
-				.col-md-4
-					h4 Cobertura
+				.col-md-12
+					h1 Plan B
+			.row
+				.col-md-3
+					h5 Cobertura
 					ul
 						li -.-.-.-
 						li -.-.--.-
-						li -.-.-.-.
-				.col-md-4.text-center
-					h3 Pago por prima
-					h2 $250.00
-					h3 mensual
-		.container
+						li -.-.-.-.					
+				.col-md-2
+					h5 Periodo
+					p mensual
+				.col-md-2
+					h5 Primer pago
+					p $250.00
+				.col-md-3
+					h5 Pagos subsecuentes 11 pagos de
+					p $250.00
+				.col-md-2
+					h5 Total a pagar
+					p $3,000.00
+		.container.bgwhite
 			.space
 			form
 				.row
@@ -648,14 +661,14 @@ html(lang="en")
 									a(target="_BLANK",href="#") Términos y condiciones
 				.row
 					.col-md-6.text-right
-						button REGRESAR
+						button.btn.lg.btn-borde REGRESAR
 					.col-md-6.text-left
-						button PAGAR
+						button.btn.lg.btn-solid PAGAR
 
 
 		hr
 		h1 poliza
-		.container.bgwhite
+		.container.bgazul1.poliza
 			.row
 				.col-md-12.text-center
 					//- img(src="", alt="")
@@ -663,20 +676,16 @@ html(lang="en")
 					.space
 					h3 Tu compra se ha realizado sin problemas y tu PÓLIZA se ha generado correctamente.
 					.space
-					h2 PÓLIZA NO. 24689012
+						p
+							span.bgazul4 PÓLIZA NO. 24689012
 					.space
 			.space
-			.row
-				.col-md-6.text-right
-					button ENVIAR POR MAIL
-				.col-md-6.text-left
-					button DESCARGAR PDF
-			.space
-			.space
-			.space
-			.row
+		.container
+			.row.bgwhite
 				.col-md-12.text-center
-					button SALIR
+					button.btn-lg.btn-solid DESCARGAR PDF
+				.space
+				.space
 		hr
 
 	script(src="http://code.jquery.com/jquery.js")
