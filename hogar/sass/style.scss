@@ -306,17 +306,22 @@ ul.list-group{
 	border-bottom: 1px solid #fff;
 	padding:20px;
 	h4{
-		color:$azul4;
+		color:$azul6;
 	}
 	p.label{
-		color:$azul4;
+		color:$azul6;
 	}	
 	p.dato{
 		color:#fff;
 	}
+	p.dato.wig{
+		color: #fff;
+		font-size: 18px;
+		font-weight: 700;
+	}
 }
 .bgazul3{
-	background: $azul3;
+	background: rgba(0, 110, 193, 0.59);
 	border-bottom: 1px solid #fff;
 	&.resumen{
 		h5{
@@ -492,12 +497,20 @@ ul.list-group{
 		}
 	}
 }
-
+.contrata{
+	h2.subt{
+		font-weight: 700;
+		color: #fff;
+	}
+}
 .bqblanco{
 	background:$azul5;
 	bottom: 7px;
     right: 10px;
     color: #fff;
+    h4{
+    	color:#fff;
+    }
 }
 .triangulo {
      width: 0; 
