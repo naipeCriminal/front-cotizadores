@@ -1,12 +1,15 @@
 $(document).ready(function(){
 	avisoPrivacidad();
 	planesAoB();
-
+	domicilio();
 	$("#checkbox-1").click(function(){
 		avisoPrivacidad();
 	})
 	$(".planAB").click(function(){
 		planesAoB();
+	})
+	$(".pregDom").click(function(){
+		domicilio();
 	})
 
 })
@@ -22,12 +25,19 @@ function avisoPrivacidad(){
 }
 function planesAoB(){
 	if( $('#radio-1').prop('checked') ){
-			console.log("Plan A")
 			$(".a").addClass("active");
 			$(".b").removeClass("active");
 		}else {
-			console.log("Plan B")
 			$(".b").addClass("active");
 			$(".a").removeClass("active");
 		}
+}
+function domicilio(){
+	if( $('#radio-domC').prop('checked') ){
+		$('.edificio').fadeOut();
+		$('.casa').fadeIn();
+	} else {
+		$('.casa').fadeOut();
+		$('.edificio').fadeIn();
+	}
 }
