@@ -439,16 +439,34 @@ html(lang="en")
 					.row
 						.col-md-6.text-center
 							.radio
-								input(type='radio',id="radio-C4",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')		
-								label(for='radio-C4')
+								input.pregDom(type='radio',id="radio-domC",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')		
+								label(for='radio-domC')
 								label 
 									h4 Casa
+							.col-md-12.casa
+								.col-md-8.text-right
+									p.label
+										strong ¿Cuántos pisos tiene la casa?
+								.col-md-3
+									input.form-control(type='text', placeholder='# Pisos ')		
+
 						.col-md-6.text-center
 							.radio
-								input(type='radio',id="radio-Cp4",name='cuestionarioP4',value='Dep', class="regular-radio")		
-								label(for='radio-Cp4')
+								input.pregDom(type='radio',id="radio-domD",name='cuestionarioP4',value='Dep', class="regular-radio")		
+								label(for='radio-domD')
 								label 
 									h4 Departamento
+							.col-md-12.edificio
+								.col-md-8.text-right
+									p.label
+										strong ¿Cuántos pisos tiene el edificio?
+								.col-md-3
+									input.form-control(type='text', placeholder='# Pisos ')
+								.col-md-8.text-right
+									p.label
+										strong ¿En qué piso vives?
+								.col-md-3
+									input.form-control(type='text', placeholder='# Pisos ')
 				.row
 					br
 					br
