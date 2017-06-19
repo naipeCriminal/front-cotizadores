@@ -473,7 +473,24 @@ html(lang="en")
 					.col-md-6.text-right
 						button.btn-lg.btn-borde REGRESAR
 					.col-md-6.text-left
-						button.btn-lg.btn-solid CONTINUAR
+						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR
+			// Modal
+		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						h2.subt ¡Felicidades!
+						br
+						h4 Tu cotización se ha realizado de manera correcta con el folio 123456789A, el cual te recomendamos conserves para futuras consultas
+						button.btn-lg.btn-borde(type='button', data-dismiss='modal') Aceptar
+					//.modal-footer
+						button.btn.btn-default(type='button', data-dismiss='modal') Close
+						button.btn.btn-primary(type='button') Save changes
+
 		hr
 		h1 contrata
 		.container
