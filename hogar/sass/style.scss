@@ -3,9 +3,11 @@ $azul2:#006EC1;
 $azul3:#009EE5;
 $azul4:#52BCEC;
 $azul5:#89D1F3;
+$azul6:#B5E5F9;
 
 $verde:#86C82D;
 $amarillo:#FDCA56;
+
 $gris1:#1A1A1A;
 $gris2:#363636;
 $gris3:#666666;
@@ -41,6 +43,9 @@ $stepcompleteh3:$azul5;
 body{
 	background: $gris6;
 
+}
+.azul3{
+	color: $azul3; 
 }
 h4{
 	font-family:$h4Family;
@@ -79,7 +84,7 @@ h2.subt{
     background-color: #fff;
     border: 2px solid $azul2;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
-    color: $azul2;
+    color: $verde;
 }
 
 .regular-checkbox:checked + label:after {
@@ -88,7 +93,7 @@ h2.subt{
     position: absolute;
     top: -4px;
     left: 3px;
-    color: $azul2;
+    color: $verde;
 }
 
 .big-checkbox + label {
@@ -98,7 +103,7 @@ h2.subt{
 .big-checkbox:checked + label:after {
     font-size: 22px;
     left: 3px;
-    color: red;
+    color: $verde;
 }
 
 .tag {
@@ -110,7 +115,7 @@ h2.subt{
     text-transform: uppercase;
     display: block;
     float: left;
-    color: red;
+    color: $verde;
 }
 ul.list-group{
 	    border: 1px solid $azul4;
@@ -129,11 +134,11 @@ ul.list-group{
 			font-weight:400;
 	    	font-size: 15px;
 		}
-		&.tp{
-			p.label{
+		& .tp{
+			 p.label{
 				color: $azul3;
 			}
-			& .badge{
+			.badge strong{
 				color: $azul3;
 			}
 		} 
