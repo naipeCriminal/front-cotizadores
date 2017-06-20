@@ -480,6 +480,27 @@ ul.list-group{
 	}	
 	}
 }
+.bgazul.valida{
+	.ico{
+    width: 100px;
+    display: block;
+    height: 100px;
+	background-color: #fff !important;		
+    background: url(../assets/img/sprite.png);
+    border: 2px solid $azul1;
+	border-radius: 50px 50px 50px 50px;
+	-moz-border-radius: 50px 50px 50px 50px;
+	-webkit-border-radius: 50px 50px 50px 50px;
+    margin: 0px auto;
+		&.house{
+			background-position:-275px 100px;
+		}
+		&.depa{
+			background-position:-380px 105px;
+		}
+	}
+
+}
 .label{
 	font-family: $pLabelFamily;
 	font-size:$pLabelSize;
