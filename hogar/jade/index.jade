@@ -399,33 +399,33 @@ html(lang="en")
 						p.label ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-C1",name='cuestionarioP1',value='no', class="regular-radio",checked='true')
+							input(type='radio',id="radio-C1",name='cuestionarioP1',value='si', class="regular-radio",checked='true')
 							label(for='radio-C1')
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='si', class="regular-radio")
+							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='no', class="regular-radio")
 							label(for='radio-Cp1')
 				.row
 					.col-md-8
 						p.label ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-C2",name='cuestionarioP2',value='no', class="regular-radio",checked='true')
+							input(type='radio',id="radio-C2",name='cuestionarioP2',value='si', class="regular-radio",checked='true')
 							label(for='radio-C2')
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='si', class="regular-radio")
+							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='no', class="regular-radio")
 							label(for='radio-Cp2')
 				.row
 					.col-md-8
 						p.label ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-C3",name='cuestionarioP3',value='no', class="regular-radio",checked='true')
+							input(type='radio',id="radio-C3",name='cuestionarioP3',value='si', class="regular-radio",checked='true')
 							label(for='radio-C3')
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='si', class="regular-radio")
+							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='no', class="regular-radio")
 							label(for='radio-Cp3')
 				.bgazul.valida
 					.triangulo
@@ -843,7 +843,7 @@ html(lang="en")
 						.col-md-12
 							p.label Tarjeta
 						.col-md-3
-							input(type="radio",name='tarjeta',value='BBVA')
+							input(type="radio",name='tarjeta',value='BBVA', checked="")
 							label Bancomer
 						.col-md-3
 							input(type="radio",name='tarjeta',value='No')
@@ -877,24 +877,33 @@ html(lang="en")
 		.container.bgazul1.poliza
 			.row
 				.exito
+				.space
+			.row
 				.col-md-12.text-center
-					//- img(src="", alt="")
 					h2 ¡FELICIDADES XXXXXXX XXXX!
+			.row
 				.col-md-12.text-center
-					h3 ¡Has contratado tu seguro exitosamente!
+					h3 ¡Has contratado tu seguro 
+						span.verde exitosamente!
+			.row
 				.col-md-12.text-center
 					h4 Tu póliza se ha generado de manera correcta, la cual será enviada a tu domicilio seleccionado.
 					br
-					.space
+			.row
+				.space
+				.col-md-12.text-center
 						p
 							span.bgazul4 No. PÓLIZA: 
 								strong 24689012
-					.space
-					.space
+			.row
+				.space
+				.space
 			.row
 				.col-md-12
+					.col-md-1.text-right.info
+						img(src="../assets/img/ico_aviso.png", alt="")
 					.col-md-10
-					h4 Aplican restricciones y exlusiones, para dudas y aclaraciones, ingresa a www.segurosbancomer.com o llama al Centro de Servicio al Cliente: CDMX y zona metropolitana 11020000, interior de la República (0155) 11020000
+						h5 Aplican restricciones y exlusiones, para dudas y aclaraciones, ingresa a www.segurosbancomer.com o llama al Centro de Servicio al Cliente: CDMX y zona metropolitana 11020000, interior de la República (0155) 11020000
 			.space
 		.container
 			.row.bgwhite
