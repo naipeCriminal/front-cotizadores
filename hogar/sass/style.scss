@@ -355,13 +355,22 @@ ul.list-group{
 }
 .ayuda{
 	background: $spriteurl;
-	height: 10px;
-	width: 10px;
+	height: 16px;
+	width: 16px;
+	position: absolute;
 	&.azul{
 		background-position: -90px 84px;
 	}
 	&.blanco{
 		background-position: -126px 84px;
+	}
+}
+.bqplanes.active{
+	.azul{
+		background-position: -126px 84px;
+	}
+	.blanco{
+		background-position: -90px 84px;
 	}
 }
 .steps{
