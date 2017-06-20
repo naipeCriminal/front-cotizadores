@@ -2,6 +2,9 @@ $(document).ready(function(){
 	avisoPrivacidad();
 	planesAoB();
 	domicilio();
+	formaPago();
+	envioP();
+
 	$("#checkbox-1").click(function(){
 		avisoPrivacidad();
 	})
@@ -11,7 +14,9 @@ $(document).ready(function(){
 	$(".pregDom").click(function(){
 		domicilio();
 	})
-
+	$(".entregaP").click(function(){
+		envioP();
+	})
 })
 $('[data-toggle="tooltip"]').tooltip();
 function avisoPrivacidad(){
@@ -39,5 +44,18 @@ function domicilio(){
 	} else {
 		$('.casa').fadeOut();
 		$('.edificio').fadeIn();
+	}
+}
+function formaPago(){
+	$(".row .plan button").click(function(){
+		$(".row .plan").removeClass("active");
+		$(this).parent().parent().addClass("active");
+	})
+}
+function envioP(){
+	if( $('#radioEnvio').prop('checked') ){
+		$('.envio').fadeIn();
+	} else {
+		$('.envio').fadeOut();
 	}
 }

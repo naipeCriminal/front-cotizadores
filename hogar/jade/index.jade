@@ -61,11 +61,10 @@ html(lang="en")
 					.col-md-4
 						input.registro.form-control(type='text', placeholder='Apellido materno *')
 					.col-md-4
-						input.registro.form-control(type='text', placeholder='Correo electrónico *')					
+						input.registro.form-control(type='text', placeholder='Correo electrónico *')
 				.row
 					.col-md-12
 						h4 Domicilio
-
 				.row
 					.col-md-4
 						input.registro.form-control(type='text', placeholder='Calle * ')
@@ -359,33 +358,27 @@ html(lang="en")
 					.col-md-6.text-right
 						button.btn-lg.btn-borde NO ME INTERESA
 					.col-md-6.text-left
-						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModal') CONTINUAR
+						button.btn-lg.btn-solid CONTINUAR
 
-
-
-		// Modal
-		#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
-			.modal-dialog(role='document')
-				.modal-content
-					//.modal-header
-						button.close(type='button', data-dismiss='modal', aria-label='Close')
-							span(aria-hidden='true') ×
-						h4#myModalLabel.modal-title Modal title
-					.modal-body
-						h4
-							strong
-								¡Buena elección!
-						p Para poder continuar y proteger tu informacion es importante que leas y aceptes las politicas de provacidad .
-						.checkbox
-							label
-								input(type='checkbox')
-								a(target="_BLANK",href="#") Aviso de Privacidad
-						h5 he leído y conozco el alcance del tratamiento de mis datos personales.
-
-						
-						button.btn-lg.btn-solid.text-center aceptar
-
-
+		//- // Modal
+		//- #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		//- 	.modal-dialog(role='document')
+		//- 		.modal-content
+		//- 			//.modal-header
+		//- 				button.close(type='button', data-dismiss='modal', aria-label='Close')
+		//- 					span(aria-hidden='true') ×
+		//- 				h4#myModalLabel.modal-title Modal title
+		//- 			.modal-body
+		//- 				h4
+		//- 					strong
+		//- 						¡Buena elección!
+		//- 				p Para poder continuar y proteger tu informacion es importante que leas y aceptes las politicas de provacidad .
+		//- 				.checkbox
+		//- 					label
+		//- 						input(type='checkbox')
+		//- 						a(target="_BLANK",href="#") Aviso de Privacidad
+		//- 				h5 he leído y conozco el alcance del tratamiento de mis datos personales.
+		//- 				button.btn-lg.btn-solid.text-center aceptar
 
 		hr
 		h1 cuestionario
@@ -406,33 +399,33 @@ html(lang="en")
 						p.label ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-C1",name='cuestionarioP1',value='no', class="regular-radio",checked='true')		
+							input(type='radio',id="radio-C1",name='cuestionarioP1',value='no', class="regular-radio",checked='true')
 							label(for='radio-C1')
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='si', class="regular-radio")		
+							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='si', class="regular-radio")
 							label(for='radio-Cp1')
 				.row
 					.col-md-8
 						p.label ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-C2",name='cuestionarioP2',value='no', class="regular-radio",checked='true')		
+							input(type='radio',id="radio-C2",name='cuestionarioP2',value='no', class="regular-radio",checked='true')
 							label(for='radio-C2')
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='si', class="regular-radio")		
+							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='si', class="regular-radio")
 							label(for='radio-Cp2')
 				.row
 					.col-md-8
 						p.label ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-C3",name='cuestionarioP3',value='no', class="regular-radio",checked='true')		
+							input(type='radio',id="radio-C3",name='cuestionarioP3',value='no', class="regular-radio",checked='true')
 							label(for='radio-C3')
 					.col-md-2
 						.radio.text-center
-							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='si', class="regular-radio")		
+							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='si', class="regular-radio")
 							label(for='radio-Cp3')
 				.bgazul.valida
 					.triangulo
@@ -444,7 +437,7 @@ html(lang="en")
 						.col-md-6.text-center
 							.ico.house
 							.radio
-								input.pregDom(type='radio',id="radio-domC",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')		
+								input.pregDom(type='radio',id="radio-domC",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')
 								label(for='radio-domC')
 								label 
 									h4 Casa
@@ -453,12 +446,12 @@ html(lang="en")
 									p.label
 										strong ¿Cuántos pisos tiene la casa?
 								.col-md-3
-									input.form-control(type='text', placeholder='# Pisos ')		
+									input.form-control(type='text', placeholder='# Pisos ')
 
 						.col-md-6.text-center
 							.ico.depa
 							.radio
-								input.pregDom(type='radio',id="radio-domD",name='cuestionarioP4',value='Dep', class="regular-radio")		
+								input.pregDom(type='radio',id="radio-domD",name='cuestionarioP4',value='Dep', class="regular-radio")
 								label(for='radio-domD')
 								label 
 									h4 Departamento
@@ -482,17 +475,25 @@ html(lang="en")
 						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR
 			// Modal
 		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
-			.modal-dialog(role='document')
+			.modal-dialog.modal-lg(role='document')
 				.modal-content
 					//.modal-header
 						button.close(type='button', data-dismiss='modal', aria-label='Close')
 							span(aria-hidden='true') ×
 						h4#myModalLabel.modal-title Modal title
 					.modal-body.text-center
-						h2.subt ¡Felicidades!
+						.row.text-left
+							.col-md-2.text-right
+								input(type="checkbox",id="checkbox-modal" class="regular-checkbox big-checkbox", checked="true")
+								label(for="checkbox-1")
+							.col-md-6
+								h2 ¡Felicidades!
 						br
-						h4 Tu cotización se ha realizado de manera correcta con el folio 123456789A, el cual te recomendamos conserves para futuras consultas
-						button.btn-lg.btn-borde(type='button', data-dismiss='modal') Aceptar
+						h4 Tu cotización se ha realizado de manera correcta con el folio 
+							strong 123456789A
+							, el cual te recomendamos conserves para futuras consultas
+						br
+						button.btn-lg.btn-solid(type='button', data-dismiss='modal') Aceptar
 					//.modal-footer
 						button.btn.btn-default(type='button', data-dismiss='modal') Close
 						button.btn.btn-primary(type='button') Save changes
@@ -534,11 +535,11 @@ html(lang="en")
 									p.label Genero*
 									br
 									p.label
-										input(type='radio',id="radio-cs",name='optionsRadios', value='femenino', checked='' class="regular-radio")		
+										input(type='radio',id="radio-cs",name='optionsRadios', value='femenino', checked='' class="regular-radio")
 										label(for='radio-cs')
 										| Femenino
 									p.label
-										input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")		
+										input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")
 										label(for='radio-cs2')
 										| Masculino
 								.space
@@ -556,7 +557,7 @@ html(lang="en")
 									.col-md-3
 										.form-group
 											p.label No. Exterior
-											input.form-control(type="text",placeholder="Apellido Materno")									
+											input.form-control(type="text",placeholder="Apellido Materno")
 									.col-md-3
 										.form-group
 											p.label no. Int
@@ -639,33 +640,32 @@ html(lang="en")
 					.row.text-center
 						.space
 						.col-md-12
-							button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
-			// Modal
-		#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
-			.modal-dialog(role='document')
-				.modal-content
-					//.modal-header
-						button.close(type='button', data-dismiss='modal', aria-label='Close')
-							span(aria-hidden='true') ×
-						h4#myModalLabel.modal-title Modal title
-					.modal-body.text-center
-						h4 Te solicitamos que ingreses tu número telefonico y un horario adecuado para contactarte
-						.col-md-12.text-center
-							.col-md-3
-							.col-md-5
-								p.label Número telefonico
-								input#contrata.form-control(type='text' placeholder='55-98-98-98')
-						.col-md-12.text-center
-							.col-md-3
-							.col-md-5
-								p.label Horario a contactar
-								input#contrata.form-control(type='text' placeholder='12:00-16:00')						
-						button.btn-lg.btn-borde CONTACTARME
-					//.modal-footer
-						button.btn.btn-default(type='button', data-dismiss='modal') Close
-						button.btn.btn-primary(type='button') Save changes
-
-
+							button.btn-lg.btn-solid CONTINUAR
+		//- button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR					
+		//- 	// Modal
+		//- #myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		//- 	.modal-dialog(role='document')
+		//- 		.modal-content
+		//- 			//.modal-header
+		//- 				button.close(type='button', data-dismiss='modal', aria-label='Close')
+		//- 					span(aria-hidden='true') ×
+		//- 				h4#myModalLabel.modal-title Modal title
+		//- 			.modal-body.text-center
+		//- 				h4 Te solicitamos que ingreses tu número telefonico y un horario adecuado para contactarte
+		//- 				.col-md-12.text-center
+		//- 					.col-md-3
+		//- 					.col-md-5
+		//- 						p.label Número telefonico
+		//- 						input#contrata.form-control(type='text' placeholder='55-98-98-98')
+		//- 				.col-md-12.text-center
+		//- 					.col-md-3
+		//- 					.col-md-5
+		//- 						p.label Horario a contactar
+		//- 						input#contrata.form-control(type='text' placeholder='12:00-16:00')
+		//- 				button.btn-lg.btn-borde CONTACTARME
+		//- 			//.modal-footer
+		//- 				button.btn.btn-default(type='button', data-dismiss='modal') Close
+		//- 				button.btn.btn-primary(type='button') Save changes
 		.container
 			.row
 				h2 PAGO DE CONTRATACIÓN
@@ -673,11 +673,10 @@ html(lang="en")
 			.row
 				.col-md-8
 					h2.subt RESUMEN DE CONTRATACIÓN
-					
 				.col-md-4.bqblanco
 					.col-xs-6
-						h6 No. de cotización. 
-					.col-xs-6.text-right				
+						h6 No. de cotización.
+					.col-xs-6.text-right
 						h4 123456789A
 			.row
 				.col-md-12
@@ -715,37 +714,92 @@ html(lang="en")
 		.container.bgazul3.resumen
 			.row
 				.col-md-12
-					h4 DATOS DEL SEGURO DE HOGAR
+					h4 DETALLE DEL SEGURO DE HOGAR
 			.row
-				.col-md-12
+				.col-md-2
 					h1 Plan B
+				.col-md-10
+					h1 $3,000.°°
 			.row
 				.col-md-3
 					h5 Cobertura
 					ul
-						li -.-.-.-
+						li -.Hola-.-.-
 						li -.-.--.-
 						li -.-.-.-.					
 				.col-md-2
-					h5 Periodo
-					p mensual
+					h4 Periodo
+					p.dato Mensual
 				.col-md-2
-					h5 Primer pago
-					p $250.00
+					h4 Primer pago
+					p.dato $250.00
 				.col-md-3
-					h5 Pagos subsecuentes 11 pagos de
-					p $250.00
+					h4 Pagos subsecuentes 11 pagos de
+					p.dato $250.00
 				.col-md-2
-					h5 Total a pagar
-					p $3,000.00
+					h4 Total a pagar
+					p.dato $3,000.00
+		.container.bgazul5.envioPoliza
+			.row
+				.col-md-8
+					h4 Envío de póliza
+			.row
+				.col-md-12
+					.col-md-12
+						h2.subt Selecciona el medio por el cual quieres recibir tu póliza.
+			.row
+				.col-md-12
+					.col-md-2
+						input.entregaP(type="radio",name='medioRecibo',value='Correo', checked="true")
+						label Correo eléctronico
+					.col-md-2
+						input.entregaP(type="radio",id="radioEnvio",name='medioRecibo',value='Domicilio')
+						label Domicilio
+					.col-md-3
+						input.entregaP(type="radio",name='medioRecibo',value='Consulta')
+						label Consulta portal Seguros
+					.col-md-2
+						input.entregaP(type="radio",name='medioRecibo',value='SAC')
+						label Comunicar al SAC
+			.row.envio
+				br
+				.col-md-12
+					.col-md-12
+						p ¿El domicilio es el mismo con el que está registrado el inmueble?
+					.row
+						.col-md-12
+							.col-md-1
+								input(type="radio",name='registro',value='Si')
+								label Si
+							.col-md-1
+								input(type="radio",name='registro',value='No')
+								label No
+						.col-md-6
+							.col-md-4
+								.form-group
+									h5.label Hora de entrega
+									input.form-control(type="text",placeholder="12:00 pm")
+					.row
+						.col-md-12
+							.col-md-6
+								.form-group
+									h5.label Detalle (Entre que calles se encuentran)
+									input.form-control(type="textarea",placeholder="Entre Pianini y Motolinia")
 		.container.bgwhite
 			.space
 			form
 				.row
 					.col-md-12
 						h4 COMPRAR
-						p Para realizar tu compra y descargar tu póliza, es necesario que ingreses los siguientes datos.
+						h2.subt Para realizar tu compra y descargar tu póliza, es necesario que ingreses los siguientes datos.
 				.row
+					.col-md-12
+						input(type="checkbox",id="checkbox-Acepto" class="regular-checkbox big-checkbox")
+						label(for="checkbox-Acepto")
+						span Acepto los	
+							a(target="_BLANK",href="#") Términos y condiciones
+				.row
+					br
 					.col-md-6
 						.col-md-10
 							p.label Nombre del titular
@@ -785,14 +839,33 @@ html(lang="en")
 								option(value="opcion-2") b
 								option(value="opcion-3") c
 								option(value="opcion-4") d
-				.row
 					.col-md-6
-						.checkbox
-							label
-								input(type='checkbox')
-								p Acepto	
-									a(target="_BLANK",href="#") Términos y condiciones
+						.col-md-12
+							p.label Tarjeta
+						.col-md-3
+							input(type="radio",name='tarjeta',value='BBVA')
+							label Bancomer
+						.col-md-3
+							input(type="radio",name='tarjeta',value='No')
+							label Otros bancos
 				.row
+					.col-md-12
+						p.label Meses sin intereses
+					.col-md-12
+						.col-md-2
+							input(type="radio",name='meses',value='3', checked="")
+							label 3 meses
+						.col-md-2
+							input(type="radio",name='meses',value='6')
+							label 6 meses
+						.col-md-2
+							input(type="radio",name='meses',value='9')
+							label 9 meses
+						.col-md-2
+							input(type="radio",name='meses',value='12')
+							label 12 meses		
+				.row
+					br
 					.col-md-6.text-right
 						button.btn.lg.btn-borde REGRESAR
 					.col-md-6.text-left
