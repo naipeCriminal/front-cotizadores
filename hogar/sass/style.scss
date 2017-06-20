@@ -31,6 +31,7 @@ $h2SubSize:18px;
 $h2SubColor:$gris2;
 
 $spriteurl:url(../assets/img/sprite.png);
+$imgExito:url(../assets/img/ico_poliza_exito.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
 $steph3:$gris4;
@@ -291,16 +292,34 @@ ul.list-group{
 
 }
 .bgazul1{
-	background: $azul1;
+	background-color: $azul1;
 	border-bottom: 1px solid #fff;
 	&.poliza{
 		color:#fff;
 		h2{
 			font-weight: 700;
 		}
-		span{padding: 10px;}
+		h3{
+			font-size: 31px;
+		}
+		h4{
+			color: #fff;
+		    font-size: 28px;
+		}
+		span{font-size: 22px;}
+		.exito{
+			background-image: $imgExito;
+			background-repeat: no-repeat;
+			height: 180px;
+    		margin-top: 68px;
+    		background-position: center;
+		}
+		.bgazul4{
+			padding: 10px; 
+			border-bottom: none;
+		    padding: 17px 25px 17px 25px;
+		}
 	}
-
 }
 .bgazul2{
 	background: $azul2;
