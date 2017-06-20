@@ -30,16 +30,17 @@ $h2SubW:500;
 $h2SubSize:18px;
 $h2SubColor:$gris2;
 
-
+$spriteurl:url(../assets/img/sprite.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
 $steph3:$gris4;
 $stepactivespanbg:$azul1;
 $stepactivespan:$azul1;
 $stepactiveh3:$azul1;
-$stepcompletespanbg:$azul5;
-$stepcompletespan:$azul5;
-$stepcompleteh3:$azul5;
+$stepcompletespanbg:$azul1;
+$stepcompletespan:$azul1;
+$stepcompleteh3:$azul1;
+
 body{
 	background: $gris6;
 
@@ -384,7 +385,26 @@ ul.list-group{
     	}
     }
 }
-
+.ayuda{
+	background: $spriteurl;
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	&.azul{
+		background-position: -90px 84px;
+	}
+	&.blanco{
+		background-position: -126px 84px;
+	}
+}
+.bqplanes.active{
+	.azul{
+		background-position: -126px 84px;
+	}
+	.blanco{
+		background-position: -90px 84px;
+	}
+}
 .steps{
 
 	.step{
@@ -393,39 +413,52 @@ ul.list-group{
 			color: $steph3;
 			font-size: 16px;
 		}
-		p{
-			span{
-			background:$stepspanbg;
-			font-size:12px;
-			color:$gris1;
-			padding:11px;
-			padding-left: 15px;
-			padding-right: 15px;
-			border-radius: 18px 18px 18px 18px;
-			-moz-border-radius: 18px 18px 18px 18px;
-			-webkit-border-radius: 18px 18px 18px 18px;			
-			}
-		}
 		&.active{
-			span{
-			background:$stepactivespanbg;
-			color:$gris1;
+			.ico{
+				background-position-y:274px !important;
+				border: solid 2px $azul3;
 			}
 			h3{
-			color:$stepactiveh3;
+			color:$azul3;
 			}
 
 		}
 		&.complete{
-			span{
-			background:$stepcompletespanbg;
-			color:$gris1;
+			.ico{
+				background-position-y:185px !important;
+				border: solid 2px $azul1;
 			}
 			h3{
 			color:$stepcompleteh3;
 			}
 
-		}		
+		}
+
+	& .ico{
+		background: $spriteurl;
+		width: 80px;
+		height: 80px;
+		border-radius: 50px 50px 50px 50px;
+		-moz-border-radius: 50px 50px 50px 50px;
+		-webkit-border-radius: 50px 50px 50px 50px;
+		border: 2px solid $gris5;
+		margin: 0 auto;
+		&.registra{
+			background-position: -73px 273px;
+		}
+		&.cotiza{
+			background-position: -173px 361px;
+		}
+		&.valida{
+			background-position: -276px 361px;
+		}
+		&.contrata{
+			background-position: -389px 361px;
+		}
+		&.poliza{
+			background-position: -497px 361px;
+		}				
+	}	
 	}
 }
 .label{

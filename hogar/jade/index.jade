@@ -19,27 +19,24 @@ html(lang="en")
 		.steps
 			.container
 				.row
-					.col-md-offset-1.col-md-2.step.active
-						p.text-center
-							span 1
+					.col-md-offset-1.col-md-2.step.complete
+						.ico.registra
 						h3.text-center registro
-					.col-md-2.step.complete
-						p.text-center
-							span 2
+					.col-md-2.step.active
+						.ico.cotiza
 						h3.text-center cotiza
 					.col-md-2.step
-						p.text-center
-							span 3
+						.ico.valida
 						h3.text-center cuestionario
 					.col-md-2.step
-						p.text-center
-							span 4
+						.ico.contrata
 						h3.text-center contrata
 					.col-md-2.step
-						p.text-center
-							span 5
+						.ico.poliza
 						h3.text-center póliza
 		hr
+		
+		.ayuda.azul(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje')
 		h1 registro
 		h2.subtitulo ingreso de datos
 		
@@ -90,7 +87,8 @@ html(lang="en")
 						input.registro.form-control(type='text', placeholder='Ciudad *')
 				.row
 					.col-md-12
-						h4 Suma asegurada
+						h4(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') Suma asegurada
+							span.ayuda.azul
 					.col-md-4
 						select.registro.form-control
 							option(value="opcion-1") Elige la suma asegurada *
@@ -147,9 +145,12 @@ html(lang="en")
 								.col-md-12
 									ul
 										h3 Coberturas
-										li -.-.-.-.
-										li -.-.-.-.
-										li -.-.-.-.
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
 									h4.text-center Ver detalle del producto
 					.col-md-5
 						.bqplanes.b
@@ -166,9 +167,12 @@ html(lang="en")
 								.col-md-12
 									ul
 										h3.text-left Cobertura
-										li Hola:-.-.-.
-										li -.-.-.-.
-										li -.-.-.-.
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
+										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
+											span.ayuda.azul
 									h4.text-center Ver detalle del producto
 
 				.row.bggris.planes
@@ -431,6 +435,7 @@ html(lang="en")
 								h4 El domicilio a asegurar es:
 					.row
 						.col-md-6.text-center
+							.ico.casa
 							.radio
 								input.pregDom(type='radio',id="radio-domC",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')
 								label(for='radio-domC')
@@ -444,6 +449,7 @@ html(lang="en")
 									input.form-control(type='text', placeholder='# Pisos ')
 
 						.col-md-6.text-center
+							.ico.depa
 							.radio
 								input.pregDom(type='radio',id="radio-domD",name='cuestionarioP4',value='Dep', class="regular-radio")
 								label(for='radio-domD')
@@ -813,7 +819,9 @@ html(lang="en")
 							input#contrata.form-control(type='text' placeholder='12312341234234123')
 					.col-md-6
 						.col-md-10
-							p.label CVV*
+							p.label(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') CVV*
+								span.ayuda.azul
+
 							input#contrata.form-control(type='text' placeholder='000')
 				.row
 					.col-md-6

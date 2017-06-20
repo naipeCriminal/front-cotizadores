@@ -18,7 +18,7 @@ $(document).ready(function(){
 		envioP();
 	})
 })
-
+$('[data-toggle="tooltip"]').tooltip();
 function avisoPrivacidad(){
 	if( $('#checkbox-1').prop('checked') ){
 			$( ".registro" ).prop( "enabled", true );
