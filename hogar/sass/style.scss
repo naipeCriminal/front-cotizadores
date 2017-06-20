@@ -321,20 +321,52 @@ ul.list-group{
 	}
 }
 .bgazul3{
-	background: rgba(0, 110, 193, 0.59);
+	background: rgba(0, 110, 193, 0.50);
 	border-bottom: 1px solid #fff;
 	&.resumen{
-		h5{
-			color:$azul5;
-		}
+	h4{
+		color:$azul6;
+	}
+	p.label{
+		color:$azul6;
+	}	
+	p.dato{
+		color:#fff;
+		font-size: 18px;
+	}
+	h1{
+		color: #fff;
+	}
 		ul li,p{
 			color:#fff;
+			font-size: 18px;
 		}
 	}
 }
 .bgazul4{
 	background: $azul4;
 	border-bottom: 1px solid #fff;
+}
+.bgazul5{
+    padding: 25px;
+	background: rgba(137, 209, 243, 0.28);
+	border-bottom: 1px solid #fff;
+	&.envioPoliza{
+		h4{
+		    font-size: 22px;
+	    	font-weight: 600;
+		}
+		h2{
+			font-size: 20px;
+		}
+		label{
+			font-weight: 200;
+    		color: #777;
+		}
+		p{
+			font-weight: 600;
+		}
+	}
 }
 
 .bgazul{
@@ -442,7 +474,25 @@ ul.list-group{
 	hr{
 		border-top: 1px solid #000;
 	}
-
+	h4{
+	    font-size: 22px;
+    	font-weight: 600;
+	}
+	h2{
+		font-size: 20px;
+	}
+	span{
+		font-size: 16px;
+    	color: $azul4;
+    	a{
+			color: #337ab7;
+	    	font-size: 16px;
+    	}
+	}
+	label{
+			font-weight: 200;
+    		color: #777;
+		}
 }
 .form-control{
 	margin-bottom: 21px;
@@ -565,4 +615,39 @@ ul.list-group{
 .regular-radio:checked + label:active {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
 	border: 2px solid $azul1;
+}
+#myModalDmc .modal-body {
+    border: 4px solid $verde;
+    .regular-checkbox + label {
+    background-color: #fff;
+    border: 2px solid $verde;
+	}
+	.regular-checkbox:checked + label {
+	    background-color: #fff;
+	    border: 4px solid $verde;
+	    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+	    color: $verde;
+	}
+	.regular-checkbox:checked + label:after {
+	    content: '\2714';
+	    font-size: 14px;
+	    position: absolute;
+	    top: -8px;
+	    left: 3px;
+	    color: $verde;
+	}
+	.big-checkbox + label {
+	    padding: 19px;
+	}
+    .big-checkbox:checked + label:after {
+    font-size: 40px;
+    left: 4px;
+    color: $verde;
+	}
+    h2{
+    	color: $azul2;
+    }
+    h4{
+    	color: $azul3;
+    }
 }
