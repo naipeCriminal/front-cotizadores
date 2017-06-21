@@ -42,7 +42,6 @@ html(lang="en")
 						span
 		hr
 		
-		.ayuda.azul(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje')
 		h1 registro
 		h2.subtitulo ingreso de datos
 		
@@ -94,8 +93,8 @@ html(lang="en")
 						input.registro.form-control(type='text', placeholder='Ciudad *')
 				.row
 					.col-md-12
-						h4(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') Suma asegurada
-							span.ayuda.azul
+						h4 Suma asegurada
+							span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="jgjg",data-title='Monto mímino $ 50,000.00 <br> Monto máximo $ 500,000.00',class='naranja-tooltip')
 					.col-md-4
 						select.registro.form-control
 							option(value="opcion-1") Elige la suma asegurada *
@@ -108,7 +107,7 @@ html(lang="en")
 						button.registro.btn-lg.btn-solid COTIZAR
 		// Modal
 		#myModalAvPriv.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
-			.modal-dialog(role='document')
+			.modal-dialog.modal-lg(role='document')
 				.modal-content
 					//.modal-header
 						button.close(type='button', data-dismiss='modal', aria-label='Close')
@@ -152,12 +151,12 @@ html(lang="en")
 								.col-md-12
 									ul
 										h3 Coberturas
-										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
-											span.ayuda.azul
-										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
-											span.ayuda.azul
-										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
-											span.ayuda.azul
+										li -.-.-.-.
+											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
+										li -.-.-.-.
+											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
+										li -.-.-.-.
+											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
 									h4.text-center Ver detalle del producto
 					.col-md-5
 						.bqplanes.b
@@ -174,12 +173,12 @@ html(lang="en")
 								.col-md-12
 									ul
 										h3.text-left Cobertura
-										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
-											span.ayuda.azul
-										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
-											span.ayuda.azul
-										li(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') -.-.-.-.
-											span.ayuda.azul
+										li -.-.-.-.
+											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
+										li -.-.-.-.
+											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
+										li -.-.-.-.
+											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
 									h4.text-center Ver detalle del producto
 
 				.row.bggris.planes
@@ -826,8 +825,8 @@ html(lang="en")
 							input#contrata.form-control(type='text' placeholder='12312341234234123')
 					.col-md-6
 						.col-md-10
-							p.label(data-toggle='tooltip', data-placement='left', title='aqui tu mensaje') CVV*
-								span.ayuda.azul
+							p.label CVV*
+								span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
 
 							input#contrata.form-control(type='text' placeholder='000')
 				.row
