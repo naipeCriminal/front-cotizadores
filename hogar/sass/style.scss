@@ -44,7 +44,6 @@ $stepcompleteh3:$azul1;
 
 body{
 	background: $gris6;
-
 }
 .callme{
 	p{
@@ -573,6 +572,10 @@ ul.list-group{
 			color: #337ab7;
 	    	font-size: 16px;
     	}
+	}
+	a{
+		color: $azul3;
+    	font-size: 16px;
 	}
 	label{
 			font-weight: 200;
