@@ -7,6 +7,7 @@ $azul6:#B5E5F9;
 
 $verde:#86C82D;
 $amarillo:#FDCA56;
+$naranja:#F8A14B;
 
 $gris1:#1A1A1A;
 $gris2:#363636;
@@ -738,4 +739,11 @@ ul.list-group{
     h4{
     	color: $azul3;
     }
+}
+#myModalAvPriv .modal-body {
+    border: 4px solid $azul2;
+}
+.naranja-tooltip + .tooltip > .tooltip-inner {
+	background-color: $naranja;
+	font-size: 13px
 }

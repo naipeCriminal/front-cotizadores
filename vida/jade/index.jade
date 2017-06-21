@@ -10,6 +10,7 @@ html(lang="en")
 		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
 		link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
 		link(rel="stylesheet",href="style.css")
+		link(rel="stylesheet",href="../fonts/font.css")
 	body
 		.callme
 			br
@@ -22,18 +23,23 @@ html(lang="en")
 					.col-md-offset-1.col-md-2.step.active
 						.ico.registra
 						h3.text-center registro
+						span
 					.col-md-2.step.complete
 						.ico.cotiza
 						h3.text-center cotiza
+						span
 					.col-md-2.step
 						.ico.valida
 						h3.text-center cuestionario
+						span
 					.col-md-2.step
 						.ico.contrata
 						h3.text-center contrata
+						span
 					.col-md-2.step
 						.ico.poliza
 						h3.text-center póliza
+						span
 		hr
 		h1 registro
 		h2.subtitulo REGISTRO
@@ -88,8 +94,8 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-12
-							p.label(data-toggle='tooltip', data-placement='right', title='', data-original-title='Monto mímino $ 50,000.00 Monto máximo $ 500,000.00' class='naranja-tooltip') Ingresa la cantidad por la cual te gustaría asegurarte *
-								span.ayuda.azul
+							p.label Ingresa la cantidad por la cual te gustaría asegurarte *
+								span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="jgjg",data-title='Monto mímino $ 50,000.00 <br> Monto máximo $ 500,000.00',class='naranja-tooltip')
 						.col-md-4
 							input.registro.form-control(type='text', placeholder='$100,000,000.°°')
 
@@ -126,7 +132,7 @@ html(lang="en")
 						h2.subt
 							strong Hola XXXXXX
 							, ésta es la mejor opción que encontramos para tí:
-				.bgazul2	
+				.bgazul2
 				.row
 					.col-md-6.text-right
 						h4 Suma asegurada:

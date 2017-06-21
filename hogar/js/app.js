@@ -5,6 +5,8 @@ $(document).ready(function(){
 	formaPago();
 	envioP();
 
+	$('[data-toggle="tooltip"]').tooltip();
+
 	$("#checkbox-1").click(function(){
 		avisoPrivacidad();
 	})
@@ -18,7 +20,7 @@ $(document).ready(function(){
 		envioP();
 	})
 })
-$('[data-toggle="tooltip"]').tooltip();
+
 function avisoPrivacidad(){
 	if( $('#checkbox-1').prop('checked') ){
 			$( ".registro" ).prop( "enabled", true );
