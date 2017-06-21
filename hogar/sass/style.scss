@@ -16,23 +16,25 @@ $gris4:#CCCCCC;
 $gris5:#D8D8D8;
 $gris6:#F2F2F2;
 
-$h4Family:sans-serif;
+$fontDefault:'StagSans-Book';
+$h4Family:'StagSans-Medium';
 $h4Size:19px;
 $h4Color:$azul1;
-$pLabelFamily:sans-serif;
+$pLabelFamily:'StagSans-Light';
 $pLabelSize:15px;
 $pLabelColor:$gris3;
 $pLabelW:300;
-$pDatoFamily:sans-serif;
+$pDatoFamily:'StagSans-Book';
 $pDatoSize:30px;;
 $pDatoColor:$gris2;
-$h2SubFamily:sans-serif;
+$h2SubFamily:'StagSans-Book';
 $h2SubW:500;
 $h2SubSize:18px;
 $h2SubColor:$gris2;
 
 $spriteurl:url(../assets/img/sprite.png);
 $imgExito:url(../assets/img/ico_poliza_exito.png);
+$selectMenu:url(../assets/img/select_menu.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
 $steph3:$gris4;
@@ -42,8 +44,12 @@ $stepactiveh3:$azul1;
 $stepcompletespanbg:$azul1;
 $stepcompletespan:$azul1;
 $stepcompleteh3:$azul1;
+.booki{
+	font-family: 'booki';
+}
 
 body{
+	font-family: $fontDefault;
 	background: $gris6;
 }
 .callme{
@@ -452,6 +458,14 @@ ul.list-group{
 			h3{
 			color:$azul3;
 			}
+			span{
+				background: $selectMenu;
+				width: 26px;
+				height: 15px;
+				position: absolute;
+				left: 50%;
+				margin-left: -13px;		
+			}			
 
 		}
 		&.complete{
