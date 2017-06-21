@@ -34,6 +34,7 @@ $h2SubColor:$gris2;
 
 $spriteurl:url(../assets/img/sprite.png);
 $imgExito:url(../assets/img/ico_poliza_exito.png);
+$selectMenu:url(../assets/img/select_menu.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
 $steph3:$gris4;
@@ -457,6 +458,14 @@ ul.list-group{
 			h3{
 			color:$azul3;
 			}
+			span{
+				background: $selectMenu;
+				width: 26px;
+				height: 15px;
+				position: absolute;
+				left: 50%;
+				margin-left: -13px;		
+			}			
 
 		}
 		&.complete{
