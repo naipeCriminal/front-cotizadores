@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	avisoPrivacidad();
 	$('[data-toggle="tooltip"]').tooltip();
+	
 	$("#checkbox-1").click(function(){
 		avisoPrivacidad();
 	})
