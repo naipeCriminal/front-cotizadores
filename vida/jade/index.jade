@@ -11,30 +11,28 @@ html(lang="en")
 		link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
 		link(rel="stylesheet",href="style.css")
 	body
+		.callme
+			br
+			p.text-center Tengo dudas, Llámenme
 		hr
 		h1 pasos
 		.steps
 			.container
 				.row
 					.col-md-offset-1.col-md-2.step.active
-						p.text-center
-							span 1
+						.ico.registra
 						h3.text-center registro
-					.col-md-2.step
-						p.text-center
-							span 2
+					.col-md-2.step.complete
+						.ico.cotiza
 						h3.text-center cotiza
 					.col-md-2.step
-						p.text-center
-							span 3
+						.ico.valida
 						h3.text-center cuestionario
 					.col-md-2.step
-						p.text-center
-							span 4
+						.ico.contrata
 						h3.text-center contrata
 					.col-md-2.step
-						p.text-center
-							span 5
+						.ico.poliza
 						h3.text-center póliza
 		hr
 		h1 registro
@@ -43,39 +41,79 @@ html(lang="en")
 		.container.bgwhite
 			form
 				.row
-					.col-md-12
-						h2.subt Para conocer la opción de Vida Segura que tenemos para ti, por favor completa los siguientes campos:
+					.col-md-offset-1.col-md-11
+						.col-md-12
+							h2.subt Para conocer la opción de 
+								span 
+									strong Vida 
+								|que tenemos para ti, es necesario aceptar el Aviso de privacidad y posteriormente completar los siguientes campos:
+							input(type="checkbox",id="checkbox-1" class="regular-checkbox big-checkbox")
+							label(for="checkbox-1")
+							a#AvPriv(target='_BLANK',href='#', data-toggle='modal', data-target='#myModalAvPriv', data-trigger='hover') Aviso de Privacidad
+						.col-md-12
+							.col-md-11.text-left
+								p.label He leído y conozco el alcance del tratamiento de mis datos personales.
+									br
+								br
+						.col-md-12
+							small
+								u * Campos obligatorios
+							h4 Datos personales
 				.row
-					.col-md-offset-3.col-md-5
-						input#nombre.form-control(type='text', placeholder='Nombre completo')
+					.col-md-offset-1.col-md-10
+						.col-md-4
+							input.registro.form-control(type='text', placeholder='Nombre (s)*')
+						.col-md-4
+							input.registro.form-control(type='text', placeholder='Apellido paterno * ')
+						.col-md-4
+							input.registro.form-control(type='text', placeholder='Apellido materno *')
 				.row
-					.col-md-offset-3.col-md-5
-						p.label Fecha de nacimiento*
-						.col-xs-12
-							input.selector.form-control(type='text')
-						.col-xs-4
-							input#day.form-control(type='text', disabled='')
-						.col-xs-4
-							input#moth.form-control(type='text', disabled='')
-						.col-xs-4
-							input#year.form-control(type='text', disabled='')
+					.col-md-offset-1.col-md-10
+						.col-md-4
+							input.registro.form-control(type='text', placeholder='Correo electrónico *')
+						.col-md-4
+							//- p.label Fecha de nacimiento*
+							input.registro.selector.form-control(type='text', placeholder='Fecha de nacimiento*')
+						.col-md-4
+							.col-xs-4
+								input#day.form-control(type='text', disabled='')
+							.col-xs-4
+								input#moth.form-control(type='text', disabled='')
+							.col-xs-4
+								input#year.form-control(type='text', disabled='')
+				.row
+					.col-md-offset-1.col-md-10
+						.col-md-12
+							h4 Suma asegurada		
+				.row
+					.col-md-offset-1.col-md-10
+						.col-md-12
+							p.label(data-toggle='tooltip', data-placement='right', title='', data-original-title='Monto mímino $ 50,000.00 Monto máximo $ 500,000.00' class='naranja-tooltip') Ingresa la cantidad por la cual te gustaría asegurarte *
+								span.ayuda.azul
+						.col-md-4
+							input.registro.form-control(type='text', placeholder='$100,000,000.°°')
 
 				.row
-					.col-md-offset-3.col-md-5
-						input#nombre.form-control(type='text', placeholder='Correo electrónico*')					
-				.row
-					.col-md-offset-3.col-md-5
-						p.label Suma asegurada*
-						select.form-control
-							option(value="opcion-1") Eligir suma
-							option(value="opcion-2") b
-							option(value="opcion-3") c
-							option(value="opcion-4") d
-							option(value="opcion-5") e
-				.row
-					.col-md-12.text-center
-						button.btn-lg cotizar
+					.col-md-offset-1.col-md-10
+						.col-md-12.text-center
+							button.registro.btn-lg.btn-solid COTIZAR
+		// Modal
+		#myModalAvPriv.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog.modal-lg(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						h4
+							strong	Aviso de privacidad
+						h2.subt Seguros BBVA Bancomer, S,A de CV. Grupo Financiero BBVA BAncomer, Montes Urales 620, 2do piso Col.Lomas de Chapultepec, Del.Miguel Hidalgo, 11000, D.F recaba tus datos para verificar tu identidad. El aviso de privacidad Integral actualizado está en cualquiera de nuestras oficinas y en 
+							a(target="_BLANK",href="https://www.segurosbancomer.com.mx/seguros/tleu/segurosban/index.jsp") www.segurosbancomer.com.mx
+						br
 
+						button.btn-lg.btn-solid.text-center(type='button', data-dismiss='modal') Aceptar
+	
 		hr
 		h1 cotiza
 		.container
@@ -88,6 +126,7 @@ html(lang="en")
 						h2.subt
 							strong Hola XXXXXX
 							, ésta es la mejor opción que encontramos para tí:
+				.bgazul2	
 				.row
 					.col-md-6.text-right
 						h4 Suma asegurada:

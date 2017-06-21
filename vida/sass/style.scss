@@ -5,12 +5,17 @@ $azul4:#52BCEC;
 $azul5:#89D1F3;
 $azul6:#B5E5F9;
 
+$verde:#86C82D;
+$amarillo:#FDCA56;
+$naranja:#F8A14B;
+
 $gris1:#1A1A1A;
 $gris2:#363636;
 $gris3:#666666;
 $gris4:#CCCCCC;
 $gris5:#D8D8D8;
 $gris6:#F2F2F2;
+$gris7:#4a4a4a;
 
 $h4Family:sans-serif;
 $h4Size:19px;
@@ -25,17 +30,127 @@ $pDatoColor:$gris2;
 $h2SubFamily:sans-serif;
 $h2SubW:500;
 $h2SubSize:18px;
-$h2SubColor:$gris2;
+$h2SubColor:$gris7;
 
-$stepspanbg:#000;
-$stepspan:blue;
-$steph3:blue;
-$stepactivespanbg:#ddd;
-$stepactivespan:red;
-$stepactiveh3:red;
+$spriteurl:url(../assets/img/sprite.png);
+$imgExito:url(../assets/img/ico_poliza_exito.png);
+$stepspanbg:$gris4;
+$stepspan:$gris4;
+$steph3:$gris4;
+$stepactivespanbg:$azul1;
+$stepactivespan:$azul1;
+$stepactiveh3:$azul1;
+$stepcompletespanbg:$azul1;
+$stepcompletespan:$azul1;
+$stepcompleteh3:$azul1;
 
 body{
 	background: $gris6;
+}
+.callme{
+	p{
+		font-size: 11px;
+		color: #fff;
+		position: relative;
+		top: 16px;
+	}
+	width: 80px;
+	height: 80px;
+	position: fixed;
+	top: 25%;
+	right: 35px;
+	-webkit-box-shadow: 3px 3px 15px -5px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 3px 15px -5px rgba(0,0,0,0.75);
+	box-shadow: 3px 3px 15px -5px rgba(0,0,0,0.75);
+	border-radius: 40px 40px 40px 40px;
+	-moz-border-radius: 40px 40px 40px 40px;
+	-webkit-border-radius: 40px 40px 40px 40px;
+	border: 0px solid #000000;	
+	background: $amarillo;
+	z-index: 10;
+	background-image: url(../assets/img/ico_llamame_0.png);
+	background-repeat: no-repeat;
+	background-position: center 10px;
+}
+.azul3{
+	color: $azul3; 
+}
+.naranja{
+	background: $naranja;
+}
+.naranja-tooltip + .tooltip > .tooltip-inner {background-color: $naranja;}
+.tooltip{
+font-size: 13px
+}
+h4{
+	font-family:$h4Family;
+	font-size:$h4Size;
+	color:$h4Color;
+}
+h2.subt{
+	font-family:$h2SubFamily ;
+	font-weight:$h2SubW ;
+	font-size:$h2SubSize ;
+	color:$h2SubColor ;
+
+}
+.regular-checkbox {
+    display: none;
+}
+
+.regular-checkbox + label {
+    background-color: #fff;
+    border: 2px solid $azul2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 9px;
+    border-radius: 3px;
+    display: inline-block;
+    top: 12px;
+    position: relative;
+    margin: 1px 5px 5px 1px;
+}
+
+.regular-checkbox + label:active,
+.regular-checkbox:checked + label:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.regular-checkbox:checked + label {
+    background-color: #fff;
+    border: 2px solid $azul2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: $verde;
+}
+
+.regular-checkbox:checked + label:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: -4px;
+    left: 3px;
+    color: $verde;
+}
+
+.big-checkbox + label {
+    padding: 11px;
+}
+
+.big-checkbox:checked + label:after {
+    font-size: 22px;
+    left: 3px;
+    color: $verde;
+}
+
+.tag {
+    font-family: Arial, sans-serif;
+    width: 200px;
+    position: relative;
+    top: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+    float: left;
+    color: $verde;
 }
 .bgwhite{
     background: #fff;
@@ -46,36 +161,89 @@ body{
 	hr{
 		border-top: 1px solid #000;
 	}
+	h4{
+	    font-size: 22px;
+    	font-weight: 600;
+	}
+	h2{
+		font-size: 20px;
+	}
+	span{
+		font-size: 16px;
+    	a{
+			color: #337ab7;
+	    	font-size: 16px;
+    	}
+	}
+	a{
+		color: $azul3;
+    	font-size: 16px;
+	}
+	label{
+			font-weight: 200;
+    		color: #777;
+		}
+}
+#myModalAvPriv .modal-body {
+    border: 4px solid $azul2;
 }
 .steps{
 
 	.step{
 		padding-top:15px;
-		p{
-			span{
-			background:$stepspanbg;
-			font-size:12px;
-			color:$stepspan;
-			padding:11px;
-			padding-left: 15px;
-			padding-right: 15px;
-			border-radius: 18px 18px 18px 18px;
-			-moz-border-radius: 18px 18px 18px 18px;
-			-webkit-border-radius: 18px 18px 18px 18px;			
-			}
+		h3{
+			color: $steph3;
+			font-size: 16px;
 		}
 		&.active{
-			span{
-			background:$stepactivespanbg;
-			color:$stepactivespan;
+			.ico{
+				background-position-y:274px !important;
+				border: solid 2px $azul3;
 			}
 			h3{
-			color:$stepactiveh3;
+			color:$azul3;
 			}
 
 		}
+		&.complete{
+			.ico{
+				background-position-y:185px !important;
+				border: solid 2px $azul1;
+			}
+			h3{
+			color:$stepcompleteh3;
+			}
+
+		}
+
+	& .ico{
+		background: $spriteurl;
+		width: 80px;
+		height: 80px;
+		border-radius: 50px 50px 50px 50px;
+		-moz-border-radius: 50px 50px 50px 50px;
+		-webkit-border-radius: 50px 50px 50px 50px;
+		border: 2px solid $gris5;
+		margin: 0 auto;
+		&.registra{
+			background-position: -73px 273px;
+		}
+		&.cotiza{
+			background-position: -173px 361px;
+		}
+		&.valida{
+			background-position: -276px 361px;
+		}
+		&.contrata{
+			background-position: -389px 361px;
+		}
+		&.poliza{
+			background-position: -497px 361px;
+		}				
+	}	
 	}
 }
+
 h2.subt{
 	font-family:$h2SubFamily ;
 	font-weight:$h2SubW ;
@@ -161,9 +329,43 @@ h2.subt{
     border: 2px solid #009ee5;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1), inset 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-
 .regular-radio + label:active,
 .regular-radio:checked + label:active {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
 	border: 2px solid #009ee5;
+}
+.label{
+	font-family: $pLabelFamily;
+	font-size:$pLabelSize;
+	color: $pLabelColor;
+	font-weight: $pLabelW;
+	white-space: inherit;
+}
+.btn-borde{
+	width: 270px;
+	border: 2px solid $azul5;
+	color:$azul5;
+	background: #fff;
+	background-color: #fff;
+	outline: none;	
+}
+.btn-solid{
+	width: 270px;
+	border: 2px solid $azul2;
+	background: $azul2;
+	background-color: $azul2;
+	outline: none;
+	color:#fff;
+}
+.ayuda{
+	background: $spriteurl;
+	height: 16px;
+	width: 16px;
+	position: absolute;
+	&.azul{
+		background-position: -90px 84px;
+	}
+	&.blanco{
+		background-position: -126px 84px;
+	}
 }

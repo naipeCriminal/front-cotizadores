@@ -1,4 +1,10 @@
 $(document).ready(function(){
+	avisoPrivacidad();
+	$('[data-toggle="tooltip"]').tooltip();
+	$("#checkbox-1").click(function(){
+		avisoPrivacidad();
+	})
+
     $('.selector').datepicker({
 		changeMonth: true,
 		changeYear: true, 	
@@ -28,3 +34,12 @@ $(document).ready(function(){
 		} 
     });	
 })
+function avisoPrivacidad(){
+	if( $('#checkbox-1').prop('checked') ){
+			$( ".registro" ).prop( "enabled", true );
+			$( ".registro" ).prop( "disabled", false );
+		}else {
+			$( ".registro" ).prop( "disabled", true );
+			$( ".registro" ).prop( "enabled", false );
+		}
+}
