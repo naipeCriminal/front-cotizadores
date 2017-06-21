@@ -103,7 +103,9 @@ h2.subt{
     border: 2px solid $azul2;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
     padding: 9px;
-    border-radius: 3px;
+    border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px;
+	-webkit-border-radius: 3px 3px 3px 3px;
     display: inline-block;
     top: 12px;
     position: relative;
@@ -183,6 +185,90 @@ h2.subt{
 			font-weight: 200;
     		color: #777;
 		}
+}
+.bgazul1{
+	background-color: $azul2;
+	border-bottom: 1px solid #fff;
+	&.poliza{
+		color:#fff;
+		h2{
+			font-weight: 700;
+		}
+		h3{
+			font-size: 31px;
+		}
+		h4{
+			color: #fff;
+		    font-size: 28px;
+		}
+		h5{
+			font-size: 17px;
+		}
+		span{
+			font-size: 22px;
+		}
+		.verde{
+			color: $verde;
+			font-size: 28px;
+		}
+		.exito{
+			background-image: $imgExito;
+			background-repeat: no-repeat;
+			height: 180px;
+    		margin-top: 68px;
+    		background-position: center;
+		}
+		.bgazul4{
+			padding: 10px; 
+			border-bottom: none;
+		    padding: 17px 25px 17px 25px;
+		}
+		.info{
+			top: 12px;
+		}
+	}
+}
+.bgazul2{
+	background: $azul2;
+	border-bottom: 1px solid #fff;
+	padding:20px;
+	h4{
+		color:$azul6;
+	}
+	p.label{
+		color:$azul6;
+	}	
+	p.dato{
+		color:#fff;
+	}
+	p.dato.wig{
+		color: #fff;
+		font-size: 18px;
+		font-weight: 700;
+	}
+}
+.bgazul3{
+	background: rgba(0, 110, 193, 0.50);
+	border-bottom: 1px solid #fff;
+	&.resumen{
+	h4{
+		color:$azul6;
+	}
+	p.label{
+		color:$azul6;
+	}	
+	p.dato{
+		color:#fff;
+		font-size: 18px;
+	}
+	h1{
+		color: #fff;
+	}
+		ul li,p{
+			color:#fff;
+			font-size: 18px;
+		}
+	}
 }
 #myModalAvPriv .modal-body {
     border: 4px solid $azul2;
@@ -305,7 +391,9 @@ h2.subt{
     border: 2px solid #009ee5;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
     padding: 9px;
-    border-radius: 50px;
+    border-radius: 50px 50px 50px 50px;
+	-moz-border-radius: 50px 50px 50px 50px;
+	-webkit-border-radius: 50px 50px 50px 50px;
     display: inline-block;
     position: relative;
 }
@@ -314,7 +402,10 @@ h2.subt{
     content: ' ';
     width: 12px;
     height: 12px;
-    border-radius: 50px;
+	border-radius: 50px 50px 50px 50px;
+	-moz-border-radius: 50px 50px 50px 50px;
+	-webkit-border-radius: 50px 50px 50px 50px;
+
     position: absolute;
     top: 3px;
     background: #009ee5;
@@ -368,4 +459,46 @@ h2.subt{
 	&.blanco{
 		background-position: -126px 84px;
 	}
+}
+.r-row{
+	padding: 10px;
+	.bgazul4{
+		border-bottom: none;
+	}
+	p.bgazul4{
+			padding: 5px;
+		}
+	h1{
+		color:#fff;
+		font-size: 28px;
+	}
+	h4{
+		color:#fff;
+		font-size: 24px;
+		text-decoration: underline;
+	}
+	h5{color: $azul6;
+		font-size: 22px;
+	}
+	h6{color: #fff;
+		font-size: 22px;
+	}
+	p{
+		color:#fff;
+	}
+	ul.list-group{
+		border: 1px solid transparent;
+	}
+	    
+	.list-group-item {
+	    position: relative;
+	    display: block;
+	    padding: 10px 15px;
+	    margin-bottom: -1px;
+	    background-color: transparent;
+	    border: 1px solid transparent;
+	    	.badge,.label{
+				color:#fff;
+			}
+	}	
 }
