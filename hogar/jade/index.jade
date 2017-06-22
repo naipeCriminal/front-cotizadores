@@ -6,7 +6,7 @@ html(lang="en")
 		meta(name="viewport",content="width=device-width, initial-scale=1")
 		meta(name="description",content="")
 		meta(name="author",content="")
-		title Cotizador de...
+		title Cotizador de Hogar
 		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
 		link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
 		link(rel="stylesheet",href="style.css")
@@ -48,74 +48,77 @@ html(lang="en")
 		.container.bgwhite
 			form
 				.row
-					.col-md-12
-						h2.subt Para conocer la opción de Hogar que tenemos para ti, por favor completa los siguientes campos:
-						input(type="checkbox",id="checkbox-1" class="regular-checkbox big-checkbox")
-						label(for="checkbox-1")
-						a#AvPriv(target='_BLANK',href='#', data-toggle='modal', data-target='#myModalAvPriv', data-trigger='hover') Aviso de Privacidad
+					.col-md-offset-1.col-md-10
+						.col-md-12
+							h2.subt Para conocer la opción de 
+								span
+									strong Hogar 
+								| que tenemos para ti, es necesario aceptar el Aviso de Privacidad y posteriormente completar los siguientes campos:
+							input(type="checkbox",id="checkbox-1" class="regular-checkbox big-checkbox")
+							label(for="checkbox-1")
+							a#AvPriv(target='_BLANK',href='#', data-toggle='modal', data-target='#myModalAvPriv', data-trigger='hover') Aviso de Privacidad
+								br
 							br
-						br
-						small
-							u * Campos obligatorios
-						h4 Datos personales
-				
-					.col-md-4
-						label.labelgral Nombre(s)
-						input.registro.form-control(type='text', placeholder='Nombre (s)*')
-					.col-md-4
-						label.labelgral Apellido paterno*
-						input.registro.form-control(type='text', placeholder='Apellido paterno * ')
-					.col-md-4
-						label.labelgral Apellido materno*
-						input.registro.form-control(type='text', placeholder='Apellido materno *')
-					.col-md-4
-						label.labelgral Correo electrónico
-						input.registro.form-control(type='text', placeholder='Correo electrónico *')
+							small
+								u * Campos obligatorios
+							h4 Datos personales
 				.row
-					.col-md-12
-						h4 Domicilio
+					.col-md-offset-1.col-md-10
+						.col-md-4
+							label.labelgral Nombre(s)*
+							input#nombreTitular.registro.form-control(type='text', disabled='',placeholder='Nombre (s)*',nombre="nombreTitular")
+						.col-md-4
+							label.labelgral Apellido paterno*
+							input#paternoTitular.registro.form-control(type='text', disabled='',placeholder='Apellido paterno * ', nombre="paternoTitular")
+						.col-md-4
+							label.labelgral Apellido materno*
+							input#maternoTitular.registro.form-control(type='text', disabled='',placeholder='Apellido materno *', nombre="#maternoTitular")
+						.col-md-4
+							label.labelgral Correo electrónico*
+							input#correoTitular.registro.form-control(type='text', disabled='',placeholder='Correo electrónico *',nombre="correoTitular")
 				.row
-					.col-md-4
-						label.labelgral Calle*
-						input.registro.form-control(type='text', placeholder='Calle * ')
-					.col-md-4
-						label.labelgral Número exterior
-						input.registro.form-control(type='text', placeholder='No.Ext *')
-					.col-md-4
-						label.labelgral Número anterior
-						input.registro.form-control(type='text', placeholder='No.Int')
-					.col-md-4
-						label.labelgral Codigo postal
-						input.registro.form-control(type='text', placeholder='C.P. *')
-					.col-md-4
-						label.labelgral Colonia*
-						input.registro.form-control(type='text', placeholder='Colonia * ')
-						//- select.registro.form-control
-						//- 	option(value="opcion-1") Colonia * 
-						//- 	option(value="opcion-2") b
-						//- 	option(value="opcion-3") c
-						//- 	option(value="opcion-4") d
-						//- 	option(value="opcion-5") e
-					.col-md-4
-						label.labelgral Delegacion / Municipio
-						input.registro.form-control(type='text', placeholder='Delegación/Municipio * ')
-					.col-md-4
-						label.labelgral Ciudad
-						input.registro.form-control(type='text', placeholder='Ciudad *')
+					.col-md-offset-1.col-md-10
+						h4 Domicilio a asegurar
 				.row
-					.col-md-12
-						h4 Suma asegurada
-							span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="jgjg",data-title='Monto mímino $ 50,000.00 <br> Monto máximo $ 500,000.00',class='naranja-tooltip')
-					.col-md-4
-						select.registro.form-control
-							option(value="opcion-1") Elige la suma asegurada *
-							option(value="opcion-2") b
-							option(value="opcion-3") c
-							option(value="opcion-4") d
-							option(value="opcion-5") e
+					.col-md-offset-1.col-md-10
+						.col-md-4
+							label.labelgral Calle*
+							input#calleAsegurar.registro.form-control(type='text', disabled='',placeholder='Calle * ',nombre="calleAsegurar")
+						.col-md-4
+							label.labelgral Número exterior*
+							input#nextasegurar.registro.form-control(type='text', disabled='',placeholder='No.Ext *',nombre="nextasegurar")
+						.col-md-4
+							label.labelgral Número anterior*
+							input#nintasegurar.registro.form-control(type='text', disabled='',placeholder='No.Int',nombre="nextasegurar")
+						.col-md-4
+							label.labelgral Codigo postal*
+							input#cpasegurar.registro.form-control(type='text', disabled='',placeholder='C.P. *',nombre="cpasegurar")
+						.col-md-4
+							label.labelgral Colonia*
+							//- input.registro.form-control(type='text', disabled='',placeholder='Colonia * ')
+							select#coloniaasegurar.registro.form-control
+								option(value="opcion-1",nombre="") Colonia 
+								option(value="opcion-2",nombre="") b
+								option(value="opcion-3",nombre="") c
+								option(value="opcion-4",nombre="") d
+								option(value="opcion-5",nombre="") e
+						.col-md-4
+							label.labelgral Delegacion / Municipio*
+							input#deleasegurar.registro.form-control(type='text', disabled='',placeholder='Delegación/Municipio * ',nombre="deleasegurar")
+						.col-md-4
+							label.labelgral Estado*
+							input#edoasegurar.registro.form-control(type='text', disabled='',placeholder='Estado *',nombre="edoasegurar")
 				.row
-					.col-md-12.text-center
-						button.registro.btn-lg.btn-solid COTIZAR
+					.col-md-offset-1.col-md-10
+						.col-md-12
+							h4 Suma asegurada
+						.col-md-4
+							label.labelgral Ingresa el valor aproximado del inmueble*
+								span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="",data-title='Considera el Valor Comercial actual aproximado de tu casa (sólo construcción), sin tomar en cuenta el terreno.',class='naranja-tooltip')
+							input#sumaasegurar.registro.form-control(type='text', disabled='',placeholder='Suma asegurada *',nombre="sumaasegurar")
+				.row
+					.col-md-offset-1.col-md-10.text-center
+						button.registro.btn-lg.btn-solid(disabled='') COTIZAR
 		// Modal
 		#myModalAvPriv.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog.modal-lg(role='document')
@@ -124,14 +127,15 @@ html(lang="en")
 						button.close(type='button', data-dismiss='modal', aria-label='Close')
 							span(aria-hidden='true') ×
 						h4#myModalLabel.modal-title Modal title
-					.modal-body.text-center
-						h4
-							strong	Aviso de privacidad
-						h2.subt Seguros BBVA Bancomer, S,A de CV. Grupo Financiero BBVA BAncomer, Montes Urales 620, 2do piso Col.Lomas de Chapultepec, Del.Miguel Hidalgo, 11000, D.F recaba tus datos para verificar tu identidad. El aviso de privacidad Integral actualizado está en cualquiera de nuestras oficinas y en 
-							a(target="_BLANK",href="https://www.segurosbancomer.com.mx/seguros/tleu/segurosban/index.jsp") www.segurosbancomer.com.mx
-						br
-
-						button.btn-lg.btn-solid.text-center(type='button', data-dismiss='modal') Aceptar
+					.modal-body
+						.col-md-offset-1.col-md-10
+							h4
+								strong	Aviso de privacidad
+							h2 Seguros BBVA Bancomer, S,A de CV. Grupo Financiero BBVA BAncomer, Montes Urales 620, 2do piso Col.Lomas de Chapultepec, Del.Miguel Hidalgo, 11000, D.F recaba tus datos para verificar tu identidad. El aviso de privacidad Integral actualizado está en cualquiera de nuestras oficinas y en 
+								a(target="_BLANK",href="https://www.segurosbancomer.com.mx/seguros/tleu/segurosban/index.jsp") www.segurosbancomer.com.mx
+							br
+						.text-center
+								button.btn-lg.btn-solid.text-center(type='button', data-dismiss='modal') Aceptar
 
 
 		hr
@@ -142,240 +146,249 @@ html(lang="en")
 		.container.bgwhite
 			form
 				.row
-					.col-md-12
-						h2.subt
-							strong Hola XXXXXX
-							, estas son las opciones que encontramos para tí:
+					.col-md-offset-1.col-md-10
+						.col-md-12
+							h2.subt
+								strong Hola XXXXXX
+								, estas son las opciones que tenemos para tí:
 				.row
-					.col-md-7
-						.bqplanes.a.active
-							.row
-								.col-md-8
-									h2
-										.radio
-											input.planAB(type='radio',id="radio-1",name='planes',value='option1',checked='true' class="regular-radio")
-											label(for='radio-1')
-											span	Plan A
-								.col-md-4
-									h2 $3,000.°°
-							.row
-								.col-md-12
-									ul
-										h3 Coberturas
-										li -.-.-.-.
-											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
-										li -.-.-.-.
-											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
-										li -.-.-.-.
-											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
-									h4.text-center Ver detalle del producto
-					.col-md-5
-						.bqplanes.b
-							.row
-								.col-md-8
-									h2
-										.radio
-											input.planAB(type='radio',id="radio-2",name='planes',value='option2' class="regular-radio")
-											label(for='radio-2')
-											span	Plan B
-								.col-md-4
-									h2 4,500.°°
-							.row
-								.col-md-12
-									ul
-										h3.text-left Cobertura
-										li -.-.-.-.
-											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
-										li -.-.-.-.
-											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
-										li -.-.-.-.
-											span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
-									h4.text-center Ver detalle del producto
+					.col-md-offset-1.col-md-10
+						.col-md-7
+							.bqplanes.a.active
+								.row
+									.col-md-8
+										h2
+											.radio
+												input.planAB(type='radio',id="radio-1",name='planes',value='option1',checked='true' class="regular-radio")
+												label(for='radio-1')
+												span	Plan A
+									.col-md-4
+										h2 $3,000.°°
+								.row
+									.col-md-12
+										ul
+											h3 Coberturas
+											li Por daños al inmueble
+												span.ayuda.azul(data-toggle='tooltip', data-placement='right', data-html="true",class="naranja-tooltip",title='Cuando el daño se presenta por: <ul> <li> Incendio</li> <li> Daños causados por tormentas e inundaciones, granizo de gran tamaño, nevadas (daños hidrometeorológicos)</li> <li> Más un 20% adicional de la suma asegurada para remover escombros</li> <li> Más 20% adicional de la suma asegurada para gastos extraordinarios (de hospedaje, almacenamiento de tus pertenencias entre otros)</li> </ul>')
+											li Por daños a los contenidos
+												span.ayuda.azul(data-toggle='tooltip', data-placement='right', data-html="true", title='Cuando el daño se presenta por: <ul> <li> Incendio </li> <li> Daños causados por tormentas e inundaciones, granizo de gran tamaño, nevadas (daños hidrometeorológicos) </li> </ul>',class="naranja-tooltip")
+											li Por robo
+												span.ayuda.azul(data-toggle='tooltip', data-placement='right', data-html="true", title='Aplica para: <ul> <li> Articulos de uso doméstico </li> <li> Muebles </li> <li> Dinero en efectivo (hasta el 5% de la suma asegurada por robo) </li> <li> Objetos de difícil reposición </li> </ul>',class="naranja-tooltip")
+											li Por rotura de cristales
+											li Por responsabilidad civil privada y familiar
+											li Por equipo electrónico
+											br
+										h4.text-center Ver detalle del producto
+						.col-md-5
+							.bqplanes.b
+								.row
+									.col-md-8
+										h2
+											.radio
+												input.planAB(type='radio',id="radio-2",name='planes',value='option2' class="regular-radio")
+												label(for='radio-2')
+												span	Plan B
+									.col-md-4
+										h2 4,500.°°
+								.row
+									.col-md-12
+										ul
+											h3.text-left Cobertura
+											li Por daños al inmueble
+												span.ayuda.azul(data-toggle='tooltip', data-placement='right', data-html="true",class="naranja-tooltip",title='Cuando el daño se presenta por: <ul> <li> Incendio</li> <li> Daños causados por tormentas e inundaciones, granizo de gran tamaño, nevadas (daños hidrometeorológicos)</li> <li> Más un 20% adicional de la suma asegurada para remover escombros</li> <li> Más 20% adicional de la suma asegurada para gastos extraordinarios (de hospedaje, almacenamiento de tus pertenencias entre otros)</li> </ul>')
+											li Por daños a los contenidos
+												span.ayuda.azul(data-toggle='tooltip', data-placement='right', data-html="true", title='Cuando el daño se presenta por: <ul> <li> Incendio </li> <li> Daños causados por tormentas e inundaciones, granizo de gran tamaño, nevadas (daños hidrometeorológicos) </li> </ul>',class="naranja-tooltip")
+											li Por robo
+												span.ayuda.azul(data-toggle='tooltip', data-placement='right', data-html="true", title='Aplica para: <ul> <li> Articulos de uso doméstico </li> <li> Muebles </li> <li> Dinero en efectivo (hasta el 5% de la suma asegurada por robo) </li> <li> Objetos de difícil reposición </li> </ul>',class="naranja-tooltip")
+											li Por rotura de cristales
+											li Por responsabilidad civil privada y familiar
+											li Por equipo electrónico
+										h4.text-center Ver detalle del producto
 
-				.row.bggris.planes
-					.a
-						.triangulo
-					.b
-						.triangulo
-					.col-md-12
-							h4 Elige el plan que más te convenga:
-					.col-md-6
-						h2.subt Pagos por prima
-						h4 Con terremoto
-						.row.plan.active
-							.col-md-5
-								button.btn.btn-info.bigbutton(type='button')
-									.triangulo
-									h4  $ 250.00
-									p.labelgral Mensual
-							.col-md-6
-								ul.list-group
-									.triangulo
-										.triangulo2
-									li.list-group-item
-										span.badge 
-											strong $250.00
-										p.labelgral + 
-											strong 11
-											span  pago subsecuente de:
-									li.list-group-item.tp
-										span.badge 
-											strong $3,000.00
-										p.labelgral Total a pagar:
-						.row.plan
-							.col-md-5
-								button.btn.btn-info.bigbutton(type='button')
-									.triangulo
-									h4 $ 750.00
-									p.labelgral Trimestral
-							.col-md-6
-								ul.list-group
-									.triangulo
-										.triangulo2
-									li.list-group-item
-										span.badge 
-											strong $750.00
-										p.labelgral + 
-											strong 3
-											span  pago subsecuente de:
-									li.list-group-item.tp
-										span.badge 
-											strong $3,000.00
-										p.labelgral Total a pagar:
-						.row.plan
-							.col-md-5
-								button.btn.btn-info.bigbutton(type='button')
-									.triangulo
-									h4 $ 1,500.00 
-									p.labelgral Semestral
-							.col-md-6
-								ul.list-group
-									.triangulo
-										.triangulo2
-									li.list-group-item
-										span.badge 
-											strong $1,500.00
-										p.labelgral + 
-											strong 1
-											span  pago subsecuente de:
-									li.list-group-item.tp
-										span.badge 
-											strong $3,000.00
-										p.labelgral Total a pagar:
-						.row.plan
-							.col-md-5
-								button.btn.btn-info.bigbutton(type='button')
-									.triangulo
-									h4 $ 3,000.00 
-									p.labelgral Anual		
-							.col-md-6
-								ul.list-group
-									.triangulo
-										.triangulo2
-									li.list-group-item
-										span.badge 
-											strong $3,000.00
-										p.labelgral Como 
-											strong pago único 
-											span de:
-											br
-										br
-									li.list-group-item.tp
-										span.badge 
-											strong $3,000.00
-										p.labelgral Total a pagar:
-					.col-md-6
-						h2.subt Pagos por prima
-						h4 Sin terremoto			
-						.row.plan
-							.col-md-5
-								button.btn.btn-info.bigbutton(type='button')
-									.triangulo
-									h4 $ 200.00 
-									p.labelgral Mensual
-							.col-md-6
-								ul.list-group
-									.triangulo
-										.triangulo2
-									li.list-group-item
-										span.badge 
-											strong $200.00
-										p.labelgral + 
-											strong 11
-											span  pago subsecuente de:
-									li.list-group-item.tp
-										span.badge 
-											strong $2,400.00
-										p.labelgral Total a pagar:
-						.row.plan
-							.col-md-5
-								button.btn.btn-info.bigbutton(type='button')
-									.triangulo
-									h4 $ 800.00 
-									p.labelgral Trimestral
-							.col-md-6
-								ul.list-group
-									.triangulo
-										.triangulo2
-									li.list-group-item
-										span.badge 
-											strong $800.00
-										p.labelgral + 
-											strong 3
-											span  pago subsecuente de:
-									li.list-group-item.tp
-										span.badge 
-											strong $2,400.00
-										p.labelgral Total a pagar:
-						.row.plan
-							.col-md-5
-								button.btn.btn-info.bigbutton(type='button')
-									.triangulo
-									h4 $ 1,200.00 
-									p.labelgral Semestral
-							.col-md-6
-								ul.list-group
-									.triangulo
-										.triangulo2
-									li.list-group-item
-										span.badge 
-											strong $1,200.00
-										p.labelgral + 
-											strong 1
-											span  pago subsecuente de:
-									li.list-group-item.tp
-										span.badge 
-											strong $2,400.00
-										p.labelgral Total a pagar:
-						.row.plan
-							.col-md-5
-								button.btn.btn-info.bigbutton(type='button')
-									.triangulo
-									h4 $ 2,400.00 
-									p.labelgral Anual		
-							.col-md-6
-								ul.list-group
-									.triangulo
-										.triangulo2
-									li.list-group-item
-										span.badge 
-											strong $2,400.00
-										p.labelgral Como 
-											strong pago único 
-											span de:
-											br
-										br
-									li.list-group-item.tp
-										span.badge 
-											strong $2,400.00
-										p.labelgral Total a pagar:
 				.row
-					br
-					br
-					.col-md-6.text-right
-						button.btn-lg.btn-borde NO ME INTERESA
-					.col-md-6.text-left
-						button.btn-lg.btn-solid CONTINUAR
+					.col-md-offset-1.col-md-10.bggris.planes
+						.a
+							.triangulo
+						.b
+							.triangulo
+						.col-md-12
+								h4 Elige el plan que más te convenga:
+						.col-md-6
+							h2.subt Pagos por prima
+							h3 Con terremoto
+							.row.plan.active
+								.col-md-5
+									button.btn.btn-info.bigbutton(type='button')
+										.triangulo
+										h4  $ 250.00
+										p.labelgral Mensual
+								.col-md-6
+									ul.list-group
+										.triangulo
+											.triangulo2
+										li.list-group-item
+											span.badge 
+												strong $250.00
+											p.labelgral + 
+												strong 11
+												span  pago subsecuente de:
+										li.list-group-item.tp
+											span.badge 
+												strong $3,000.00
+											p.labelgral Total a pagar:
+							.row.plan
+								.col-md-5
+									button.btn.btn-info.bigbutton(type='button')
+										.triangulo
+										h4 $ 750.00
+										p.labelgral Trimestral
+								.col-md-6
+									ul.list-group
+										.triangulo
+											.triangulo2
+										li.list-group-item
+											span.badge 
+												strong $750.00
+											p.labelgral + 
+												strong 3
+												span  pago subsecuente de:
+										li.list-group-item.tp
+											span.badge 
+												strong $3,000.00
+											p.labelgral Total a pagar:
+							.row.plan
+								.col-md-5
+									button.btn.btn-info.bigbutton(type='button')
+										.triangulo
+										h4 $ 1,500.00 
+										p.labelgral Semestral
+								.col-md-6
+									ul.list-group
+										.triangulo
+											.triangulo2
+										li.list-group-item
+											span.badge 
+												strong $1,500.00
+											p.labelgral + 
+												strong 1
+												span  pago subsecuente de:
+										li.list-group-item.tp
+											span.badge 
+												strong $3,000.00
+											p.labelgral Total a pagar:
+							.row.plan
+								.col-md-5
+									button.btn.btn-info.bigbutton(type='button')
+										.triangulo
+										h4 $ 3,000.00 
+										p.labelgral Anual		
+								.col-md-6
+									ul.list-group
+										.triangulo
+											.triangulo2
+										li.list-group-item
+											span.badge 
+												strong $3,000.00
+											p.labelgral Como 
+												strong pago único 
+												span de:
+												br
+										li.list-group-item.tp
+											span.badge 
+												strong $3,000.00
+											p.labelgral Total a pagar:
+						.col-md-6
+							h2.subt Pagos por prima
+							h3 Sin terremoto			
+							.row.plan
+								.col-md-5
+									button.btn.btn-info.bigbutton(type='button')
+										.triangulo
+										h4 $ 200.00 
+										p.labelgral Mensual
+								.col-md-6
+									ul.list-group
+										.triangulo
+											.triangulo2
+										li.list-group-item
+											span.badge 
+												strong $200.00
+											p.labelgral + 
+												strong 11
+												span  pago subsecuente de:
+										li.list-group-item.tp
+											span.badge 
+												strong $2,400.00
+											p.labelgral Total a pagar:
+							.row.plan
+								.col-md-5
+									button.btn.btn-info.bigbutton(type='button')
+										.triangulo
+										h4 $ 800.00 
+										p.labelgral Trimestral
+								.col-md-6
+									ul.list-group
+										.triangulo
+											.triangulo2
+										li.list-group-item
+											span.badge 
+												strong $800.00
+											p.labelgral + 
+												strong 3
+												span  pago subsecuente de:
+										li.list-group-item.tp
+											span.badge 
+												strong $2,400.00
+											p.labelgral Total a pagar:
+							.row.plan
+								.col-md-5
+									button.btn.btn-info.bigbutton(type='button')
+										.triangulo
+										h4 $ 1,200.00 
+										p.labelgral Semestral
+								.col-md-6
+									ul.list-group
+										.triangulo
+											.triangulo2
+										li.list-group-item
+											span.badge 
+												strong $1,200.00
+											p.labelgral + 
+												strong 1
+												span  pago subsecuente de:
+										li.list-group-item.tp
+											span.badge 
+												strong $2,400.00
+											p.labelgral Total a pagar:
+							.row.plan
+								.col-md-5
+									button.btn.btn-info.bigbutton(type='button')
+										.triangulo
+										h4 $ 2,400.00 
+										p.labelgral Anual		
+								.col-md-6
+									ul.list-group
+										.triangulo
+											.triangulo2
+										li.list-group-item
+											span.badge 
+												strong $2,400.00
+											p.labelgral Como 
+												strong pago único 
+												span de:
+												br
+										li.list-group-item.tp
+											span.badge 
+												strong $2,400.00
+											p.labelgral Total a pagar:
+				.row
+					.col-md-offset-1.col-md-10
+						br
+						br
+						.col-md-6.text-right
+							button.btn-lg.btn-borde NO ME INTERESA
+						.col-md-6.text-left
+							button.btn-lg.btn-solid CONTINUAR
 
 		//- // Modal
 		//- #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
@@ -404,92 +417,100 @@ html(lang="en")
 				h2 CUESTIONARIO
 		.container.bgwhite
 			.row
-				h2.subt Por favor responde las siguientes preguntas:
+				.col-md-offset-1.col-md-10
+					h2.subt A continuación te realizaremos un cuestionario, te pedimos las respondas:
 			form
 				.row
-					.col-md-offset-8.col-md-2.text-center
-						strong SI
-					.col-md-2.text-center
-						strong NO
+					.col-md-offset-1.col-md-10
+						.col-md-offset-8.col-md-2.text-center
+							strong SI
+						.col-md-2.text-center
+							strong NO
 				.row
-					.col-md-8
-						p.labelgral ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
-					.col-md-2
-						.radio.text-center
-							input(type='radio',id="radio-C1",name='cuestionarioP1',value='si', class="regular-radio",checked='true')
-							label(for='radio-C1')
-					.col-md-2
-						.radio.text-center
-							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='no', class="regular-radio")
-							label(for='radio-Cp1')
+					.col-md-offset-1.col-md-10
+						.col-md-8
+							p.labelgral ¿El inmueble por asegurar se encuentra auna distancia menor a 500 metros respecto a cualquier fuente de agua (lago, río, mar, etc.)?
+						.col-md-2
+							.radio.text-center
+								input(type='radio',id="radio-C1",name='cuestionarioP1',value='si', class="regular-radio",checked='true')
+								label(for='radio-C1')
+						.col-md-2
+							.radio.text-center
+								input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='no', class="regular-radio")
+								label(for='radio-Cp1')
 				.row
-					.col-md-8
-						p.labelgral ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
-					.col-md-2
-						.radio.text-center
-							input(type='radio',id="radio-C2",name='cuestionarioP2',value='si', class="regular-radio",checked='true')
-							label(for='radio-C2')
-					.col-md-2
-						.radio.text-center
-							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='no', class="regular-radio")
-							label(for='radio-Cp2')
+					.col-md-offset-1.col-md-10
+						.col-md-8
+							p.labelgral ¿Los muros están construidos de tabique, ladrillo, block o concreto armado?
+						.col-md-2
+							.radio.text-center
+								input(type='radio',id="radio-C2",name='cuestionarioP2',value='si', class="regular-radio",checked='true')
+								label(for='radio-C2')
+						.col-md-2
+							.radio.text-center
+								input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='no', class="regular-radio")
+								label(for='radio-Cp2')
 				.row
-					.col-md-8
-						p.labelgral ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
-					.col-md-2
-						.radio.text-center
-							input(type='radio',id="radio-C3",name='cuestionarioP3',value='si', class="regular-radio",checked='true')
-							label(for='radio-C3')
-					.col-md-2
-						.radio.text-center
-							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='no', class="regular-radio")
-							label(for='radio-Cp3')
-				.bgazul.valida
-					.triangulo
-					.row
-						.form-inline
-							.col-md-12
-								h4 El domicilio a asegurar es:
-					.row
-						.col-md-6.text-center
-							.ico.house
-							.radio
-								input.pregDom(type='radio',id="radio-domC",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')
-								label(for='radio-domC')
-								label 
-									h4 Casa
-							.col-md-12.casa
-								.col-md-8.text-right
-									p.labelgral
-										strong ¿Cuántos pisos tiene la casa?
-								.col-md-3
-									input.form-control(type='text', placeholder='# Pisos ')
+					.col-md-offset-1.col-md-10
+						.col-md-8
+							p.labelgral ¿Los techos están construidos de concreto armado o bóveda de ladrillo?
+						.col-md-2
+							.radio.text-center
+								input(type='radio',id="radio-C3",name='cuestionarioP3',value='si', class="regular-radio",checked='true')
+								label(for='radio-C3')
+						.col-md-2
+							.radio.text-center
+								input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='no', class="regular-radio")
+								label(for='radio-Cp3')
+				.row
+					.col-md-offset-1.col-md-10
+						.bgazul.valida
+							.triangulo
+							.row
+								.form-inline
+									.col-md-12
+										h4 El domicilio a asegurar es:
+							.row
+								.col-md-6.text-center
+									.ico.house
+									.radio
+										input.pregDom(type='radio',id="radio-domC",name='cuestionarioP4',value='Casa', class="regular-radio",checked='true')
+										label(for='radio-domC')
+										label 
+											h4 Casa
+									.col-md-12.casa
+										.col-md-8.text-right
+											p.labelgral
+												strong ¿Cuántos pisos tiene la casa?
+										.col-md-3
+											input.form-control(type='text', placeholder='# Pisos ')
 
-						.col-md-6.text-center
-							.ico.depa
-							.radio
-								input.pregDom(type='radio',id="radio-domD",name='cuestionarioP4',value='Dep', class="regular-radio")
-								label(for='radio-domD')
-								label 
-									h4 Departamento
-							.col-md-12.edificio
-								.col-md-8.text-right
-									p.labelgral
-										strong ¿Cuántos pisos tiene el edificio?
-								.col-md-3
-									input.form-control(type='text', placeholder='# Pisos ')
-								.col-md-8.text-right
-									p.labelgral
-										strong ¿En qué piso vives?
-								.col-md-3
-									input.form-control(type='text', placeholder='# Pisos ')
+								.col-md-6.text-center
+									.ico.depa
+									.radio
+										input.pregDom(type='radio',id="radio-domD",name='cuestionarioP4',value='Dep', class="regular-radio")
+										label(for='radio-domD')
+										label 
+											h4 Departamento
+									.col-md-12.edificio
+										.col-md-8.text-right
+											p.labelgral
+												strong ¿Cuántos pisos tiene el edificio?
+										.col-md-3
+											input.form-control(type='text', placeholder='# Pisos ')
+										.col-md-8.text-right
+											p.labelgral
+												strong ¿En qué piso vives?
+										.col-md-3
+											input.form-control(type='text', placeholder='# Pisos ')
 				.row
-					br
-					br
-					.col-md-6.text-right
-						button.btn-lg.btn-borde REGRESAR
-					.col-md-6.text-left
-						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR
+					.col-md-offset-1.col-md-10
+						br
+						br
+						.col-md-6.text-right
+							button.btn-lg.btn-borde REGRESAR
+						.col-md-6.text-left
+							button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR
 			// Modal
 		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog.modal-lg(role='document')

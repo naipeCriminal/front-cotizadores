@@ -21,8 +21,8 @@ $h4Family:'StagSans-Medium';
 $h4Size:19px;
 $h4Color:$azul1;
 $pLabelFamily:'StagSans-Light';
-$pLabelSize:15px;
-$pLabelColor:$gris3;
+$pLabelSize:16px;
+$pLabelColor:#474B50;;
 $pLabelW:300;
 $pDatoFamily:'StagSans-Book';
 $pDatoSize:30px;;
@@ -210,7 +210,7 @@ ul.list-group{
 			border-left: 13px solid transparent;
 			border-bottom: 13px solid $azul2;
 			position: absolute;
-			left: -20px;
+			left: 25px;
 			z-index: 10;
 		}
 		& .triangulo2{
@@ -254,11 +254,15 @@ ul.list-group{
 }
 .btn-borde{
 	width: 270px;
-	border: 2px solid $azul5;
-	color:$azul5;
+	border: 2px solid $azul4;
 	background: #fff;
 	background-color: #fff;
-	outline: none;	
+	outline: none;
+	width: 270px;
+    font-family: StagSans-Book;
+    font-size: 16px;
+    color: $azul4;
+    letter-spacing: 0;	
 }
 .btn-solid{
 	width: 270px;
@@ -267,6 +271,9 @@ ul.list-group{
 	background-color: $azul2;
 	outline: none;
 	color:#fff;
+	font-family: StagSans-Book;
+	font-size: 16px;
+	letter-spacing: 0;
 }
 .r-row{
 	padding: 10px;
@@ -541,6 +548,13 @@ ul.list-group{
 	padding-top: 15px;
 	padding-bottom: 15px;
 	background: $gris6;
+	h4{
+		font-size: 24px;
+    	font-family: StagSans-Book;
+	}
+	h3{
+		color:$azul3;
+	}
 	& .a.active{
 		.triangulo{
 		width: 0; 
@@ -575,8 +589,12 @@ ul.list-group{
 	hr{
 		border-top: 1px solid #000;
 	}
-	h4{
+	h5{
 	    font-size: 22px;
+    	font-weight: 600;
+	}
+	h4{
+	    font-size: 24px;
     	font-weight: 600;
 	}
 	h2{
@@ -584,20 +602,22 @@ ul.list-group{
 	}
 	span{
 		font-size: 16px;
-    	color: $azul4;
     	a{
 			color: #337ab7;
 	    	font-size: 16px;
     	}
 	}
 	a{
+		font-family: $pLabelFamily;
 		color: $azul3;
-    	font-size: 16px;
+    	font-size: 20px;
 	}
-	label{
-			font-weight: 200;
-    		color: #777;
-		}
+	u{
+		font-family: $pLabelFamily;
+		font-size: 12px;
+		color: #6C6F73;
+	}
+	label{font-weight: 200;}
 }
 .form-control{
 	margin-bottom: 21px;
@@ -620,6 +640,7 @@ ul.list-group{
 	}
 	h3{
 		color:$azul2;
+		font-family: StagSans-Book;
 	}
 	h4{
 		color:$azul3;
@@ -630,8 +651,14 @@ ul.list-group{
 		li{
 			padding-bottom: 10px;
 			color: $azul3;
-			font-size: 18px;	
+			font-size: 21px;
+			list-style-type: circle;
+			font-family: StagSans-Book;
 		}
+	}
+	span{
+		font-size: 30px;
+		font-family: StagSans-Medium;
 	}
 	&.active{
 		background: $azul2;
@@ -762,8 +789,41 @@ ul.list-group{
 }
 #myModalAvPriv .modal-body {
     border: 4px solid $azul2;
+    h4{
+    	font-family: StagSans-Book;
+		font-size: 28px;
+		color: #094FA4;
+    }
+    h2{
+    	font-family: StagSans-Book;
+font-size: 17px;
+color: #666666;
+line-height: 28px;
+    }
 }
 .naranja-tooltip + .tooltip > .tooltip-inner {
 	background-color: $naranja;
-	font-size: 13px
+	font-size: 13px;
+    width: 202px;
+    padding: 14px;
+    text-align: left;
+    ul,li{
+    	color: #fff;
+    	font-size: 13px;
+    	padding-bottom: 0px;
+    	list-style-type: initial;
+    	font-family: StagSans-Book;
+    }
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: $naranja;
+    top: 86%;
+}
+.tooltip.in {
+    opacity: 1;
+}
+input, select, textarea {
+    font-family: $pLabelFamily;
+	font-size: 12px;
+	color: $gris3;
 }
