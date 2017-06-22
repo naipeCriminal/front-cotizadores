@@ -157,7 +157,7 @@ ul.list-group{
 	    -webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
 		border-radius: 5px;
-		p.label{
+		p.labelgral{
     	font-size: 13px;
 		}
 		& li.list-group-item{
@@ -170,7 +170,7 @@ ul.list-group{
 	    	font-size: 15px;
 		}
 		& .tp{
-			 p.label{
+			 p.labelgral{
 				color: $azul3;
 			}
 			.badge strong{
@@ -246,7 +246,7 @@ ul.list-group{
 		color: #fff;
 		font-size: 30px;
 	}
-	& p.label{
+	& p.labelgral{
 		color: #fff;
 		font-weight: 100;
 		font-size: 23px;
@@ -348,7 +348,7 @@ ul.list-group{
 	h4{
 		color:$azul6;
 	}
-	p.label{
+	p.labelgral{
 		color:$azul6;
 	}	
 	p.dato{
@@ -367,7 +367,7 @@ ul.list-group{
 	h4{
 		color:$azul6;
 	}
-	p.label{
+	p.labelgral{
 		color:$azul6;
 	}	
 	p.dato{
@@ -529,7 +529,7 @@ ul.list-group{
 	}
 
 }
-.label{
+.labelgral{
 	font-family: $pLabelFamily;
 	font-size:$pLabelSize;
 	color: $pLabelColor;
