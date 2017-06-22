@@ -176,8 +176,7 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-10
 						.bggris.planes
-							.a
-								.triangulo
+							.triangulo1
 							.row
 								.col-md-12
 									h4 Elige el plan que más te convenga:
@@ -274,12 +273,11 @@ html(lang="en")
 				.space
 				.row
 					br
+					br
 					.col-md-6.text-right
-						button.btn-lg NO ME INTERESA
+						button.btn-lg.btn-borde NO ME INTERESA
 					.col-md-6.text-left
-						button.btn-lg(type='button', data-toggle='modal', data-target='#myModal') CONTINUAR
-
-
+						button.btn-lg.btn-solid CONTINUAR
 
 		// Modal
 		#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
@@ -301,9 +299,6 @@ html(lang="en")
 						h5.text-center he leído y conozco el alcance del tratamiento de mis datos personales.
 
 						button.btn-lg aceptar
-
-
-
 					//.modal-footer
 						button.btn.btn-default(type='button', data-dismiss='modal') Close
 						button.btn.btn-primary(type='button') Save changes
@@ -316,54 +311,97 @@ html(lang="en")
 		.container.bgwhite
 			.row
 				.col-md-12
-					p Por favor responde la siguiente pregunta:
-					h4 ¿Tienes o has tenido alguna de estas enfermedades?
+					h2.subt Por favor responde la siguiente pregunta:
+				.col-md-offset-1.col-md-10
+					h3 ¿Tienes o has tenido alguna de estas enfermedades?
 			form
 				.row
-					.col-md-offset-7.col-md-2.text-center
-						strong NO
-					.col-md-2.text-center
+					.col-md-offset-8.col-md-1
+					.col-md-1.text-center
 						strong SI
+					.col-md-1.text-center
+						strong NO
 				.row
-					.col-md-offset-3.col-md-4
-						p Cáncer, tumores malignos, leucemia o lupus
-					.col-md-2
+					.col-md-offset-1.col-md-7
+						h6.labelgral2 1.- Cáncer, tumores malignos, leucemia o lupus
+					.col-md-1
+					.col-md-1
 						.radio.text-center
-							input(type='radio',id="radio-C1",name='cuestionarioP1',value='no', class="regular-radio",checked='true')		
+							input(type='radio',id="radio-C1",name='cuestionarioP1',value='si', class="regular-radio",checked='true')		
 							label(for='radio-C1')
-					.col-md-2
+					.col-md-1
 						.radio.text-center
-							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='si', class="regular-radio")		
+							input(type='radio',id="radio-Cp1",name='cuestionarioP1',value='no', class="regular-radio")		
 							label(for='radio-Cp1')
 				.row
-					.col-md-offset-3.col-md-4
-						p Aunerisma, trombosis, embolia, derrame cerebral o cardiopatía (infarto o isquemia o arritmia) Efisema pulmonar, bronquitis crónica o tuberculosis.
-					.col-md-2
+					.col-md-offset-1.col-md-7
+						h6.labelgral2 2.- Aunerisma, trombosis, embolia, derrame cerebral o cardiopatía 
+							strong (infarto o isquemia o arritmia)
+					.col-md-1
+					.col-md-1
 						.radio.text-center
-							input(type='radio',id="radio-C2",name='cuestionarioP2',value='no', class="regular-radio",checked='true')		
+							input(type='radio',id="radio-C2",name='cuestionarioP2',value='si', class="regular-radio",checked='true')		
 							label(for='radio-C2')
-					.col-md-2
+					.col-md-1
 						.radio.text-center
-							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='si', class="regular-radio")		
+							input(type='radio',id="radio-Cp2",name='cuestionarioP2',value='no', class="regular-radio")		
 							label(for='radio-Cp2')
 				.row
-					.col-md-offset-3.col-md-4
-						p Insuficiencia hepática, cirrosis hepática, hepatitis crónica ("B" o "C"), insuficiencia renal crónica o pancreatitis.
-					.col-md-2
+					.col-md-offset-1.col-md-7
+						h6.labelgral2 3.- Efisema pulmonar, bronquitis crónica o tuberculosis.
+					.col-md-1
+					.col-md-1
 						.radio.text-center
-							input(type='radio',id="radio-C3",name='cuestionarioP3',value='no', class="regular-radio",checked='true')
+							input(type='radio',id="radio-C3",name='cuestionarioP3',value='si', class="regular-radio",checked='true')		
 							label(for='radio-C3')
-					.col-md-2
+					.col-md-1
 						.radio.text-center
-							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='si', class="regular-radio")		
+							input(type='radio',id="radio-Cp3",name='cuestionarioP3',value='no', class="regular-radio")		
 							label(for='radio-Cp3')
 				.row
+					.col-md-offset-1.col-md-7
+						h6.labelgral2 4.- Insuficiencia hepática, cirrosis hepática, hepatitis crónica ("B" o "C"), insuficiencia renal crónica o pancreatitis.
+					.col-md-1
+					.col-md-1
+						.radio.text-center
+							input(type='radio',id="radio-C4",name='cuestionarioP4',value='si', class="regular-radio",checked='true')
+							label(for='radio-C4')
+					.col-md-1
+						.radio.text-center
+							input(type='radio',id="radio-Cp4",name='cuestionarioP4',value='no', class="regular-radio")		
+							label(for='radio-Cp4')
+				.row
+					br
 					br
 					.col-md-6.text-right
-						button REGRESAR
+						button.btn-lg.btn-borde REGRESAR
 					.col-md-6.text-left
-						button CONTINUAR
-				.space
+						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR
+			// Modal
+		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog.modal-lg(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						.row.text-left
+							.col-md-2.text-right
+								input(type="checkbox",id="checkbox-modal" class="regular-checkbox big-checkbox", checked="true")
+								label(for="checkbox-1")
+							.col-md-6
+								h2 ¡Felicidades!
+						br
+						h4 Tu cotización se ha realizado de manera correcta con el folio 
+							strong 123456789A
+							, el cual te recomendamos conserves para futuras consultas
+						br
+						button.btn-lg.btn-solid(type='button', data-dismiss='modal') Aceptar
+					//.modal-footer
+						button.btn.btn-default(type='button', data-dismiss='modal') Close
+						button.btn.btn-primary(type='button') Save changes
+
 		hr
 		h1 contrata
 		.container
@@ -636,197 +674,190 @@ html(lang="en")
 						button.btn.btn-default(type='button', data-dismiss='modal') Close
 						button.btn.btn-primary(type='button') Save changes
 
-
 		.container
 			.row
-				h2 PÓLIZA
-		.container.bgwhite
+				h2 PAGO DE CONTRATACIÓN
+		.container.bgazul2.contrata
 			.row
-				.col-md-8
-					p
-						strong XXXXXX
-						, éstos son los datos que vas a registrar para contratar tu seguro y emitir tu Póliza, por favor revisa la información.
-				.col-md-3.text-right
-					p.labelgral No. de cotización
-					br
-					p.labelgral 123456789A
+				.col-md-offset-1.col-md-6
+					h2.subt RESUMEN DE CONTRATACIÓN
+				.col-md-4.bqblanco
+					.col-xs-6
+						h6 No. de cotización.
+					.col-xs-6.text-right
+						h4 123456789A
 			.row
-				.col-md-4
-					h4 SUMA ASEGURADA:
-				.col-md-3
-					h4 $0,000
-				.col-md-3
-					h4 	
+				.col-md-offset-1.col-md-11
+					h4 DATOS DEL CONTRATANTE
+			.row
+				.col-md-offset-1.col-md-3
+					p.labelgral Nombre del cliente
+					p.dato XRamiréz Ayala Juan LuisX
 				.col-md-2
-					h4 
-			.row
-				.col-md-4
-					p Suma asegurada:
+					p.labelgral Género
+					p.dato Femenino
 				.col-md-3
-					p $0,000
+					p.labelgral Fecha de nacimiento
+					p.dato 23/10/1985
 				.col-md-3
-					p 
-				.col-md-2
-					p 
+					p.labelgral País de nacimiento
+					p.dato México
 			.row
-				.col-md-4
-					p suma asegurada por fallecimiento:
+				.col-md-offset-1.col-md-2
+					p.labelgral Entidad federativa
+					p.dato CDMX
 				.col-md-3
-					p $0,000
-				.col-md-3 	
-					p Suma asegurada por muerte accidental:
-				.col-md-2
-					p $0,000
-			.row
-				.col-md-4
-					p Suma asegurada para gastos funerarios:
+					p.labelgral CURP
+					p.dato XRAYU123412MMDH09X
 				.col-md-3
-					p $0,000
-				.col-md-3 
-					p Plan creciente:
-				.col-md-2
-					p Si
-			.row
-				.col-md-4
-					p Prima:
+					p.labelgral RFC
+					p.dato XRAYU123412MMX
 				.col-md-3
-					p $0,00- Mensual
-				.col-md-3
-					p 
-				.col-md-2
-					p 	
-			.space					
+					p.labelgral Correo eléctronico
+					p.dato Xjuan@mail.comX
 			.row
-				.col-md-12
-					h4 DATOS PERSONALES
+				.col-md-offset-1.col-md-11
+					h4 DOMICILIO DEL CONTRATANTE
+					P.dato Exploradores Tonatiuh No. 304, Col. Alamos, C.p. 034500, Bénito Juárez, CDMX.
 			.row
-				.col-md-4
-					.col-md-6
-						p Nombre(s):
-						p Fecha de nacimiento:
-						p Entidad de nacimiento:
-					.col-md-6
-						p Jorge
-						p 11.12.1980
-						p CDMX
-				.col-md-4
-					.col-md-5
-						p Primer apellido: 
-						p Género:
-						p CURP
-					.col-md-7
-						p Huerta
-						p Masculino
-						p AAAA123123123AWEWD!
-				.col-md-4
-					.col-md-6
-						p Segundo apellido:
-						p País de nacimiento:
-					.col-md-6
-						p Sainz
-						p México
-			.space
-			.row
-				.col-md-12
-					h4 DOMICILIO
-			.row
-				.col-md-12
-					p El domicilio registrado será usado para entregas postales.
-			.row
-				.col-md-4
-					.col-md-6
-						p C.P
-						p Delegación o municipio:
-						p No. Exterior:
-					.col-md-6
-						p 11320
-						p Miguél Hidalgo
-						p 319
-				.col-md-4
-					.col-md-6
-						p Entidad federativa:
-						p Colonia:
-						p No. Interior:
-					.col-md-6
-						p CDMX
-						p Anáhuac
-						p 405-B
-				.col-md-4
-					.col-md-6
-						p Ciudad
-						p Calle
-						p Núm. teléfonico
-					.col-md-6
-						p México
-						p Mariano Escobedo
-						p 55000023
-			.space
-			.row
-				.col-md-12
+				.col-md-offset-1.col-md-11
 					h4 Beneficiarios
+			.row
+				.col-md-offset-1.col-md-4
+					p.labelgral 1 Nombre del beneficiario
+					p.dato XRamiréz Ayala Juan LuisX
+				.col-md-3
+					p.labelgral Parentesco
+					p.dato Hijo
 				.col-md-4
+					p.labelgral Porcentaje asignado
+					p.dato 25%
+		.container.bgazul3.resumen
+			.space
+			.row
+				.col-md-offset-1.col-md-12
+					h4 Detalle del Seguro Vida
+			.row
+				.col-md-offset-1.col-md-4
+					h1 Suma asegurada
+				.col-md-6
+					h1 $500,000.°°
+			.row
+				.col-md-offset-1.col-md-3
+					h4 Suma asegurada por fallecimiento
+					p.dato $250,000.°°
+				.col-md-3
+					h4 Suma asegurada por muerte accidental
+					p.dato $120,000.00
+				.col-md-3
+					h4 Suma asegurada para gastos funerarios
+					p.dato $280,000.°°
+				.col-md-2
+					h4 Periodo
+					br
+					p.dato Mensual
+			.space
+			.row
+				.col-md-offset-1.col-md-3
+					h4 Primer pago
+					br
+					p.dato $250.°°
+				.col-md-3
+					h4 Pagos subsecuentes 11 pagos de 
+					p.dato $250.°°
+				.col-md-3
+					h4 Total a pagar
+					br
+					p.dato $3,000.°°
+				.col-md-2
+		.container.bgazul5.envioPoliza
+			.row
+				.col-md-offset-1.col-md-8
+					h4 Envío de póliza
+			.row
+				.col-md-offset-1.col-md-12
+					h2.subt Selecciona el medio por el cual quieres recibir tu póliza.
+			.row
+				.col-md-offset-1.col-md-12
+					.col-md-2
+						input.entregaP(type="radio",name='medioRecibo',value='Correo', checked="true")
+						label Correo eléctronico
+					.col-md-2
+						input.entregaP(type="radio",id="radioEnvio",name='medioRecibo',value='Domicilio')
+						label Domicilio
+					.col-md-3
+						input.entregaP(type="radio",name='medioRecibo',value='Consulta')
+						label Consulta portal Seguros
+					.col-md-2
+						input.entregaP(type="radio",name='medioRecibo',value='SAC')
+						label Comunicar al SAC
+			.row.envio
+				br
+				.col-md-offset-1.col-md-12
 					.col-md-12
-						p.labelgral Beneficiario 1
-					.col-md-6
-						p Nombre(s):
-						p Primer apellido:
-						p Segundo apellido:
-						p Parentezco:
-						p Porcentaje
-					.col-md-6
-						p María Eugenia
-						p Sainz
-						p Díaz
-						p Madre
-						p 70%
-				.col-md-4
-					.col-md-12
-						p.labelgral Beneficiario 2
-					.col-md-6
-						p Nombre(s):
-						p Primer apellido:
-						p Segundo apellido:
-						p Parentezco:
-						p Porcentaje
-					.col-md-6
-						p María Eugenia
-						p Sainz
-						p Díaz
-						p Madre
-						p 70%
-				.col-md-4
-					h3 Pago por prima
-					h2 $250.00
-					h3 mensual
-		.container.bqplanes
+						p ¿El domicilio es el mismo con el que está registrado el inmueble?
+					.row
+						.col-md-12
+							.col-md-1
+								input(type="radio",name='registro',value='Si')
+								label Si
+							.col-md-1
+								input(type="radio",name='registro',value='No')
+								label No
+						.col-md-6
+							.col-md-4
+								.form-group
+									h5.label Hora de entrega
+									input.form-control(type="text",placeholder="12:00 pm")
+					.row
+						.col-md-12
+							.col-md-6
+								.form-group
+									h5.label Detalle (Entre que calles se encuentran)
+									input.form-control(type="textarea",placeholder="Entre Pianini y Motolinia")
+		.container.bgwhite
+			.space
 			form
 				.row
-					.col-md-12
+					.col-md-offset-1.col-md-11
 						h4 COMPRAR
-						p Para realizar tu compra y descargar tu póliza, es necesario que ingreses los siguientes datos.
+						h2.subt Para realizar tu compra y descargar tu póliza, es necesario que 
+							strong aceptes 
+							| los Términos y Condiciones y que ingreses los siguientes datos.
 				.row
-					.col-md-4
+					.col-md-offset-1.col-md-11
+						input(type="checkbox",id="checkbox-Acepto" class="regular-checkbox big-checkbox")
+						label(for="checkbox-Acepto")
+						span Acepto los	
+							a(target="_BLANK",href="#") Términos y condiciones
+				.row
+					br
+					.col-md-offset-1.col-md-4
 						.col-md-10
-							p.labelgral No. de tarjeta*
-							input#contrata.form-control(type='text' placeholder='12312341234234123')
-					.col-md-4
-						.col-md-10
-							p.labelgral CVV*
-							input#contrata.form-control(type='text' placeholder='000')
-					.col-md-4
+							p.labelgral Nombre del titular*
+							input#contrata.form-control(type='text' placeholder='Escribe tu nombre')
+					.col-md-3
 						.col-md-10
 							p.labelgral Tipo de tarjeta*
 							select.form-control
 								option(value="opcion-1") VISA
 								option(value="opcion-2") b
 								option(value="opcion-3") c
-								option(value="opcion-4") d		
-				.row
+								option(value="opcion-4") d	
 					.col-md-4
-						.space
+						.col-md-10
+							p.labelgral No. de tarjeta*
+							input#contrata.form-control(type='text' placeholder='12312341234234123')
+				.row
+					.col-md-offset-1.col-md-4
+						.col-md-10
+							p.labelgral CVV*
+								span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
+							input#contrata.form-control(type='text' placeholder='000')
+					.col-md-3
 						.col-md-12
 							p.labelgral Fecha de vencimiento*
-						.col-md-4
+						.col-md-6
 							select.form-control
 								option(value="opcion-1") 06
 								option(value="opcion-2") b
@@ -838,78 +869,79 @@ html(lang="en")
 								option(value="opcion-2") b
 								option(value="opcion-3") c
 								option(value="opcion-4") d
-					.col-md-offset-5.col-md-3
-						h4 Meses sin intereses:
-						.col-md-10
-							.radio
-								input(type='radio',id="radioMS",name='MeseSinIntereses',value='3meses', class="regular-radio",checked='true')
-								label(for='radioMS')
-								label  3 Meses
-							.radio
-								input(type='radio',id="radioMS2",name='MeseSinIntereses',value='6meses', class="regular-radio")
-								label(for='radioMS2')
-								label  6 Meses
-							.radio
-								input(type='radio',id="radioMS3",name='MeseSinIntereses',value='9meses', class="regular-radio")
-								label(for='radioMS3')
-								label  9 Meses
-							.radio
-								input(type='radio',id="radioMS4",name='MeseSinIntereses',value='12meses', class="regular-radio")
-								label(for='radioMS4')
-								label 12 Meses
+					.col-md-4
+						.col-md-12
+							p.labelgral Tarjeta
+						.col-md-5
+							input(type="radio",name='tarjeta',value='BBVA', checked="")
+							label Bancomer
+						.col-md-5
+							input(type="radio",name='tarjeta',value='No')
+							label Otros bancos
+				.row
+					.col-md-offset-1.col-md-9
+						p.labelgral Meses sin intereses
+					.col-md-offset-1.col-md-9
+						.col-md-2
+							input(type="radio",name='meses',value='3', checked="")
+							label 3 meses
+						.col-md-2
+							input(type="radio",name='meses',value='6')
+							label 6 meses
+						.col-md-2
+							input(type="radio",name='meses',value='9')
+							label 9 meses
+						.col-md-2
+							input(type="radio",name='meses',value='12')
+							label 12 meses		
 				.space
 				.row
-					.col-md-4.text-center
-						button SEGUIR DESPUES
-					.col-md-4.text-center
-						button NO ME INTERESA
-					.col-md-4.text-center
-						button(type='button', data-toggle='modal', data-target='#myModal3') PAGAR
-		// Modal
-		#myModal3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
-			.modal-dialog(role='document')
-				.modal-content
-					//.modal-header
-						button.close(type='button', data-dismiss='modal', aria-label='Close')
-							span(aria-hidden='true') ×
-						h4#myModalLabel.modal-title Modal title
-					.modal-body.text-center
-						h4
-							strong
-								¡Parece que tenemos un problema!
-						p No pudimos realizar el cobro, porfavor verifica los datos de tu tarjeta o consulta el saldo disponible.
-
-						button.btn-lg revisar
-
-
-
-					//.modal-footer
-						button.btn.btn-default(type='button', data-dismiss='modal') Close
-						button.btn.btn-primary(type='button') Save changes
-
+					br
+					.col-md-6.text-right
+						button.btn.lg.btn-borde REGRESAR
+					.col-md-6.text-left
+						button.btn.lg.btn-solid PAGAR
 		hr
 		h1 poliza
-		.container.bgwhite
-			.triangulo
+		.container.bgazul1.poliza
+			.row
+				.exito
+				.space
 			.row
 				.col-md-12.text-center
-					//- img(src="", alt="")
-					h2 ¡Ya estas protegido!
-					.space
-					h3 Tu compra se ha realizado sin problemas y tu PÓLIZA se ha generado correctamente.
-					.space
-					h2 PÓLIZA NO. 24689012
-					.space
-			.space
+					h2 ¡FELICIDADES XXXXXXX XXXX!
 			.row
-				.col-md-6.text-right
-					button ENVIAR POR MAIL
-				.col-md-6.text-left
-					button DESCARGAR PDF
+				.col-md-12.text-center
+					h3 ¡Has contratado tu seguro 
+						span.verde exitosamente!
+			.row
+				.col-md-12.text-center
+					h4 Tu póliza se ha generado de manera correcta, la cual será enviada a tu domicilio seleccionado.
+					br
+			.row
+				.space
+				.col-md-12.text-center
+						p
+							span.bgazul4 No. PÓLIZA: 
+								strong 24689012
+			.row
+				.space
+				.space
+			.row
+				.col-md-12
+					.col-md-1.text-right.info
+						img(src="../assets/img/ico_aviso.png", alt="")
+					.col-md-10
+						h5 Aplican restricciones y exlusiones, para dudas y aclaraciones, ingresa a www.segurosbancomer.com o llama al Centro de Servicio al Cliente: CDMX y zona metropolitana 11020000, interior de la República (0155) 11020000
 			.space
-			.space
-			.space
+		.container
+			.row.bgwhite
+				.col-md-12.text-center
+					button.btn-lg.btn-solid DESCARGAR PDF
+				.space
+				.space
 		hr
+
 
 		
 

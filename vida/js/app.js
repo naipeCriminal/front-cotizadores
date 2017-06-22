@@ -1,11 +1,15 @@
 $(document).ready(function(){
 	avisoPrivacidad();
 	formaPago();
+	envioP();
 
 	$('[data-toggle="tooltip"]').tooltip();
 
 	$("#checkbox-1").click(function(){
 		avisoPrivacidad();
+	})
+	$(".entregaP").click(function(){
+		envioP();
 	})
 
     $('.selector').datepicker({
@@ -51,4 +55,11 @@ function formaPago(){
 		$(".row .plan").removeClass("active");
 		$(this).parent().addClass("active");
 	})
+}
+function envioP(){
+	if( $('#radioEnvio').prop('checked') ){
+		$('.envio').fadeIn();
+	} else {
+		$('.envio').fadeOut();
+	}
 }
