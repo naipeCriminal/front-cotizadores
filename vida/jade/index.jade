@@ -6,7 +6,7 @@ html(lang="en")
 		meta(name="viewport",content="width=device-width, initial-scale=1")
 		meta(name="description",content="")
 		meta(name="author",content="")
-		title Cotizador de...
+		title Cotizador de Vida
 		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
 		link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
 		link(rel="stylesheet",href="style.css")
@@ -58,7 +58,7 @@ html(lang="en")
 							a#AvPriv(target='_BLANK',href='#', data-toggle='modal', data-target='#myModalAvPriv', data-trigger='hover') Aviso de Privacidad
 						.col-md-12
 							.col-md-11.text-left
-								p.labelgral He leído y conozco el alcance del tratamiento de mis datos personales.
+								label.labelgral He leído y conozco el alcance del tratamiento de mis datos personales.
 									br
 								br
 						.col-md-12
@@ -68,25 +68,32 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='Nombre (s)*')
+							label Nombre(s)
+							input.registro.form-control(type='text', id="nombreVida",placeholder='Nombre (s)*')
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='Apellido paterno * ')
+							label Apellido paterno*
+							input.registro.form-control(type='text', id="apellidoPaternoVida", placeholder='Apellido paterno * ')
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='Apellido materno *')
+							label Apellido materno
+							input.registro.form-control(type='text', id="apellidoMatrernoVida", placeholder='Apellido materno *')
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='Correo electrónico *')
+							label Correo electronico
+							input.registro.form-control(type='text', id="correoElectronicoVida" ,placeholder='Correo electrónico *')
 						.col-md-4
-							//- p.labelgral Fecha de nacimiento*
+							label Fecha de nacimiento*
 							input.registro.selector.form-control(type='text', placeholder='Fecha de nacimiento*')
 						.col-md-4
 							.col-xs-4
-								input#day.form-control(type='text', disabled='')
+								label.labelgral Dia
+								input#day.form-control(type='text' , disabled='')
 							.col-xs-4
-								input#moth.form-control(type='text', disabled='')
+								label Mes
+								input#moth.form-control(type='text' ,disabled='')
 							.col-xs-4
-								input#year.form-control(type='text', disabled='')
+								label Año
+								input#year.form-control(type='text' ,disabled='')
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-12
@@ -97,12 +104,12 @@ html(lang="en")
 							p.labelgral Ingresa la cantidad por la cual te gustaría asegurarte *
 								span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="jgjg",data-title='Monto mímino $ 50,000.00 <br> Monto máximo $ 500,000.00',class='naranja-tooltip')
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='$100,000,000.°°')
+							input.registro.form-control(type='text', id="cantidadAsegurarteVida" , placeholder='$100,000,000.°°')
 
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-12.text-center
-							button.registro.btn-lg.btn-solid COTIZAR
+							button.registro.btn-lg.btn-solid(id="step1Vida") COTIZAR
 		// Modal
 		#myModalAvPriv.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog.modal-lg(role='document')
@@ -118,7 +125,7 @@ html(lang="en")
 							a(target="_BLANK",href="https://www.segurosbancomer.com.mx/seguros/tleu/segurosban/index.jsp") www.segurosbancomer.com.mx
 						br
 
-						button.btn-lg.btn-solid.text-center(type='button', data-dismiss='modal') Aceptar
+						button.btn-lg.btn-solid.text-center(type='button', id="aceptarStep1" ,data-dismiss='modal') Aceptar
 	
 		hr
 		h1 cotiza
@@ -277,7 +284,7 @@ html(lang="en")
 					.col-md-6.text-right
 						button.btn-lg NO ME INTERESA
 					.col-md-6.text-left
-						button.btn-lg(type='button', data-toggle='modal', data-target='#myModal') CONTINUAR
+						button.btn-lg(type='button', id='noMeInteresa' , data-toggle='modal', data-target='#myModal') CONTINUAR
 
 
 
@@ -360,9 +367,9 @@ html(lang="en")
 				.row
 					br
 					.col-md-6.text-right
-						button REGRESAR
+						button#regresaStep3 REGRESAR
 					.col-md-6.text-left
-						button CONTINUAR
+						button#continuarStep3 CONTINUAR
 				.space
 		hr
 		h1 contrata
@@ -386,59 +393,63 @@ html(lang="en")
 					.col-md-8
 						.col-md-6
 							.form-group
-								p.labelgral Nombre(s)*
-								input.form-control(type="text",placeholder="Nombre(s)")
+								label.labelgral Nombre(s)*
+								input.form-control(type="text",id="nombreContrataVida" ,placeholder="Nombre(s)")
 							.form-group
-								p.labelgral Segundo apellido*
-								input.form-control(type="text",placeholder="Nombre(s)")
+								label.labelgral Apellido paterno*
+								input.form-control(type="text", id="apellidoPaternoContrataVida"  ,placeholder="Apellido paterno")
 						.col-md-6
 							.form-group
-								p.labelgral Primer apellido*
-								input.form-control(type="text",placeholder="Apellido Materno")
+								label.labelgral Apellido materno*
+								input.form-control(type="text", id="apellidoMaternoContrataVida" ,placeholder="Apellido Materno")
 						.col-md-6
 							.col-md-4
 								.form-group
-									p.labelgral Genero*
+									label.labelgral Genero*
 									br
 							.col-md-7
 								.radio
 									p.labelgral
-										input(type='radio',id="radio-cs",name='optionsRadios', value='femenino', checked='' class="regular-radio")
-										label(for='radio-cs')
+										input(type='radio',id="radio-cs1",name='optionsRadios', value='femenino', checked='' class="regular-radio")
+										label(for='radio-cs1')
 										| Femenino
 								.radio
 									p.labelgral
-										input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")		
+										input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")
 										label(for='radio-cs2')
 										| Masculino
 							.space
-						.col-md-8
-							.form-group
-								p Fecha de nacimiento*
+						.col-md-8.form-group
+							
+								label.labergral Fecha de nacimiento*
 								.col-xs-12
-									input.selector2.form-control(type='text')
+									label.labelgral Fecha
+									input.selector2.form-control(type='text' , id="fechaNacimientoContrataVida" )
 								.col-xs-4
+									label.labelgral Día 
 									input#day2.form-control(type='text', disabled='')
 								.col-xs-4
+									label.labelgral Mes
 									input#moth2.form-control(type='text', disabled='')
 								.col-xs-4
+									label.labelgral Año
 									input#year2.form-control(type='text', disabled='')
 						.col-md-6
 							.form-group
-								p.labelgral Pais de nacimiento*
-								select.form-control
+								label.labelgral Pais de nacimiento*
+								select.form-control#paisNacimietoContrataVida
 									option(value="opcion-1") Seleccionar
 									option(value="opcion-2") b
 									option(value="opcion-3") c
 									option(value="opcion-4") d
 									option(value="opcion-5") e
 							.form-group
-								p.labelgral CURP*
-								input.form-control(type="text",placeholder="Nombre(s)")
+								label.labelgral CURP*
+								input.form-control(type="text", id="curpContrataVida" ,placeholder="Nombre(s)")
 						.col-md-6
 							.form-group
-								p.labelgral Entidad de nacimiento*
-								select.form-control
+								label.labelgral Entidad de nacimiento*
+								select.form-control#entidadContrataVida
 									option(value="opcion-1") Seleccionar
 									option(value="opcion-2") b
 									option(value="opcion-3") c
@@ -461,66 +472,66 @@ html(lang="en")
 									label No
 						.col-md-6
 							.form-group
-								p.labelgral C.P.
+								label.labelgral C.P.
 								input.form-control(type="text",placeholder="Calle")
 							.form-group
-								p.labelgral Entidad federativa*
-								select.form-control
+								label.labelgral Entidad federativa*
+								select.form-control#entidadFederativaContrataVida
 									option(value="opcion-1") Seleccionar
 									option(value="opcion-2") b
 									option(value="opcion-3") c
 									option(value="opcion-4") d
 									option(value="opcion-5") e
 							.form-group
-								p.labelgral Delegación o municipio*
-								select.form-control
+								label.labelgral Delegación o municipio*
+								select.form-control#delegacionContrataVida
 									option(value="opcion-1") Seleccionar
 									option(value="opcion-2") b
 									option(value="opcion-3") c
 									option(value="opcion-4") d
 									option(value="opcion-5") e
 							.form-group
-								p.labelgral Calle*
-								select.form-control
+								label.labelgral Calle*
+								select.form-control#calleContrataVida
 									option(value="opcion-1") Seleccionar
 									option(value="opcion-2") b
 									option(value="opcion-3") c
 									option(value="opcion-4") d
 									option(value="opcion-5") e
 							.form-group
-								p.labelgral No. Interior*
-								input.form-control(type="text",placeholder="No. Interior")
+								label.labelgral No. Interior*
+								input.form-control(type="text", id="noInteriorContrataVida" ,placeholder="No. Interior")
 						.col-md-6
 							.form-group
-								p.labelgral Entidad federativa
-								select.form-control
+								label.labelgral Entidad federativa
+								select.form-control#entidadFederativaContrataVida
 									option(value="opcion-1") Colonia
 									option(value="opcion-2") b
 									option(value="opcion-3") c
 									option(value="opcion-4") d
 									option(value="opcion-5") e
 							.form-group
-								p.labelgral Ciudad*
-								select.form-control
+								label.labelgral Ciudad*
+								select.form-control#ciudadContrataVida
 									option(value="opcion-1") Seleccionar
 									option(value="opcion-2") b
 									option(value="opcion-3") c
 									option(value="opcion-4") d
 									option(value="opcion-5") e
 							.form-group
-								p.labelgral Colonia*
-								select.form-control
+								label.labelgral Colonia*
+								select.form-control#coloniaContrataVida
 									option(value="opcion-1") Seleccionar
 									option(value="opcion-2") b
 									option(value="opcion-3") c
 									option(value="opcion-4") d
 									option(value="opcion-5") e
 							.form-group
-								p.labelgral No. Exterior*
-								input.form-control(type="text",placeholder="No. Exterior")
+								label.labelgral No. Exterior*
+								input.form-control(type="text", id="noEsteriorContrataVida", placeholder="No. Exterior")
 							.form-group
-								p.labelgral No. teléfonico*
-								input.form-control(type="text",placeholder="Telefono")
+								label.labelgral No. teléfonico*
+								input.form-control(type="text",placeholder="Telefono", id="telefonoContrataVida" )
 						.col-md-8
 							h4 BENEFICIARIOS
 							br
@@ -533,14 +544,14 @@ html(lang="en")
 							h4 DATOS BENEFICIARIO 1
 						.col-md-6
 							.form-group
-								p.labelgral Nombre(s)*
-								input.form-control(type="text",placeholder="Nombre(s)")
+								label.labelgral Nombre(s)*
+								input.form-control(type="text",placeholder="Nombre(s)",id="nombreBenef1ContrataVida" )
 							.form-group
-								p.labelgral Segundo apellido*
-								input.form-control(type="text",placeholder="Nombre(s)")
+								label.labelgral Apellido paterno*
+								input.form-control(type="text",placeholder="Apellido paterno",id="apellidoPaternoBenef1ContrataVida" )
 							.form-group
-								p.labelgral Parentesco*
-								select.form-control
+								label.labelgral Parentesco*
+								select.form-control#parentescoBenef1ContrataVida
 									option(value="opcion-1") Selecciona
 									option(value="opcion-2") b
 									option(value="opcion-3") c
@@ -548,10 +559,10 @@ html(lang="en")
 									option(value="opcion-5") e
 						.col-md-6
 							.form-group
-								p.labelgral Primer apellido*
+								label.labelgral Primer apellido*
 								input.form-control(type="text",placeholder="Apellido Materno")
 							.form-group
-								p.labelgral Porcentaje que le corresponde*
+								label.labelgral Porcentaje que le corresponde*
 								select.form-control
 									option(value="opcion-1") Selecciona
 									option(value="opcion-2") b
@@ -561,9 +572,9 @@ html(lang="en")
 						.col-md-12
 							br
 							.col-md-6.text-right
-								button CONTINUAR DESPUES
+								button#continuarDespuesStep4 CONTINUAR DESPUES
 							.col-md-6.text-left
-								button(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
+								button#continuarStep4(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
 								.space
 					.col-md-4.text-center
 							.col-md-10.bqplanes
@@ -807,16 +818,16 @@ html(lang="en")
 				.row
 					.col-md-4
 						.col-md-10
-							p.labelgral No. de tarjeta*
-							input#contrata.form-control(type='text' placeholder='12312341234234123')
+							label.labelgral No. de tarjeta*
+							input#contrataTargeta.form-control(type='text' placeholder='12312341234234123')
 					.col-md-4
 						.col-md-10
-							p.labelgral CVV*
-							input#contrata.form-control(type='text' placeholder='000')
+							label.labelgral CVV*
+							input#contrataCvv.form-control(type='text' placeholder='000')
 					.col-md-4
 						.col-md-10
-							p.labelgral Tipo de tarjeta*
-							select.form-control
+							label.labelgral Tipo de tarjeta*
+							select.form-control#contrataTipoTargeta
 								option(value="opcion-1") VISA
 								option(value="opcion-2") b
 								option(value="opcion-3") c
@@ -825,15 +836,15 @@ html(lang="en")
 					.col-md-4
 						.space
 						.col-md-12
-							p.labelgral Fecha de vencimiento*
+							label.labelgral Fecha de vencimiento*
 						.col-md-4
-							select.form-control
+							select.form-control#contrataVencimientoDia
 								option(value="opcion-1") 06
 								option(value="opcion-2") b
 								option(value="opcion-3") c
 								option(value="opcion-4") d
 						.col-md-6
-							select.form-control
+							select.form-control#contrataVencimientoMes
 								option(value="opcion-1") 2019
 								option(value="opcion-2") b
 								option(value="opcion-3") c
@@ -860,11 +871,11 @@ html(lang="en")
 				.space
 				.row
 					.col-md-4.text-center
-						button SEGUIR DESPUES
+						button#contrataSeguirDespuesStep4 SEGUIR DESPUES
 					.col-md-4.text-center
-						button NO ME INTERESA
+						button#contrataNoMeInteresaStep4 NO ME INTERESA
 					.col-md-4.text-center
-						button(type='button', data-toggle='modal', data-target='#myModal3') PAGAR
+						button#contrataPagarStep4(type='button', data-toggle='modal', data-target='#myModal3') PAGAR
 		// Modal
 		#myModal3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog(role='document')
@@ -879,7 +890,7 @@ html(lang="en")
 								¡Parece que tenemos un problema!
 						p No pudimos realizar el cobro, porfavor verifica los datos de tu tarjeta o consulta el saldo disponible.
 
-						button.btn-lg revisar
+						button.btn-lg#contrataRevisarStep4 revisar
 
 
 
@@ -903,9 +914,9 @@ html(lang="en")
 			.space
 			.row
 				.col-md-6.text-right
-					button ENVIAR POR MAIL
+					button#enviarPorMailStep5 ENVIAR POR MAIL
 				.col-md-6.text-left
-					button DESCARGAR PDF
+					button#descargarStep5 DESCARGAR PDF
 			.space
 			.space
 			.space
