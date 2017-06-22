@@ -1,7 +1,9 @@
 $(document).ready(function(){
 	avisoPrivacidad();
+	formaPago();
+
 	$('[data-toggle="tooltip"]').tooltip();
-	
+
 	$("#checkbox-1").click(function(){
 		avisoPrivacidad();
 	})
@@ -43,4 +45,10 @@ function avisoPrivacidad(){
 			$( ".registro" ).prop( "disabled", true );
 			$( ".registro" ).prop( "enabled", false );
 		}
+}
+function formaPago(){
+	$(".row .plan button").click(function(){
+		$(".row .plan").removeClass("active");
+		$(this).parent().addClass("active");
+	})
 }
