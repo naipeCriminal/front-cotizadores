@@ -38,6 +38,8 @@ $h2SubColor:$gris2;
 
 $spriteurl:url(../assets/img/sprite.png);
 $imgExito:url(../assets/img/ico_poliza_exito.png);
+$imgExito1:url(../assets/img/ico_aviso.png);
+$imgExito2:url(../assets/img/ico_comprobante.png);
 $selectMenu:url(../assets/img/select_menu.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
@@ -151,25 +153,31 @@ input, select, textarea {
 		line-height: 25px;
 	}
 	& .btn-solid{
-	width: 170px;
-    border: 2px solid #006ec1;
-    background: #006ec1;
-    background-color: #006ec1;
-    outline: 0;
-    color: #fff;
-    font-family: StagSans-Book;
-    font-size: 16px;
-    letter-spacing: 0;
-    .mov{
-    	left: -15px;
-	    top: 11px;
-	    font-weight: 800;
-    }
-    .mov2{
-    	left: -25px;
-    	top: 0px;
-    }
-}
+		width: 170px;
+	    border: 2px solid #006ec1;
+	    background: #006ec1;
+	    background-color: #006ec1;
+	    outline: 0;
+	    color: #fff;
+	    font-family: StagSans-Book;
+	    font-size: 16px;
+	    letter-spacing: 0;
+	    .mov{
+	    	left: -15px;
+		    top: 11px;
+		    font-weight: 800;
+	    }
+	    .mov2{
+	    	left: -25px;
+	    	top: 0px;
+	    }
+	}
+	.comprobante{
+		font-family: StagSans-Book;
+		font-size: 18px;
+		color: #094FA4;
+		font-weight: 100;
+	}
 }
 .regular-checkbox {
     display: none;
@@ -298,8 +306,16 @@ input, select, textarea {
 		color: #6C6F73;
 	}
 	label{font-weight: 200;font-family: StagSans-Light;
-font-size: 16px;
-color: $gris3;}
+	font-size: 16px;
+	color: $gris3;
+	}
+	.exito2{
+		background-image: $imgExito2;
+	    background-repeat: no-repeat;
+	    height: 132px;
+	    margin-top: -47px;
+	    background-position: center;
+		}
 }
 .bgazul1{
 	background-color: $azul2;
@@ -345,6 +361,13 @@ color: $gris3;}
 			height: 180px;
     		margin-top: 68px;
     		background-position: center;
+		}
+		.exito1{
+			background-image: $imgExito1;
+		    background-repeat: no-repeat;
+		    height: 28px;
+		    margin-top: -1px;
+		    background-position: center;
 		}
 		.bgazul4{
 			padding: 10px; 
