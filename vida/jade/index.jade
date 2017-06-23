@@ -6,7 +6,7 @@ html(lang="en")
 		meta(name="viewport",content="width=device-width, initial-scale=1")
 		meta(name="description",content="")
 		meta(name="author",content="")
-		title Cotizador de vida
+		title Cotizador de Vida
 		link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css")
 		link(rel='stylesheet', href='https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css')
 		link(rel="stylesheet",href="style.css")
@@ -67,6 +67,7 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-4
+<<<<<<< HEAD
 							p.labelgral Nombre(s)*
 							input.registro.form-control(type='text', placeholder='Nombre (s)')
 						.col-md-4
@@ -104,12 +105,12 @@ html(lang="en")
 							p.labelgral Ingresa la cantidad por la cual te gustaría asegurarte *
 								span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="jgjg",data-title='Monto mímino $ 50,000.00 <br> Monto máximo $ 500,000.00',class='naranja-tooltip')
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='$100,000,000.°°')
+							input.registro.form-control(type='text', id="cantidadAsegurarteVida" , placeholder='$100,000,000.°°')
 
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-12.text-center
-							button.registro.btn-lg.btn-solid COTIZAR
+							button.registro.btn-lg.btn-solid(id="step1Vida") COTIZAR
 		// Modal
 		#myModalAvPriv.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog.modal-lg(role='document')
@@ -285,7 +286,7 @@ html(lang="en")
 					.col-md-6.text-right
 						button.btn-lg.btn-borde NO ME INTERESA
 					.col-md-6.text-left
-						button.btn-lg.btn-solid CONTINUAR
+						button.btn-lg.btn-solid(type='button', id='noMeInteresa' , data-toggle='modal', data-target='#myModal') CONTINUAR
 
 		// Modal
 		#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
@@ -383,9 +384,10 @@ html(lang="en")
 					br
 					br
 					.col-md-6.text-right
-						button.btn-lg.btn-borde REGRESAR
+						button.btn-lg.btn-borde#regresaStep3 REGRESAR
 					.col-md-6.text-left
-						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR
+						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR#continuarStep3 CONTINUAR
+				.space
 			// Modal
 		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog.modal-lg(role='document')
@@ -410,7 +412,6 @@ html(lang="en")
 					//.modal-footer
 						button.btn.btn-default(type='button', data-dismiss='modal') Close
 						button.btn.btn-primary(type='button') Save changes
-
 		hr
 		h1 contrata
 		.container
@@ -584,7 +585,6 @@ html(lang="en")
 								ul
 									li "Revisar rubro"
 									li "Revisar rubro"
-
 							.col-md-12
 								h4 DATOS BENEFICIARIO 1
 							.col-md-6
@@ -617,7 +617,7 @@ html(lang="en")
 						.col-md-12
 							br
 							.col-md-12.text-center
-								button(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
+								button#continuarStep4(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
 								.space
 					
 			// Modal
@@ -805,12 +805,19 @@ html(lang="en")
 					br
 					.col-md-offset-1.col-md-4
 						.col-md-10
+							label.labelgral No. de tarjeta*
+							input#contrataTargeta.form-control(type='text' placeholder='12312341234234123')
+					.col-md-4
+						.col-md-10
+							label.labelgral CVV*
+							input#contrataCvv.form-control(type='text' placeholder='000')
+					.col-md-4
 							p.labelgral Nombre del titular*
 							input#contrata.form-control(type='text' placeholder='Escribe tu nombre')
 					.col-md-3
 						.col-md-10
-							p.labelgral Tipo de tarjeta*
-							select.form-control
+							label.labelgral Tipo de tarjeta*
+							select.form-control#contrataTipoTargeta
 								option(value="opcion-1") VISA
 								option(value="opcion-2") b
 								option(value="opcion-3") c
@@ -829,13 +836,13 @@ html(lang="en")
 						.col-md-12
 							p.labelgral Fecha de vencimiento*
 						.col-md-6
-							select.form-control
+							select.form-control#contrataVencimientoDia
 								option(value="opcion-1") 06
 								option(value="opcion-2") b
 								option(value="opcion-3") c
 								option(value="opcion-4") d
 						.col-md-6
-							select.form-control
+							select.form-control#contrataVencimientoMes
 								option(value="opcion-1") 2019
 								option(value="opcion-2") b
 								option(value="opcion-3") c
@@ -867,11 +874,39 @@ html(lang="en")
 							label 12 meses		
 				.space
 				.row
+					.col-md-4.text-center
+						button#contrataSeguirDespuesStep4 SEGUIR DESPUES
+					.col-md-4.text-center
+						button#contrataNoMeInteresaStep4 NO ME INTERESA
+					.col-md-4.text-center
+						button#contrataPagarStep4(type='button', data-toggle='modal', data-target='#myModal3') PAGAR
+		// Modal
+		#myModal3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						h4
+							strong
+								¡Parece que tenemos un problema!
+						p No pudimos realizar el cobro, porfavor verifica los datos de tu tarjeta o consulta el saldo disponible.
+
+						button.btn-lg#contrataRevisarStep4 revisar
+
+
+
+					//.modal-footer
+						button.btn.btn-default(type='button', data-dismiss='modal') Close
+						button.btn.btn-primary(type='button') Save changes
+
 					br
 					.col-md-6.text-right
-						button.btn.lg.btn-borde REGRESAR
+						button.btn.lg.btn-bordecontrataNoMeInteresaStep4 REGRESAR
 					.col-md-6.text-left
-						button.btn.lg.btn-solid PAGAR
+						button.btn.lg.btn-solid#contrataSeguirDespuesStep4 PAGAR
 		hr
 		h1 poliza
 		.container.bgazul1.poliza
@@ -882,6 +917,12 @@ html(lang="en")
 				.col-md-12.text-center
 					h2 ¡FELICIDADES XXXXXXX XXXX!
 			.row
+				.col-md-6.text-right
+					button#enviarPorMailStep5 ENVIAR POR MAIL
+				.col-md-6.text-left
+					button#descargarStep5 DESCARGAR PDF
+			.space
+			.space
 				.col-md-12.text-center
 					h3 ¡Has contratado tu seguro 
 						span.verde exitosamente!
