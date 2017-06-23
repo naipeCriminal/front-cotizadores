@@ -38,6 +38,8 @@ $h2SubColor:$gris2;
 
 $spriteurl:url(../assets/img/sprite.png);
 $imgExito:url(../assets/img/ico_poliza_exito.png);
+$imgExito1:url(../assets/img/ico_aviso.png);
+$imgExito2:url(../assets/img/ico_comprobante.png);
 $selectMenu:url(../assets/img/select_menu.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
@@ -357,6 +359,13 @@ ul.list-group{
 			height: 180px;
     		margin-top: 68px;
     		background-position: center;
+		}
+		.exito1{
+			background-image: $imgExito1;
+		    background-repeat: no-repeat;
+		    height: 28px;
+		    margin-top: -1px;
+		    background-position: center;
 		}
 		.bgazul4{
 			padding: 10px; 
@@ -738,6 +747,13 @@ ul.list-group{
 		color: #6C6F73;
 	}
 	label{font-weight: 200;}
+	.exito2{
+		background-image: $imgExito2;
+	    background-repeat: no-repeat;
+	    height: 132px;
+	    margin-top: -47px;
+	    background-position: center;
+		}
 }
 .form-control{
 	margin-bottom: 21px;
