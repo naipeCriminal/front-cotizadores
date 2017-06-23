@@ -120,11 +120,56 @@ input, select, textarea {
 .bgazul7{
 	background: $azul7;
 	border-radius: 2px;
+	& .triangulo{
+		    width: 0;
+		    height: 0;
+		    border-left: 48px solid #fff;
+		    border-top: 39px solid transparent;
+		    border-bottom: 40px solid transparent;
+		    position: absolute;
+		    transform: rotate(90deg);
+		    left: 82px;
+		    top: -44px;
+		}
 	h6{
 		font-family: StagSans-Book;
 		font-size: 18px;
 		color: #094FA4;
 	}
+	& h3{
+		font-family: StagSans-Book;
+		font-size: 14px;
+		color: #4A4A4A;
+	    list-style-type: none;
+		line-height: 25px;
+	}
+	ul,li{
+		font-family: StagSans-Book;
+		font-size: 14px;
+		color: #4A4A4A;
+	    list-style-type: none;
+		line-height: 25px;
+	}
+	& .btn-solid{
+	width: 170px;
+    border: 2px solid #006ec1;
+    background: #006ec1;
+    background-color: #006ec1;
+    outline: 0;
+    color: #fff;
+    font-family: StagSans-Book;
+    font-size: 16px;
+    letter-spacing: 0;
+    .mov{
+    	left: -15px;
+	    top: 11px;
+	    font-weight: 800;
+    }
+    .mov2{
+    	left: -25px;
+    	top: 0px;
+    }
+}
 }
 .regular-checkbox {
     display: none;

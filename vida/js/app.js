@@ -2,7 +2,9 @@ $(document).ready(function(){
 	avisoPrivacidad();
 	formaPago();
 	envioP();
-
+	qBene();
+	$(".qBeneficiario").fadeOut();
+	
 	$('[data-toggle="tooltip"]').tooltip();
 
 	$("#checkbox-1").click(function(){
@@ -11,7 +13,6 @@ $(document).ready(function(){
 	$(".entregaP").click(function(){
 		envioP();
 	})
-
     $('.selector').datepicker({
 		changeMonth: true,
 		changeYear: true, 	
@@ -62,4 +63,9 @@ function envioP(){
 	} else {
 		$('.envio').fadeOut();
 	}
+}
+function qBene(){
+	$(".pregB button").click(function(){
+		$(".qBeneficiario").fadeIn();
+	})
 }

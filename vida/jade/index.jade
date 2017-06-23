@@ -67,7 +67,6 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-4
-<<<<<<< HEAD
 							p.labelgral Nombre(s)*
 							input.registro.form-control(type='text', placeholder='Nombre (s)')
 						.col-md-4
@@ -386,7 +385,7 @@ html(lang="en")
 					.col-md-6.text-right
 						button.btn-lg.btn-borde#regresaStep3 REGRESAR
 					.col-md-6.text-left
-						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR#continuarStep3 CONTINUAR
+						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR
 				.space
 			// Modal
 		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
@@ -473,7 +472,11 @@ html(lang="en")
 									p.labelgral País de nacimiento*
 									input#qPais.form-control(type="text",nombre="qRfc",placeholder="País de nacimiento")
 							.col-md-6
+								br
+							.col-md-6
 								.form-group
+									br
+									br
 									p.labelgral CURP*
 									input#qCurp.form-control(type="text",nombre="qCurp",placeholder="CURP")
 							.col-md-6
@@ -581,10 +584,25 @@ html(lang="en")
 							.col-md-12
 								h4 BENEFICIARIOS
 								br
-								p Recomendaciones para registrar a tus beneficiarios:
-								ul
-									li "Revisar rubro"
-									li "Revisar rubro"
+							.col-md-12.bgazul7
+								br
+								.triangulo
+								.col-md-8
+									h3 Recomendaciones para registrar a tus beneficiarios:
+									ul
+										li -"Revisar rubro"
+										li -"Revisar rubro"
+								.col-md-4.text-center.pregB
+									br
+									button#agregarBene.btn-lg.btn-solid(type='button') 
+										.col-md-1.mov
+											b.text-left +
+										.col-md-6.mov2
+											| AGREGAR BENEFICIARIO
+									br
+								.col-md-12
+									br
+						.col-md-8.qBeneficiario							
 							.col-md-12
 								h4 DATOS BENEFICIARIO 1
 							.col-md-6
@@ -592,34 +610,32 @@ html(lang="en")
 									p.labelgral Nombre(s)*
 									input.form-control(type="text",placeholder="Nombre(s)")
 								.form-group
-									p.labelgral Segundo apellido*
-									input.form-control(type="text",placeholder="Nombre(s)")
+									p.labelgral Apellido materno*
+									input.form-control(type="text",placeholder="Apellido materno")
+								.form-group
+									p.labelgral Porcentaje asignado*
+									select.form-control
+										option(value="opcion-1") Selecciona
+										option(value="opcion-2") 25%
+										option(value="opcion-3") c
+										option(value="opcion-4") d
+										option(value="opcion-5") e	
+							.col-md-6
+								.form-group
+									p.labelgral Apellido paterno*
+									input.form-control(type="text",placeholder="Apellido paterno")
 								.form-group
 									p.labelgral Parentesco*
 									select.form-control
 										option(value="opcion-1") Selecciona
-										option(value="opcion-2") b
+										option(value="opcion-2") Hijo
 										option(value="opcion-3") c
 										option(value="opcion-4") d
 										option(value="opcion-5") e
-							.col-md-6
-								.form-group
-									p.labelgral Primer apellido*
-									input.form-control(type="text",placeholder="Apellido Materno")
-								.form-group
-									p.labelgral Porcentaje que le corresponde*
-									select.form-control
-										option(value="opcion-1") Selecciona
-										option(value="opcion-2") b
-										option(value="opcion-3") c
-										option(value="opcion-4") d
-										option(value="opcion-5") e
-						.col-md-12
+						.col-md-offset-1.col-md-10.text-center
 							br
-							.col-md-12.text-center
-								button#continuarStep4(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
-								.space
-					
+							button#continuarStep4.btn-lg.btn-solid CONTINUAR
+							.space				
 			// Modal
 		#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog(role='document')
@@ -916,11 +932,6 @@ html(lang="en")
 			.row
 				.col-md-12.text-center
 					h2 ¡FELICIDADES XXXXXXX XXXX!
-			.row
-				.col-md-6.text-right
-					button#enviarPorMailStep5 ENVIAR POR MAIL
-				.col-md-6.text-left
-					button#descargarStep5 DESCARGAR PDF
 			.space
 			.space
 				.col-md-12.text-center
