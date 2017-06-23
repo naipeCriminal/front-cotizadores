@@ -49,18 +49,17 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-11
 						.col-md-12
-							h2.subt Seguros Bancomer lo que más nos importa eres tú, por lo cual te sugerimos que  
+							h2.subt Para conocer la opción de 
 								span 
-									strong leas y aceptes 
-								| el Aviso de Privacidad que tenemos para el manejo de tus datos personales, y posteriormente te solicitamos completar los siguientes datos:
+									strong Vida  
+								| que tenemos para ti, es necesario aceptar el Aviso de Privacidad y posteriormente completar los siguientes campos:
 							input(type="checkbox",id="checkbox-1" class="regular-checkbox big-checkbox")
 							label(for="checkbox-1")
 							a#AvPriv(target='_BLANK',href='#', data-toggle='modal', data-target='#myModalAvPriv', data-trigger='hover') Aviso de Privacidad
 						.col-md-12
 							.col-md-11.text-left
-								p.labelgral He leído y conozco el alcance del tratamiento de mis datos personales.
+								h6 He leído y conozco el alcance del tratamiento de mis datos personales.
 									br
-								br
 						.col-md-12
 							small
 								u * Campos obligatorios
@@ -68,24 +67,32 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='Nombre (s)*')
+							p.labelgral Nombre(s)*
+							input.registro.form-control(type='text', placeholder='Nombre (s)')
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='Apellido paterno * ')
+							p.labelgral Apellido Paterno*
+							input.registro.form-control(type='text', placeholder='Apellido paterno')
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='Apellido materno *')
+							p.labelgral Apellido Materno*
+							input.registro.form-control(type='text', placeholder='Apellido materno ')
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-4
-							input.registro.form-control(type='text', placeholder='Correo electrónico *')
+							p.labelgral Correo electrónico*
+							input.registro.form-control(type='text', placeholder='Correo electronico')
 						.col-md-4
-							//- p.labelgral Fecha de nacimiento*
+							p.labelgral Fecha de nacimiento*
 							input.registro.selector.form-control(type='text', placeholder='Fecha de nacimiento*')
 						.col-md-4
+							p.labelgral
 							.col-xs-4
+								br
 								input#day.form-control(type='text', disabled='')
 							.col-xs-4
+								br 
 								input#moth.form-control(type='text', disabled='')
-							.col-xs-4
+							.col-xs-4 
+								br
 								input#year.form-control(type='text', disabled='')
 				.row
 					.col-md-offset-1.col-md-10
@@ -111,14 +118,15 @@ html(lang="en")
 						button.close(type='button', data-dismiss='modal', aria-label='Close')
 							span(aria-hidden='true') ×
 						h4#myModalLabel.modal-title Modal title
-					.modal-body.text-center
-						h4
-							strong	Aviso de privacidad
-						h2.subt Seguros BBVA Bancomer, S,A de CV. Grupo Financiero BBVA BAncomer, Montes Urales 620, 2do piso Col.Lomas de Chapultepec, Del.Miguel Hidalgo, 11000, D.F recaba tus datos para verificar tu identidad. El aviso de privacidad Integral actualizado está en cualquiera de nuestras oficinas y en 
-							a(target="_BLANK",href="https://www.segurosbancomer.com.mx/seguros/tleu/segurosban/index.jsp") www.segurosbancomer.com.mx
-						br
-
-						button.btn-lg.btn-solid.text-center(type='button', data-dismiss='modal') Aceptar
+					.modal-body
+						.col-md-offset-1.col-md-10
+							h4
+								strong	Aviso de privacidad
+							h2 Seguros BBVA Bancomer, S,A de CV. Grupo Financiero BBVA BAncomer, Montes Urales 620, 2do piso Col.Lomas de Chapultepec, Del.Miguel Hidalgo, 11000, D.F recaba tus datos para verificar tu identidad. El aviso de privacidad Integral actualizado está en cualquiera de nuestras oficinas y en 
+								a(target="_BLANK",href="https://www.segurosbancomer.com.mx/seguros/tleu/segurosban/index.jsp") www.segurosbancomer.com.mx
+							br
+						.text-center
+								button.btn-lg.btn-solid.text-center(type='button', data-dismiss='modal') Aceptar
 	
 		hr
 		h1 cotiza
@@ -128,8 +136,8 @@ html(lang="en")
 		.container.bgwhite
 			form
 				.row
-					.col-md-12
-						h2.subt
+					.col-md-offset-1.col-md-10
+						h2
 							strong Hola XXXXXX
 							, ésta es la mejor opción que encontramos para tí:
 				.space
@@ -162,7 +170,7 @@ html(lang="en")
 							.space
 				.row
 					.col-md-offset-1.col-md-11
-						h2 Tipo de plan:
+						h3 Tipo de plan:
 					.col-md-offset-1.col-md-2
 						.radio
 							input(type='radio',id="radio",name='tipoPlan',value='Plan-Creciente', class="regular-radio",checked='true')
@@ -182,7 +190,7 @@ html(lang="en")
 									h4 Elige el plan que más te convenga:
 							.row
 								.col-md-12
-									h2.subt Pagos por prima
+									h2 Pagos por prima
 									.col-md-3.plan.active
 										button.btn.btn-info.bigbutton(type='button')
 											.triangulo
@@ -310,10 +318,11 @@ html(lang="en")
 				h2 CUESTIONARIO
 		.container.bgwhite
 			.row
-				.col-md-12
-					h2.subt Por favor responde la siguiente pregunta:
 				.col-md-offset-1.col-md-10
-					h3 ¿Tienes o has tenido alguna de estas enfermedades?
+					.col-md-12
+						h2.subt Por favor responde la siguiente pregunta:
+					.col-md-12
+						h3 ¿Tienes o has tenido alguna de estas enfermedades?
 			form
 				.row
 					.col-md-offset-8.col-md-1
@@ -406,247 +415,211 @@ html(lang="en")
 		h1 contrata
 		.container
 			.row
-				h2 CONTRATAR
+				h2 CONTRATA
 		.container.bgwhite
-			.row
-				.col-md-9
-					P Para contratar tu póliza es necesario completar la información que se solicita a continuación:
-				.col-md-3.text-right
-					p.labelgral No. de cotización
-					br
-					p.labelgral 123456789A
-						.space
-					hr
-				.col-md-8
-					h4 Datos personales
-					br
-				form
-					.col-md-8
-						.col-md-6
-							.form-group
-								p.labelgral Nombre(s)*
-								input.form-control(type="text",placeholder="Nombre(s)")
-							.form-group
-								p.labelgral Segundo apellido*
-								input.form-control(type="text",placeholder="Nombre(s)")
-						.col-md-6
-							.form-group
-								p.labelgral Primer apellido*
-								input.form-control(type="text",placeholder="Apellido Materno")
-						.col-md-6
-							.col-md-4
-								.form-group
-									p.labelgral Genero*
-									br
-							.col-md-7
-								.radio
-									p.labelgral
-										input(type='radio',id="radio-cs",name='optionsRadios', value='femenino', checked='' class="regular-radio")
-										label(for='radio-cs')
-										| Femenino
-								.radio
-									p.labelgral
-										input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")		
-										label(for='radio-cs2')
-										| Masculino
-							.space
+			form
+				.row
+					.col-md-offset-1.col-md-10
 						.col-md-8
-							.form-group
-								p Fecha de nacimiento*
-								.col-xs-12
-									input.selector2.form-control(type='text')
-								.col-xs-4
-									input#day2.form-control(type='text', disabled='')
-								.col-xs-4
-									input#moth2.form-control(type='text', disabled='')
-								.col-xs-4
-									input#year2.form-control(type='text', disabled='')
-						.col-md-6
-							.form-group
-								p.labelgral Pais de nacimiento*
-								select.form-control
-									option(value="opcion-1") Seleccionar
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
-							.form-group
-								p.labelgral CURP*
-								input.form-control(type="text",placeholder="Nombre(s)")
-						.col-md-6
-							.form-group
-								p.labelgral Entidad de nacimiento*
-								select.form-control
-									option(value="opcion-1") Seleccionar
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
-						.col-md-8
-							h4 Domicilio
-						.col-md-8
-							.form-inline
-							p ¿Deseas recibir tu póliza en el domicilio registrado?
-							.col-md-4
-								.radio.text-center
-									input(type='radio',id="radiopd",name='domicilio',value='si', class="regular-radio",checked='')
-									label(for='radiopd')
-									label Si
-							.col-md-4
-								.radio.text-center
-									input(type='radio',id="radiopdm",name='domicilio',value='No', class="regular-radio")
-									label(for='radiopdm')
-									label No
-						.col-md-6
-							.form-group
-								p.labelgral C.P.
-								input.form-control(type="text",placeholder="Calle")
-							.form-group
-								p.labelgral Entidad federativa*
-								select.form-control
-									option(value="opcion-1") Seleccionar
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
-							.form-group
-								p.labelgral Delegación o municipio*
-								select.form-control
-									option(value="opcion-1") Seleccionar
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
-							.form-group
-								p.labelgral Calle*
-								select.form-control
-									option(value="opcion-1") Seleccionar
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
-							.form-group
-								p.labelgral No. Interior*
-								input.form-control(type="text",placeholder="No. Interior")
-						.col-md-6
-							.form-group
-								p.labelgral Entidad federativa
-								select.form-control
-									option(value="opcion-1") Colonia
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
-							.form-group
-								p.labelgral Ciudad*
-								select.form-control
-									option(value="opcion-1") Seleccionar
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
-							.form-group
-								p.labelgral Colonia*
-								select.form-control
-									option(value="opcion-1") Seleccionar
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
-							.form-group
-								p.labelgral No. Exterior*
-								input.form-control(type="text",placeholder="No. Exterior")
-							.form-group
-								p.labelgral No. teléfonico*
-								input.form-control(type="text",placeholder="Telefono")
-						.col-md-8
-							h4 BENEFICIARIOS
+							h2.subt Para contratar tu póliza es necesario completar la información que se solicita a continuación:
+								br
+							small
+								u * Campos obligatorios
+							h4 Datos personales
 							br
-							p Recomendaciones para registrar a tus beneficiarios:
-							ul
-								li "Revisar rubro"
-								li "Revisar rubro"
+							.col-md-6
+								.form-group
+									p.labelgral Nombre(s)*
+									input#qNombre.form-control(type="text",nombre="qNombre",placeholder="Nombre(s)")
+								.form-group
+									p.labelgral Apellido Materno*
+									input#qMaterno.form-control(type="text",nombre="qMaterno",placeholder="Apellido Materno")
+								.form-group
+									p Fecha de nacimiento*
+									.col-xs-12
+										input#qFecha.selector2.form-control(type='text',nombre="qFecha")
+									.col-xs-4
+										input#day2.form-control(type='text', disabled='',nombre="qFechaD")
+									.col-xs-4
+										input#moth2.form-control(type='text', disabled='',nombre="qFechaM")
+									.col-xs-4
+										input#year2.form-control(type='text', disabled='',nombre="qFecha")
+								.form-group
+									p.labelgral Entidad federativa*
+									input#qEdo.form-control(type="text",nombre="qRfc",placeholder="Entidad federativa")
+								.form-group
+									p.labelgral RFC*
+									input#qCurp.form-control(type="text",nombre="qRfc",placeholder="RFC")
+							.col-md-6
+								.form-group
+									p.labelgral Apellido Paterno*
+									input#qMaterno.form-control(type="text",nombre="qPaterno",placeholder="Apellido Paterno")
+							.col-md-6
+								.form-inline
+									p.labelgral Genero*
+									.col-md-6
+										h6.labelgral
+											input(type='radio',id="radio-cs",name='optionsRadios', value='femenino', checked='' class="regular-radio")
+											label(for='radio-cs')
+											| Femenino
+									.col-md-6
+										h6.labelgral
+											input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")
+											label(for='radio-cs2')
+											| Masculino
+							.col-md-6
+								.form-group
+									p.labelgral País de nacimiento*
+									input#qPais.form-control(type="text",nombre="qRfc",placeholder="País de nacimiento")
+							.col-md-6
+								.form-group
+									p.labelgral CURP*
+									input#qCurp.form-control(type="text",nombre="qCurp",placeholder="CURP")
+							.col-md-6
+								.form-group
+									p.labelgral Correo electronico*
+									input#qCorreo.form-control(type="text",nombre="qCorreo",placeholder="ana@gmail.com")
+							.row
+								.col-md-12
+									.col-md-8
+										h4 Domicilio del contratante
+									.col-md-6
+										.form-group
+											p.labelgral Calle*
+											input#qCalle.form-control(type="text",nombre="qCalle",placeholder="Calle")
+									.col-md-6
+										.form-group
+											p.labelgral No. Exterior
+											input#qNext.form-control(type="text",nombre="qNext",placeholder="Apellido Materno")
+									.col-md-6
+										.form-group
+											p.labelgral No. Interior*
+											input#qNint.form-control(type="text",nombre="qNint",placeholder="No. Int")
+									.col-md-6
+										.form-group
+											p.labelgral C.P*
+											input#qCp.form-control(type="text",nombre="qCp",placeholder="Codigo postal")
+									.col-md-6
+										p.labelgral Colonia*
+										select#qColonia.form-control
+											option(value="opcion-1",nombre="") Colonia
+											option(value="opcion-2",nombre="") b
+											option(value="opcion-3",nombre="") c
+											option(value="opcion-4",nombre="") d
+											option(value="opcion-5",nombre="") e
+									.col-md-6
+										.form-group
+											p.labelgral Delegación/municipio*
+											input#qDeleg.form-control(type="text",nombre="qDeleg",placeholder="Delegación/municipio")
+									.col-md-6
+										.form-group
+											p.labelgral Ciudad*
+											input#qCiudad.form-control(type="text",nombre="qCiudad",placeholder="Ciudad")
+											.space
+									.col-md-6
+										.form-group
+											p.labelgral Estado*
+											input#qEdo.form-control(type="text",nombre="qEdo",placeholder="Estado")
+											.space
 
-						.col-md-12
-							h4 DATOS BENEFICIARIO 1
-						.col-md-6
-							.form-group
-								p.labelgral Nombre(s)*
-								input.form-control(type="text",placeholder="Nombre(s)")
-							.form-group
-								p.labelgral Segundo apellido*
-								input.form-control(type="text",placeholder="Nombre(s)")
-							.form-group
-								p.labelgral Parentesco*
-								select.form-control
-									option(value="opcion-1") Selecciona
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
-						.col-md-6
-							.form-group
-								p.labelgral Primer apellido*
-								input.form-control(type="text",placeholder="Apellido Materno")
-							.form-group
-								p.labelgral Porcentaje que le corresponde*
-								select.form-control
-									option(value="opcion-1") Selecciona
-									option(value="opcion-2") b
-									option(value="opcion-3") c
-									option(value="opcion-4") d
-									option(value="opcion-5") e
+						.col-md-4.bgazul1.r-row
+							.col-md-12
+								p.bgazul4 No. de cotización: 
+									strong  123456789A
+							.col-md-5
+								h1 Suma asegurada
+							.col-md-7
+								h2 $5000,000.°°
+							.col-md-12
+								.col-md-6
+									h3 Suma asegurada por fallecimiento
+								.col-md-6
+									br
+									h4 $ 250,000.°°
+							.col-md-12
+								.col-md-6
+									h3 Suma asegurada por muerte accidental
+								.col-md-6
+									br
+									h4 $ 120,000.°°
+							.col-md-12
+								.col-md-6
+									h3 Suma asegurada para gastos funerarios
+								.col-md-6
+									br
+									h4 $ 280,000.°°
+							.col-md-12
+								hr
+							.col-md-12
+								.col-md-6
+									h5 Periodo:
+								.col-md-6
+									h6 Mensual
+							.col-md-12
+								.col-md-6
+									h5 Primer pago:
+								.col-md-6
+									h6 $ 250.°°
+							.col-md-12
+								.col-md-6
+									h5 Pagos subsecuentes 11 pagos de:
+								.col-md-6
+									h6 $ 250.°°
+							.col-md-12
+								.col-md-6
+									h5 Total a pagar:
+								.col-md-6
+									h6 $ 3,000.°°	
+									.space
+							.col-md-12.text-center
+								button.btn-lg.btn-borde CAMBIAR COTIZACIÓN
+								.space
+							//.col-md-12.text-center
+								button.btn-lg.btn-borde CONTRATAR VIA TELEFÓNICA
+						.col-md-8
+							.col-md-12
+								h4 BENEFICIARIOS
+								br
+								p Recomendaciones para registrar a tus beneficiarios:
+								ul
+									li "Revisar rubro"
+									li "Revisar rubro"
+
+							.col-md-12
+								h4 DATOS BENEFICIARIO 1
+							.col-md-6
+								.form-group
+									p.labelgral Nombre(s)*
+									input.form-control(type="text",placeholder="Nombre(s)")
+								.form-group
+									p.labelgral Segundo apellido*
+									input.form-control(type="text",placeholder="Nombre(s)")
+								.form-group
+									p.labelgral Parentesco*
+									select.form-control
+										option(value="opcion-1") Selecciona
+										option(value="opcion-2") b
+										option(value="opcion-3") c
+										option(value="opcion-4") d
+										option(value="opcion-5") e
+							.col-md-6
+								.form-group
+									p.labelgral Primer apellido*
+									input.form-control(type="text",placeholder="Apellido Materno")
+								.form-group
+									p.labelgral Porcentaje que le corresponde*
+									select.form-control
+										option(value="opcion-1") Selecciona
+										option(value="opcion-2") b
+										option(value="opcion-3") c
+										option(value="opcion-4") d
+										option(value="opcion-5") e
 						.col-md-12
 							br
 							.col-md-12.text-center
 								button(type='button', data-toggle='modal', data-target='#myModal2') CONTINUAR
 								.space
-					.col-md-4.text-center
-							.col-md-10.bqplanes
-								h4.text-center Mi cotización
-									.space
-								.col-md-8.text-right
-									h4 Suma asegurada:
-								.col-md-4.text-left
-									h4 $0,000 
-									.space
-								.col-md-8.text-right
-									p Suma asegurada por fallecimiento:
-								.col-md-4.text-left
-									p $0,000 
-									.space
-								.col-md-8.text-right
-									p Suma asegurada por muerte accidental:
-								.col-md-4.text-left
-									p $0,000 
-									.space
-								.col-md-8.text-right
-									p Suma asegurada para gastos funerarios:
-								.col-md-4.text-left
-									p $0,000 
-									.space
-								.col-md-12.text-right
-									.radio
-										p.labelgral
-											input(type='radio',id="radioctrt",name='PlanOf', value='Plan', class="regular-radio", checked="")
-											label(for='radioctrt')
-											label Plan reciente
-									.space
-								.col-md-8.text-right 
-									p Pago por prima:
-								.col-md-4.text-left
-									p $0000
-									p mensual
-									.space
-									.space
-								.col-md-10.text-center
-									.col-md-4
-										button.btn-lg CAMBIAR COTIZACIÓN
-										.space
-							.col-md-12.text-center
-								.space
-								.col-md-10
-									button.btn-lg CONTRATAR VIA TELEFÓNICA
+					
 			// Modal
 		#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog(role='document')

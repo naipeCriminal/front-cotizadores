@@ -18,6 +18,7 @@ $gris5:#D8D8D8;
 $gris6:#F2F2F2;
 $gris7:#4a4a4a;
 $gris8:#6C6F73;
+$gris9:#B5B7B9; 
 
 $fontDefault:'StagSans-Book';
 $h4Family:'StagSans-Medium';
@@ -40,7 +41,7 @@ $imgExito:url(../assets/img/ico_poliza_exito.png);
 $selectMenu:url(../assets/img/select_menu.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
-$steph3:$gris4;
+$steph3:$gris9;
 $stepactivespanbg:$azul1;
 $stepactivespan:$azul1;
 $stepactiveh3:$azul1;
@@ -315,6 +316,9 @@ ul.list-group{
 .bgazul1{
 	background-color: $azul2;
 	border-bottom: 1px solid #fff;
+	border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
 	&.poliza{
 		color:#fff;
 		h2{
@@ -531,6 +535,7 @@ ul.list-group{
 		h3{
 			color: $steph3;
 			font-size: 16px;
+			font-family:'StagSans-Book';
 		}
 		&.active{
 			.ico{

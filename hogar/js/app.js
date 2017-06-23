@@ -44,10 +44,10 @@ function avisoPrivacidad(){
 function planesAoB(){
 	if( $('#radio-1').prop('checked') ){
 			$(".a").addClass("active");
-			$(".b").removeClass("active");
+			$(".b,.c").removeClass("active");
 		}else {
 			$(".b").addClass("active");
-			$(".a").removeClass("active");
+			$(".a,.c").removeClass("active");
 		}
 }
 function domicilio(){

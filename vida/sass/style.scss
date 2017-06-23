@@ -4,6 +4,7 @@ $azul3:#009EE5;
 $azul4:#52BCEC;
 $azul5:#89D1F3;
 $azul6:#B5E5F9;
+$azul7:#e7f6fd;
 
 $verde:#86C82D;
 $amarillo:#FDCA56;
@@ -17,27 +18,30 @@ $gris5:#D8D8D8;
 $gris6:#F2F2F2;
 $gris7:#4a4a4a;
 $gris8:#6C6F73;
+$gris9:#B5B7B9;
 
-$h4Family:sans-serif;
+$fontDefault:'StagSans-Book';
+$h4Family:'StagSans-Medium';
 $h4Size:19px;
 $h4Color:$azul1;
-$pLabelFamily:sans-serif;
-$pLabelSize:15px;
-$pLabelColor:$gris3;
+$pLabelFamily:'StagSans-Light';
+$pLabelSize:16px;
+$pLabelColor:#474B50;;
 $pLabelW:300;
-$pDatoFamily:sans-serif;
+$pDatoFamily:'StagSans-Book';
 $pDatoSize:30px;;
 $pDatoColor:$gris2;
-$h2SubFamily:sans-serif;
+$h2SubFamily:'StagSans-Book';
 $h2SubW:500;
 $h2SubSize:18px;
-$h2SubColor:$gris7;
+$h2SubColor:$gris2;
 
 $spriteurl:url(../assets/img/sprite.png);
 $imgExito:url(../assets/img/ico_poliza_exito.png);
+$selectMenu:url(../assets/img/select_menu.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
-$steph3:$gris4;
+$steph3:$gris9;
 $stepactivespanbg:$azul1;
 $stepactivespan:$azul1;
 $stepactiveh3:$azul1;
@@ -76,17 +80,51 @@ body{
 .azul3{
 	color: $azul3; 
 }
-.naranja{
-	background: $naranja;
-}
-.naranja-tooltip + .tooltip > .tooltip-inner {background-color: $naranja;}
-.tooltip{
-font-size: 13px
-}
 h4{
 	font-family:$h4Family;
 	font-size:$h4Size;
 	color:$h4Color;
+}
+.naranja-tooltip + .tooltip > .tooltip-inner {
+	background-color: $naranja;
+	font-size: 13px;
+    width: 202px;
+    padding: 14px;
+    text-align: left;
+    ul,li{
+    	color: #fff;
+    	font-size: 13px;
+    	padding-bottom: 0px;
+    	list-style-type: initial;
+    	font-family: StagSans-Book;
+    }
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: $naranja;
+    top: 86%;
+}
+.tooltip.in {
+    opacity: 1;
+}
+input, select, textarea {
+    font-family: $pLabelFamily;
+	font-size: 12px;
+	color: $gris3;
+}
+.form-control:focus { 
+   	border-color: #FFF;
+    outline: 0;
+    -webkit-box-shadow: inset 0 0px 0px #333, 0 0 8px #333;
+    box-shadow: inset 0 0px 0px #333, 0 0 8px #333;
+}
+.bgazul7{
+	background: $azul7;
+	border-radius: 2px;
+	h6{
+		font-family: StagSans-Book;
+		font-size: 18px;
+		color: #094FA4;
+	}
 }
 .regular-checkbox {
     display: none;
@@ -154,37 +192,69 @@ h4{
     padding: 30px;
     padding-bottom: 20px;
     padding-top: 20px;
+    & .fp{
+    	font-family: StagSans-Light;
+		font-size: 12px;
+		color: #474B50;
+    }
+    .acepto{
+    	font-family: StagSans-Light;
+		font-size: 18px;
+		color: $azul3;
+    }
 	hr{
 		border-top: 1px solid #000;
 	}
-	h4{
+	h6{
+		font-family: StagSans-Light;
+		font-size: 16px;
+		color: #6C6F73;
+	}
+	h5{
+	    font-size: 22px;
     	font-weight: 600;
 	}
-	h3{
-		font-family:$h2SubFamily ;
-		font-weight:$h2SubW ;
-		font-size:16px ;
-		color:$h2SubColor ;
+	h4{
+	    font-size: 19px;
+    	font-weight: 600;
 	}
 	h2{
+		font-family:$h2SubFamily;
+	font-weight:$h2SubW;
+	color:$h2SubColor;
+	line-height: 20px;
 		font-size: 20px;
+	}
+	h3{
+	font-family:$h2SubFamily;
+	font-weight:$h2SubW;
+	color:$gris7;
+	line-height: 20px;
+	font-size: 16px;
+
 	}
 	span{
 		font-size: 16px;
     	a{
-			color: #337ab7;
-	    	font-size: 16px;
+			font-family: StagSans-Book;
+			font-size: 18px;
+			color: $azul2;
+			line-height: 19px;
     	}
 	}
 	a{
+		font-family: $pLabelFamily;
 		color: $azul3;
-    	font-size: 16px;
+    	font-size: 20px;
 	}
-	label{
-			font-weight: 200;
-    		color: #777;
-    		font-size: 16px;
-		}
+	u{
+		font-family: $pLabelFamily;
+		font-size: 12px;
+		color: #6C6F73;
+	}
+	label{font-weight: 200;font-family: StagSans-Light;
+font-size: 16px;
+color: $gris3;}
 }
 .bgazul1{
 	background-color: $azul2;
@@ -230,6 +300,43 @@ h4{
 			top: 12px;
 		}
 	}
+	&.r-row{
+		h1{
+			font-family: StagSans-Medium;
+			font-size: 24px;
+			color: #FFFFFF;
+		}
+		h2{
+			font-family: StagSans-Book;
+			font-size: 23px;
+			color: #FFFFFF;
+		}
+		h3{
+			font-family: StagSans-Book;
+			font-size: 14px;
+			color: #FAFAFA;
+		}
+		h4{
+			font-family: 'StagSans-Light';
+			    text-decoration: none;
+			font-size: 13px;
+			color: #B5E5F9;
+		}
+		h5{
+			font-family: StagSans-Book;
+			font-size: 12px;
+			color: #FFFFFF;
+			line-height: 14px;
+		}
+		h6{
+			font-family: StagSans-Book;
+			font-size: 15px;
+			color: #B5E5F9;
+		}
+		hr{
+		    border-top: 1px solid $azul6;
+		}
+	}
 }
 .bgazul2{
 	background: $azul2;
@@ -270,6 +377,9 @@ h4{
 		}
 	}
 }
+.bgazul4{
+	background: $azul4;
+}
 .bgazul5{
     padding: 39px 1px 48px 1px;
 	background: rgba(137, 209, 243, 0.28);
@@ -293,6 +403,17 @@ h4{
 }
 #myModalAvPriv .modal-body {
     border: 4px solid $azul2;
+    h4{
+    	font-family: StagSans-Book;
+		font-size: 28px;
+		color: #094FA4;
+    }
+    h2{
+    	font-family: StagSans-Book;
+font-size: 17px;
+color: $gris3;
+line-height: 28px;
+    }
 }
 .steps{
 
@@ -301,6 +422,7 @@ h4{
 		h3{
 			color: $steph3;
 			font-size: 16px;
+			font-family:'StagSans-Book';
 		}
 		&.active{
 			.ico{
@@ -310,6 +432,14 @@ h4{
 			h3{
 			color:$azul3;
 			}
+			span{
+				background: $selectMenu;
+				width: 26px;
+				height: 15px;
+				position: absolute;
+				left: 50%;
+				margin-left: -13px;		
+			}			
 
 		}
 		&.complete{
@@ -352,10 +482,11 @@ h4{
 }
 
 h2.subt{
-	font-family:$h2SubFamily ;
-	font-weight:$h2SubW ;
-	font-size:$h2SubSize ;
-	color:$h2SubColor ;
+	font-family:$h2SubFamily;
+	font-weight:$h2SubW;
+	font-size:$h2SubSize;
+	color:$h2SubColor;
+	line-height: 20px;
 }
 .labelgral{
 	color: #000;
@@ -365,6 +496,14 @@ h2.subt{
 	padding-top: 15px;
 	padding-bottom: 15px;
 	background: $gris6;
+	h4{
+		font-size: 24px;
+    	font-family: StagSans-Book;
+    	color: $azul1;
+	}
+	h3{
+		color:$azul3;
+	}
 	& .a.active{
 		.triangulo{
 		width: 0; 
@@ -470,11 +609,15 @@ h2.subt{
 }
 .btn-borde{
 	width: 270px;
-	border: 2px solid $azul5;
-	color:$azul5;
+	border: 2px solid $azul4;
 	background: #fff;
 	background-color: #fff;
-	outline: none;	
+	outline: none;
+	width: 270px;
+    font-family: StagSans-Book;
+    font-size: 16px;
+    color: $azul4;
+    letter-spacing: 0;	
 }
 .btn-solid{
 	width: 270px;
@@ -483,6 +626,9 @@ h2.subt{
 	background-color: $azul2;
 	outline: none;
 	color:#fff;
+	font-family: StagSans-Book;
+	font-size: 16px;
+	letter-spacing: 0;
 }
 .ayuda{
 	background: $spriteurl;
@@ -507,16 +653,20 @@ h2.subt{
 	h1{
 		color:#fff;
 		font-size: 28px;
+		font-family: 'StagSans-Medium';
 	}
 	h4{
 		color:#fff;
 		font-size: 24px;
 		text-decoration: underline;
+		font-family: StagSans-Medium;
 	}
 	h5{color: $azul6;
 		font-size: 22px;
+		font-family: 'StagSans-Light';
 	}
 	h6{color: #fff;
+		font-family: 'StagSans-Book';
 		font-size: 22px;
 	}
 	p{
@@ -555,11 +705,15 @@ ul.list-group{
 	    	font-size: 15px;
 		}
 		& .tp{
-			 p.label{
-				color: $azul3;
+			 p.labelgral{
+			 	font-family: StagSans-Light;
+			    font-size: 13px;
+				font-weight: 700;
+				color: $azul2;
 			}
 			.badge strong{
-				color: $azul3;
+				font-family: StagSans-Book;
+				color: $azul2;
 			}
 		} 
 }
@@ -568,13 +722,14 @@ ul.list-group{
 	width: 100%;
 	height: 100%;
 	& h4 {
-		color: #fff;
-		font-size: 24px;
+		font-family: StagSans-Book;
+		font-size: 26px;
+		color: #FFFFFF;
 	}
 	& p.labelgral{
-		color: #fff;
-		font-weight: 100;
-		font-size: 20px;
+		font-family: StagSans-Light;
+		font-size: 18px;
+		color: #FFFFFF;
 	}
 }
 .planes .plan.active {
