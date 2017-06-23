@@ -668,7 +668,7 @@ html(lang="en")
 			.row
 				.col-md-offset-1.col-md-6
 					h2.subt RESUMEN DE CONTRATACIÓN
-				.col-md-4.bqblanco
+				.col-md-4.bgazul5
 					.col-xs-6
 						h6 No. de cotización.
 					.col-xs-6.text-right
@@ -757,145 +757,141 @@ html(lang="en")
 					br
 					p.dato $3,000.°°
 				.col-md-2
-		.container.bgazul5.envioPoliza
-			.row
-				.col-md-offset-1.col-md-8
-					h4 Envío de póliza
-			.row
-				.col-md-offset-1.col-md-12
-					h2.subt Selecciona el medio por el cual quieres recibir tu póliza.
-			.row
-				.col-md-offset-1.col-md-12
-					.col-md-2
-						input.entregaP(type="radio",name='medioRecibo',value='Correo', checked="true")
-						label Correo eléctronico
-					.col-md-2
-						input.entregaP(type="radio",id="radioEnvio",name='medioRecibo',value='Domicilio')
-						label Domicilio
-					.col-md-3
-						input.entregaP(type="radio",name='medioRecibo',value='Consulta')
-						label Consulta portal Seguros
-					.col-md-2
-						input.entregaP(type="radio",name='medioRecibo',value='SAC')
-						label Comunicar al SAC
-			.row.envio
-				br
-				.col-md-offset-1.col-md-12
-					.col-md-12
-						p ¿El domicilio es el mismo con el que está registrado el inmueble?
-					.row
-						.col-md-12
-							.col-md-1
-								input(type="radio",name='registro',value='Si')
-								label Si
-							.col-md-1
-								input(type="radio",name='registro',value='No')
-								label No
-						.col-md-6
-							.col-md-4
-								.form-group
-									h5.label Hora de entrega
-									input.form-control(type="text",placeholder="12:00 pm")
-					.row
-						.col-md-12
-							.col-md-6
-								.form-group
-									h5.label Detalle (Entre que calles se encuentran)
-									input.form-control(type="textarea",placeholder="Entre Pianini y Motolinia")
+		//- .container.bgazul5.envioPoliza
+		//- 	.row
+		//- 		.col-md-offset-1.col-md-8
+		//- 			h4 Envío de póliza
+		//- 	.row
+		//- 		.col-md-offset-1.col-md-12
+		//- 			h2.subt Selecciona el medio por el cual quieres recibir tu póliza.
+		//- 	.row
+		//- 		.col-md-offset-1.col-md-12
+		//- 			.col-md-2
+		//- 				input.entregaP(type="radio",name='medioRecibo',value='Correo', checked="true")
+		//- 				label Correo eléctronico
+		//- 			.col-md-2
+		//- 				input.entregaP(type="radio",id="radioEnvio",name='medioRecibo',value='Domicilio')
+		//- 				label Domicilio
+		//- 			.col-md-3
+		//- 				input.entregaP(type="radio",name='medioRecibo',value='Consulta')
+		//- 				label Consulta portal Seguros
+		//- 			.col-md-2
+		//- 				input.entregaP(type="radio",name='medioRecibo',value='SAC')
+		//- 				label Comunicar al SAC
+		//- 	.row.envio
+		//- 		br
+		//- 		.col-md-offset-1.col-md-12
+		//- 			.col-md-12
+		//- 				p ¿El domicilio es el mismo con el que está registrado el inmueble?
+		//- 			.row
+		//- 				.col-md-12
+		//- 					.col-md-1
+		//- 						input(type="radio",name='registro',value='Si')
+		//- 						label Si
+		//- 					.col-md-1
+		//- 						input(type="radio",name='registro',value='No')
+		//- 						label No
+		//- 				.col-md-6
+		//- 					.col-md-4
+		//- 						.form-group
+		//- 							h5.label Hora de entrega
+		//- 							input.form-control(type="text",placeholder="12:00 pm")
+		//- 			.row
+		//- 				.col-md-12
+		//- 					.col-md-6
+		//- 						.form-group
+		//- 							h5.label Detalle (Entre que calles se encuentran)
+		//- 							input.form-control(type="textarea",placeholder="Entre Pianini y Motolinia")
 		.container.bgwhite
 			.space
 			form
 				.row
-					.col-md-offset-1.col-md-11
-						h4 COMPRAR
-						h2.subt Para realizar tu compra y descargar tu póliza, es necesario que 
-							strong aceptes 
-							| los Términos y Condiciones y que ingreses los siguientes datos.
+					.col-md-offset-1.col-md-10
+						.col-md-12
+							h4 COMPRAR
 				.row
-					.col-md-offset-1.col-md-11
-						input(type="checkbox",id="checkbox-Acepto" class="regular-checkbox big-checkbox")
-						label(for="checkbox-Acepto")
-						span Acepto los	
-							a(target="_BLANK",href="#") Términos y condiciones
+					.col-md-offset-1.col-md-10
+						.col-md-12
+							input(type="checkbox",id="checkbox-Acepto" class="regular-checkbox big-checkbox")
+							label(for="checkbox-Acepto")
+							span.acepto Acepto los	
+								a(target="_BLANK",href="#") Términos y condiciones
 				.row
 					br
-					.col-md-offset-1.col-md-4
-						.col-md-10
-							label.labelgral No. de tarjeta*
-							input#contrataTargeta.form-control(type='text' placeholder='12312341234234123')
-					.col-md-4
-						.col-md-10
-							label.labelgral CVV*
-							input#contrataCvv.form-control(type='text' placeholder='000')
-					.col-md-4
-							p.labelgral Nombre del titular*
-							input#contrata.form-control(type='text' placeholder='Escribe tu nombre')
-					.col-md-3
-						.col-md-10
-							label.labelgral Tipo de tarjeta*
-							select.form-control#contrataTipoTargeta
-								option(value="opcion-1") VISA
-								option(value="opcion-2") b
-								option(value="opcion-3") c
-								option(value="opcion-4") d	
-					.col-md-4
-						.col-md-10
-							p.labelgral No. de tarjeta*
-							input#contrata.form-control(type='text' placeholder='12312341234234123')
+					.col-md-offset-1.col-md-10
+						.col-md-4.tdc.ccb
+							.col-md-10
+								p.labelgral Nombre del titular*
+								input.acepto1#contrata.form-control(type='text' placeholder='Escribe tu nombre',nombre='',disabled='')
+						.col-md-4
+							.col-md-10
+								p.labelgral Tipo de tarjeta*
+								select.acepto1.form-control(disabled='')
+									option(value="opcion-1",nombre='') VISA
+									option(value="opcion-2",nombre='') b
+									option(value="opcion-3",nombre='') c
+									option(value="opcion-4",nombre='') d
+						.col-md-4
+							.col-md-10
+								p.labelgral Número de tarjeta*
+								input.acepto1#contrata.form-control(type='text' placeholder='12312341234234123',nombre='',disabled='')
 				.row
-					.col-md-offset-1.col-md-4
-						.col-md-10
-							p.labelgral CVV*
-								span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='aqui tu mensaje',class="naranja-tooltip")
-							input#contrata.form-control(type='text' placeholder='000')
-					.col-md-3
-						.col-md-12
-							p.labelgral Fecha de vencimiento*
-						.col-md-6
-							select.form-control#contrataVencimientoDia
-								option(value="opcion-1") 06
-								option(value="opcion-2") b
-								option(value="opcion-3") c
-								option(value="opcion-4") d
-						.col-md-6
-							select.form-control#contrataVencimientoMes
-								option(value="opcion-1") 2019
-								option(value="opcion-2") b
-								option(value="opcion-3") c
-								option(value="opcion-4") d
-					.col-md-4
-						.col-md-12
-							p.labelgral Tarjeta
-						.col-md-5
-							input(type="radio",name='tarjeta',value='BBVA', checked="")
-							label Bancomer
-						.col-md-5
-							input(type="radio",name='tarjeta',value='No')
-							label Otros bancos
+					.col-md-offset-1.col-md-10
+						.col-md-4
+							.col-md-10
+								p.labelgral CVV*
+									span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='Ultimos digitos al reverso de tu tarjeta',class="naranja-tooltip")
+
+								input.acepto1#contrata.form-control(type='text' placeholder='000',nombre='',disabled='')
+						.col-md-4
+							.col-md-12
+								p.labelgral Fecha de vencimiento*
+							.col-md-4
+								select.acepto1#fechaVenc.form-control(disabled='')
+									option(value="opcion-1",nombre='') 06
+									option(value="opcion-2",nombre='') b
+									option(value="opcion-3",nombre='') c
+									option(value="opcion-4",nombre='') d
+							.col-md-6
+								select.acepto1.form-control(disabled='')
+									option(value="opcion-1",nombre='') 2019
+									option(value="opcion-2",nombre='') b
+									option(value="opcion-3",nombre='') c
+									option(value="opcion-4",nombre='') d
+						.col-md-4
+							.col-md-12
+								p.labelgral Tarjeta
+							.col-md-5
+								input.acepto1#tarjBbva(type="radio",name='tarjeta',value='BBVA', checked="")
+								label Bancomer
+							.col-md-7
+								input.acepto1#tarjOther(type="radio",name='tarjeta',value='No',disabled='')
+								label Otros bancos
 				.row
-					.col-md-offset-1.col-md-9
-						p.labelgral Meses sin intereses
-					.col-md-offset-1.col-md-9
-						.col-md-2
-							input(type="radio",name='meses',value='3', checked="")
-							label 3 meses
-						.col-md-2
-							input(type="radio",name='meses',value='6')
-							label 6 meses
-						.col-md-2
-							input(type="radio",name='meses',value='9')
-							label 9 meses
-						.col-md-2
-							input(type="radio",name='meses',value='12')
-							label 12 meses		
+					.col-md-offset-1.col-md-10
+						.col-md-7.tdc1
+							.col-md-12
+								p.labelgral Meses sin intereses
+							.col-md-3
+								input.acepto1(type="radio",name='meses',value='3', checked="",disabled='')
+								label 3 meses
+							.col-md-3
+								input.acepto1(type="radio",name='meses',value='6',disabled='')
+								label 6 meses
+							.col-md-3
+								input.acepto1(type="radio",name='meses',value='9',disabled='')
+								label 9 meses
+							.col-md-3
+								input.acepto1(type="radio",name='meses',value='12',disabled='')
+								label 12 meses
 				.space
 				.row
-					.col-md-4.text-center
-						button#contrataSeguirDespuesStep4 SEGUIR DESPUES
-					.col-md-4.text-center
-						button#contrataNoMeInteresaStep4 NO ME INTERESA
-					.col-md-4.text-center
-						button#contrataPagarStep4(type='button', data-toggle='modal', data-target='#myModal3') PAGAR
+					br
+					.col-md-offset-1.col-md-10
+						.col-md-6.text-right
+							button.btn.lg.btn-borde REGRESAR
+						.col-md-6.text-left
+							button.btn.lg.btn-solid PAGAR
 		// Modal
 		#myModal3.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog(role='document')
@@ -960,9 +956,10 @@ html(lang="en")
 		.container
 			.row.bgwhite
 				.col-md-12.text-center
+					br
 					button.btn-lg.btn-solid DESCARGAR PDF
-				.space
-				.space
+				.col-md-12.text-center
+					br
 		hr
 
 

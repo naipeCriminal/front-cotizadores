@@ -13,6 +13,9 @@ $(document).ready(function(){
 	$(".entregaP").click(function(){
 		envioP();
 	})
+		$("#checkbox-Acepto").click(function(){
+		terminosCondiciones()
+	})
     $('.selector').datepicker({
 		changeMonth: true,
 		changeYear: true, 	
@@ -68,4 +71,13 @@ function qBene(){
 	$(".pregB button").click(function(){
 		$(".qBeneficiario").fadeIn();
 	})
+}
+function terminosCondiciones(){
+	if( $('#checkbox-Acepto').prop('checked') ){
+			$( ".acepto1" ).prop( "enabled", true );
+			$( ".acepto1" ).prop( "disabled", false );
+		}else {
+			$( ".acepto1" ).prop( "disabled", true );
+			$( ".acepto1" ).prop( "enabled", false );
+		}
 }
