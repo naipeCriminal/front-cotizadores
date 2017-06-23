@@ -4,6 +4,7 @@ $azul3:#009EE5;
 $azul4:#52BCEC;
 $azul5:#89D1F3;
 $azul6:#B5E5F9;
+$azul7:#e7f6fd;
 
 $verde:#86C82D;
 $amarillo:#FDCA56;
@@ -15,14 +16,16 @@ $gris3:#666666;
 $gris4:#CCCCCC;
 $gris5:#D8D8D8;
 $gris6:#F2F2F2;
+$gris7:#4a4a4a;
+$gris8:#6C6F73;
 
 $fontDefault:'StagSans-Book';
 $h4Family:'StagSans-Medium';
 $h4Size:19px;
 $h4Color:$azul1;
 $pLabelFamily:'StagSans-Light';
-$pLabelSize:15px;
-$pLabelColor:$gris3;
+$pLabelSize:16px;
+$pLabelColor:#474B50;;
 $pLabelW:300;
 $pDatoFamily:'StagSans-Book';
 $pDatoSize:30px;;
@@ -210,7 +213,7 @@ ul.list-group{
 			border-left: 13px solid transparent;
 			border-bottom: 13px solid $azul2;
 			position: absolute;
-			left: -20px;
+			left: 25px;
 			z-index: 10;
 		}
 		& .triangulo2{
@@ -254,11 +257,15 @@ ul.list-group{
 }
 .btn-borde{
 	width: 270px;
-	border: 2px solid $azul5;
-	color:$azul5;
+	border: 2px solid $azul4;
 	background: #fff;
 	background-color: #fff;
-	outline: none;	
+	outline: none;
+	width: 270px;
+    font-family: StagSans-Book;
+    font-size: 16px;
+    color: $azul4;
+    letter-spacing: 0;	
 }
 .btn-solid{
 	width: 270px;
@@ -267,6 +274,9 @@ ul.list-group{
 	background-color: $azul2;
 	outline: none;
 	color:#fff;
+	font-family: StagSans-Book;
+	font-size: 16px;
+	letter-spacing: 0;
 }
 .r-row{
 	padding: 10px;
@@ -274,7 +284,10 @@ ul.list-group{
 		border-bottom: none;
 	}
 	p.bgazul4{
-			padding: 5px;
+		padding: 5px;
+		font-family: StagSans-Book;
+		font-size: 16px;
+		color: #FFFFFF;
 		}
 	h4,h1{
 		color:#fff;
@@ -340,6 +353,38 @@ ul.list-group{
 			top: 12px;
 		}
 	}
+	&.r-row{
+		h1{
+			font-family: StagSans-Medium;
+			font-size: 28px;
+			color: #FFFFFF;
+		}
+		h3{
+			font-family: StagSans-Book;
+			font-size: 12px;
+			color: #FAFAFA;
+		}
+		h4{
+			font-family: StagSans-Book;
+			font-size: 20px;
+			color: $azul6;
+		    font-weight: 100;
+		}
+		h5{
+			font-family: StagSans-Book;
+			font-size: 12px;
+			color: #FFFFFF;
+			line-height: 14px;
+		}
+		h6{
+			font-family: StagSans-Book;
+			font-size: 15px;
+			color: #B5E5F9;
+		}
+		hr{
+		    border-top: 1px solid $azul6;
+		}
+	}
 }
 .bgazul2{
 	background: $azul2;
@@ -350,14 +395,35 @@ ul.list-group{
 	}
 	p.labelgral{
 		color:$azul6;
+		font-family: StagSans-Book;
+		font-size: 14px;
+		line-height: 24px;
 	}	
 	p.dato{
-		color:#fff;
+		font-family: StagSans-Book;
+		font-size: 18px;
+		color: #FFFFFF;
+		line-height: 24px;
 	}
 	p.dato.wig{
-		color: #fff;
-		font-size: 18px;
-		font-weight: 700;
+		font-family: StagSans-Medium;
+		font-size: 20px;
+		color: #FFFFFF;	
+	}
+	.bgazul5{
+		background: $azul5;
+		padding: 0px;
+	    border-bottom: none;
+		h6{
+			font-family: StagSans-Book;
+			font-size: 16px;
+			color: #FFFFFF;
+		}
+		h4{
+			font-family: StagSans-Medium;
+			font-size: 20px;
+			color: #FFFFFF;
+		}
 	}
 }
 .bgazul3{
@@ -366,29 +432,34 @@ ul.list-group{
 	&.resumen{
 	h4{
 		color:$azul6;
+		font-family: StagSans-Book;
+		font-size: 20px;
 	}
 	p.labelgral{
 		color:$azul6;
 	}	
 	p.dato{
-		color:#fff;
-		font-size: 18px;
+		font-family: StagSans-Book;
+		font-size: 21px;
+		color: #FFFFFF;
 	}
 	h1{
-		color: #fff;
+		font-family: StagSans-Medium;
+		font-size: 30px;
+		color: #FFFFFF;
 	}
-		ul li,p{
-			color:#fff;
-			font-size: 18px;
+		h6,p{
+			font-family: StagSans-Book;
+			font-size: 12px;
+			color: #FAFAFA;
 		}
 	}
 }
 .bgazul4{
 	background: $azul4;
-	border-bottom: 1px solid #fff;
 }
 .bgazul5{
-    padding: 25px;
+    padding: 39px 1px 48px 54px;
 	background: rgba(137, 209, 243, 0.28);
 	border-bottom: 1px solid #fff;
 	&.envioPoliza{
@@ -400,8 +471,9 @@ ul.list-group{
 			font-size: 20px;
 		}
 		label{
-			font-weight: 200;
-    		color: #777;
+			font-family: StagSans-Light;
+			font-size: 12px;
+			color: #666666;
 		}
 		p{
 			font-weight: 600;
@@ -410,7 +482,7 @@ ul.list-group{
 }
 
 .bgazul{
-	background: $azul6;
+	background: rgba(231, 246, 253, 0.5);
     padding: 30px;
     padding-bottom: 20px;
     padding-top: 20px;
@@ -421,6 +493,14 @@ ul.list-group{
     				color:$azul3;
     			}
     		}
+    	}
+    }
+    .bgazul6{
+    	background: $azul6;
+    	.seguro{
+    		font-family: StagSans-Book;
+			font-size: 12px;
+			color: $azul2;
     	}
     }
 }
@@ -536,11 +616,26 @@ ul.list-group{
 	font-weight: $pLabelW;
 	white-space: inherit;
 }
+.labelgral2{
+	font-family: $pLabelFamily;
+	font-size: 14px;
+	color: $gris8;
+    line-height: 17px;
+	font-weight: $pLabelW;
+	white-space: inherit;
+}
 .bggris{
 	padding: 20px;
 	padding-top: 15px;
 	padding-bottom: 15px;
 	background: $gris6;
+	h4{
+		font-size: 24px;
+    	font-family: StagSans-Book;
+	}
+	h3{
+		color:$azul3;
+	}
 	& .a.active{
 		.triangulo{
 		width: 0; 
@@ -565,6 +660,18 @@ ul.list-group{
 	    right: -330px;
 		}
 	}
+	& .c.active{
+		.triangulo{
+		width: 0; 
+     	height: 0; 
+	    border-left: 48px solid #fff;
+	    border-top: 39px solid transparent;
+	    border-bottom: 40px solid transparent;
+	    position: relative;
+	    transform: rotate(90deg);
+	    left: 0px;
+		}
+	}
 }
 .bgwhite{
     background: #fff;
@@ -572,11 +679,25 @@ ul.list-group{
     padding: 30px;
     padding-bottom: 20px;
     padding-top: 20px;
+    & .fp{
+    	font-family: StagSans-Light;
+		font-size: 12px;
+		color: #474B50;
+    }
+    .acepto{
+    	font-family: StagSans-Light;
+		font-size: 18px;
+		color: $azul3;
+    }
 	hr{
 		border-top: 1px solid #000;
 	}
-	h4{
+	h5{
 	    font-size: 22px;
+    	font-weight: 600;
+	}
+	h4{
+	    font-size: 24px;
     	font-weight: 600;
 	}
 	h2{
@@ -584,20 +705,24 @@ ul.list-group{
 	}
 	span{
 		font-size: 16px;
-    	color: $azul4;
     	a{
-			color: #337ab7;
-	    	font-size: 16px;
+			font-family: StagSans-Book;
+			font-size: 18px;
+			color: $azul2;
+			line-height: 19px;
     	}
 	}
 	a{
+		font-family: $pLabelFamily;
 		color: $azul3;
-    	font-size: 16px;
+    	font-size: 20px;
 	}
-	label{
-			font-weight: 200;
-    		color: #777;
-		}
+	u{
+		font-family: $pLabelFamily;
+		font-size: 12px;
+		color: #6C6F73;
+	}
+	label{font-weight: 200;}
 }
 .form-control{
 	margin-bottom: 21px;
@@ -620,6 +745,7 @@ ul.list-group{
 	}
 	h3{
 		color:$azul2;
+		font-family: StagSans-Book;
 	}
 	h4{
 		color:$azul3;
@@ -630,8 +756,14 @@ ul.list-group{
 		li{
 			padding-bottom: 10px;
 			color: $azul3;
-			font-size: 18px;	
+			font-size: 21px;
+			list-style-type: circle;
+			font-family: StagSans-Book;
 		}
+	}
+	span{
+		font-size: 30px;
+		font-family: StagSans-Medium;
 	}
 	&.active{
 		background: $azul2;
@@ -654,8 +786,14 @@ ul.list-group{
 }
 .contrata{
 	h2.subt{
-		font-weight: 700;
-		color: #fff;
+		font-family: StagSans-Medium;
+		font-size: 24px;
+		color: #FFFFFF;
+	}
+	h4{
+		font-family: StagSans-Book;
+		font-size: 20px;
+		color: #B5E5F9;
 	}
 }
 .bqblanco{
@@ -762,8 +900,56 @@ ul.list-group{
 }
 #myModalAvPriv .modal-body {
     border: 4px solid $azul2;
+    h4{
+    	font-family: StagSans-Book;
+		font-size: 28px;
+		color: #094FA4;
+    }
+    h2{
+    	font-family: StagSans-Book;
+font-size: 17px;
+color: #666666;
+line-height: 28px;
+    }
 }
 .naranja-tooltip + .tooltip > .tooltip-inner {
 	background-color: $naranja;
-	font-size: 13px
+	font-size: 13px;
+    width: 202px;
+    padding: 14px;
+    text-align: left;
+    ul,li{
+    	color: #fff;
+    	font-size: 13px;
+    	padding-bottom: 0px;
+    	list-style-type: initial;
+    	font-family: StagSans-Book;
+    }
+}
+.tooltip.right .tooltip-arrow {
+    border-right-color: $naranja;
+    top: 86%;
+}
+.tooltip.in {
+    opacity: 1;
+}
+input, select, textarea {
+    font-family: $pLabelFamily;
+	font-size: 12px;
+	color: $gris3;
+}
+.form-control:focus { 
+   	border-color: #FFF;
+    outline: 0;
+    -webkit-box-shadow: inset 0 0px 0px #333, 0 0 8px #333;
+    box-shadow: inset 0 0px 0px #333, 0 0 8px #333;
+}
+.bgazul7{
+	background: $azul7;
+	border-radius: 2px;
+	h6{
+		font-family: StagSans-Book;
+		font-size: 18px;
+		color: #094FA4;
+	}
 }
