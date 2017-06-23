@@ -820,11 +820,20 @@ html(lang="en")
 				.row
 					br
 					.col-md-offset-1.col-md-10
+						.col-md-4
+							.col-md-10
+								p.labelgral Forma de pago
+								select.acepto1#formaP.form-control(disabled='')
+									option(value="0",nombre='')
+									option(value="1",nombre='') TDC
+									option(value="2",nombre='') CCB
+									option(value="3",nombre='') c
+									option(value="4",nombre='') d	
 						.col-md-4.tdc.ccb
 							.col-md-10
 								p.labelgral Nombre del titular*
 								input.acepto1#contrata.form-control(type='text' placeholder='Escribe tu nombre',nombre='',disabled='')
-						.col-md-4
+						.col-md-4.tdc
 							.col-md-10
 								p.labelgral Tipo de tarjeta*
 								select.acepto1.form-control(disabled='')
@@ -832,13 +841,19 @@ html(lang="en")
 									option(value="opcion-2",nombre='') b
 									option(value="opcion-3",nombre='') c
 									option(value="opcion-4",nombre='') d
+						.col-md-4.ccb
+							.col-md-10
+								p.labelgral Número de la cuenta
+									span.fp (20 digitos)*
+								input.acepto1#contrata.form-control(type='text' placeholder='12312341234234123',nombre='',disabled='')
+				.row.tdc
+					.col-md-offset-1.col-md-10
 						.col-md-4
 							.col-md-10
 								p.labelgral Número de tarjeta*
+									span.fp (16 digitos)
 								input.acepto1#contrata.form-control(type='text' placeholder='12312341234234123',nombre='',disabled='')
-				.row
-					.col-md-offset-1.col-md-10
-						.col-md-4
+						.col-md-3
 							.col-md-10
 								p.labelgral CVV*
 									span.ayuda.azul(data-toggle='tooltip', data-placement='right', title='Ultimos digitos al reverso de tu tarjeta',class="naranja-tooltip")
@@ -859,17 +874,15 @@ html(lang="en")
 									option(value="opcion-2",nombre='') b
 									option(value="opcion-3",nombre='') c
 									option(value="opcion-4",nombre='') d
-						.col-md-4
+						.col-md-5.tdc
 							.col-md-12
 								p.labelgral Tarjeta
-							.col-md-5
+							.col-md-4
 								input.acepto1#tarjBbva(type="radio",name='tarjeta',value='BBVA', checked="")
 								label Bancomer
-							.col-md-7
+							.col-md-8
 								input.acepto1#tarjOther(type="radio",name='tarjeta',value='No',disabled='')
 								label Otros bancos
-				.row
-					.col-md-offset-1.col-md-10
 						.col-md-7.tdc1
 							.col-md-12
 								p.labelgral Meses sin intereses
@@ -885,6 +898,12 @@ html(lang="en")
 							.col-md-3
 								input.acepto1(type="radio",name='meses',value='12',disabled='')
 								label 12 meses
+				.row.ccb
+					.col-md-offset-1.col-md-10
+						.col-md-4
+							.col-md-10
+								p.labelgral Institución bancaria*
+								input.acepto1#contrata.form-control(type='text' placeholder='Banamex',nombre='')
 				.space
 				.row
 					br

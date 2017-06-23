@@ -13,7 +13,10 @@ $(document).ready(function(){
 	$(".entregaP").click(function(){
 		envioP();
 	})
-		$("#checkbox-Acepto").click(function(){
+	$("#formaP").click(function(){
+		formaPago1();
+	})
+	$("#checkbox-Acepto").click(function(){
 		terminosCondiciones()
 	})
     $('.selector').datepicker({
@@ -80,4 +83,16 @@ function terminosCondiciones(){
 			$( ".acepto1" ).prop( "disabled", true );
 			$( ".acepto1" ).prop( "enabled", false );
 		}
+}
+function formaPago1(){
+	if( $('#formaP').val()==0 ){
+	   	$(".ccb,.tdc1").fadeOut();
+	 	$(".tdc").fadeIn();
+	}else if( $('#formaP').val()==1 ){
+		$(".ccb").fadeOut();
+	 	$(".tdc, .tdc1").fadeIn();
+	}else if( $('#formaP').val()==2 ){
+	   	$(".tdc,.tdc1").fadeOut();
+	   	$(".ccb").fadeIn();
+	}
 }
