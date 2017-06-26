@@ -49,10 +49,10 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-11
 						.col-md-12
-							h2.subt Para conocer la opción de 
+							h2.subt En Seguros Bancomer lo que más nos importa eres tú, por lo cual te sugerimos que 
 								span 
-									strong Vida  
-								| que tenemos para ti, es necesario aceptar el Aviso de Privacidad y posteriormente completar los siguientes campos:
+									strong leas y aceptes    
+								| el Aviso de Privacidad que tenemos para el manejo de tus datos personales, y posteriormente te solicitamos completar los siguientes datos:
 							input(type="checkbox",id="checkbox-1" class="regular-checkbox big-checkbox")
 							label(for="checkbox-1")
 							a#AvPriv(target='_BLANK',href='#', data-toggle='modal', data-target='#myModalAvPriv', data-trigger='hover') Aviso de Privacidad
@@ -102,7 +102,7 @@ html(lang="en")
 					.col-md-offset-1.col-md-10
 						.col-md-12
 							p.labelgral Ingresa la cantidad por la cual te gustaría asegurarte *
-								span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="jgjg",data-title='Monto mímino $ 50,000.00 <br> Monto máximo $ 500,000.00',class='naranja-tooltip')
+								span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="jgjg",data-title='Para elegir tu Suma Asegurada, ten en cuenta tus gastos mensuales.<br> <br>Monto mímino $ 50,000.00 <br> <br> Monto máximo $ 500,000.00 <br>',class='naranja-tooltip')
 						.col-md-4
 							input.registro.form-control(type='text', id="cantidadAsegurarteVida" , placeholder='$100,000,000.°°')
 
@@ -143,10 +143,10 @@ html(lang="en")
 				.space
 				.row
 					.col-md-offset-1.col-md-10
-						.bgazul1.r-row
+						.bgazul1.r-row2
 							.row
 								.col-md-offset-1.col-md-10
-									h1 Protege a tus seres queridos en caso de que llegues a faltar con:
+									h1 Deja protegidos a tus seres queridos en caso de que llegues a faltar.
 							br
 							.row
 								.col-md-offset-1.col-md-7
@@ -164,30 +164,29 @@ html(lang="en")
 								.col-md-4
 									h5 $250,000.°°
 							.space
-							.row
-								.col-md-12.text-center
-									h4.text-center Ver detalle del producto
-							.space
+						
 				.row
 					.col-md-offset-1.col-md-11
 						h3 Tipo de plan:
-					.col-md-offset-1.col-md-2
+					.col-md-offset-1.col-md-3
 						.radio
 							input(type='radio',id="radio",name='tipoPlan',value='Plan-Creciente', class="regular-radio",checked='true')
 							label(for='radio')
 							label Creciente
-					.col-md-2
+								span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="jgjg",data-title='Con este plan tu suma asegurada incrementará un 5% en tu renovación.',class='naranja-tooltip')
+					.col-md-3
 						.radio
 							input(type='radio',id="radio-1",name='tipoPlan',value='Plan-fijo', class="regular-radio")
 							label(for='radio-1')
 							label Fijo
+								span.ayuda.azul(data-toggle='tooltip', data-html="true", title="", data-placement='right', data-content="jgjg",data-title='Con este plan tu suma asegurada se mantendrá constante en la renovación.',class='naranja-tooltip')
 				.row
 					.col-md-offset-1.col-md-10
 						.bggris.planes
 							.triangulo1
 							.row
 								.col-md-12
-									h4 Elige el plan que más te convenga:
+									h4 Elige el plan de pago que más te convenga:
 							.row
 								.col-md-12
 									h2 Pagos por prima
@@ -285,32 +284,7 @@ html(lang="en")
 					.col-md-6.text-right
 						button.btn-lg.btn-borde NO ME INTERESA
 					.col-md-6.text-left
-						button.btn-lg.btn-solid(type='button', id='noMeInteresa' , data-toggle='modal', data-target='#myModal') CONTINUAR
-
-		// Modal
-		#myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
-			.modal-dialog(role='document')
-				.modal-content
-					//.modal-header
-						button.close(type='button', data-dismiss='modal', aria-label='Close')
-							span(aria-hidden='true') ×
-						h4#myModalLabel.modal-title Modal title
-					.modal-body
-						h4
-							strong
-								¡Buena elección!
-						p Para poder continuar y proteger tu informacion es importante que leas y aceptes las politicas de provacidad .
-						.checkbox.text-center
-							label
-								input(type='checkbox')
-								a(target="_BLANK",href="#") Aviso de Privacidad
-						h5.text-center he leído y conozco el alcance del tratamiento de mis datos personales.
-
-						button.btn-lg aceptar
-					//.modal-footer
-						button.btn.btn-default(type='button', data-dismiss='modal') Close
-						button.btn.btn-primary(type='button') Save changes
-
+						button.btn-lg.btn-solid(id='MeInteresa') CONTINUAR
 		hr
 		h1 cuestionario
 		.container
@@ -320,9 +294,9 @@ html(lang="en")
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-12
-						h2.subt Por favor responde la siguiente pregunta:
+						h2.subt Para poder continuar, necesitamos hacerte unas preguntas acerca de tu estado de salud.
 					.col-md-12
-						h3 ¿Tienes o has tenido alguna de estas enfermedades?
+						h2 ¿Tienes o has tenido alguna de estas enfermedades?
 			form
 				.row
 					.col-md-offset-8.col-md-1
@@ -450,6 +424,9 @@ html(lang="en")
 								.form-group
 									p.labelgral RFC*
 									input#qCurp.form-control(type="text",nombre="qRfc",placeholder="RFC")
+								.form-group
+									p.labelgral Teléfono*
+									input#qNombre.form-control(type="text",nombre="qTelefono",placeholder="Teléfono")
 							.col-md-6
 								.form-group
 									p.labelgral Apellido Paterno*
@@ -517,11 +494,6 @@ html(lang="en")
 											input#qDeleg.form-control(type="text",nombre="qDeleg",placeholder="Delegación/municipio")
 									.col-md-6
 										.form-group
-											p.labelgral Ciudad*
-											input#qCiudad.form-control(type="text",nombre="qCiudad",placeholder="Ciudad")
-											.space
-									.col-md-6
-										.form-group
 											p.labelgral Estado*
 											input#qEdo.form-control(type="text",nombre="qEdo",placeholder="Estado")
 											.space
@@ -530,10 +502,8 @@ html(lang="en")
 							.col-md-12
 								p.bgazul4 No. de cotización: 
 									strong  123456789A
-							.col-md-5
-								h1 Suma asegurada
-							.col-md-7
-								h2 $5000,000.°°
+							.col-md-12
+								h1 Deja protegidos a tus seres queridos en caso de que llegues a faltar
 							.col-md-12
 								.col-md-6
 									h3 Suma asegurada por fallecimiento
@@ -665,15 +635,16 @@ html(lang="en")
 		.container
 			.row
 				h2 PAGO DE CONTRATACIÓN
-		.container.bgazul2.contrata
+		.container.bgwhite
 			.row
 				.col-md-offset-1.col-md-6
 					h2.subt RESUMEN DE CONTRATACIÓN
-				.col-md-4.bgazul5
-					.col-xs-6
-						h6 No. de cotización.
-					.col-xs-6.text-right
+				.col-md-4.bgazul1.poliza
+					.col-xs-7
+						h4 No. de cotización.
+					.col-xs-5.text-right
 						h4 123456789A
+		.container.bgazul3.contrata
 			.row
 				.col-md-offset-1.col-md-11
 					h4 DATOS DEL CONTRATANTE
@@ -704,6 +675,10 @@ html(lang="en")
 					p.labelgral Correo eléctronico
 					p.dato Xjuan@mail.comX
 			.row
+				.col-md-offset-1.col-md-3
+					p.labelgral Teléfono de contacto
+					p.dato X5532452345X
+			.row
 				.col-md-offset-1.col-md-11
 					h4 DOMICILIO DEL CONTRATANTE
 					P.dato Exploradores Tonatiuh No. 304, Col. Alamos, C.p. 034500, Bénito Juárez, CDMX.
@@ -720,7 +695,7 @@ html(lang="en")
 				.col-md-4
 					p.labelgral Porcentaje asignado
 					p.dato 25%
-		.container.bgazul3.resumen
+		.container.bgazul2.resumen
 			.space
 			.row
 				.col-md-offset-1.col-md-12
@@ -809,14 +784,23 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-12
-							h4 COMPRAR
+							input(type="checkbox",id="checkbox-Acepto" class="regular-checkbox big-checkbox")
+							label(for="checkbox-Acepto")
+							span.labelgral He leído y acepto los términos y condiciones del contrato	
+								a(target="_BLANK",href="#") condiciones generales
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-12
-							input(type="checkbox",id="checkbox-Acepto" class="regular-checkbox big-checkbox")
-							label(for="checkbox-Acepto")
-							span.acepto Acepto los	
-								a(target="_BLANK",href="#") Términos y condiciones
+							input(type="checkbox",id="checkbox-Acepto1" class="regular-checkbox big-checkbox")
+							label(for="checkbox-Acepto1")
+							span.labelgral Acepto el envío los documentos de contrato y la póliza de seguro a mi correo electrónico
+				.row
+					.col-md-offset-1.col-md-10
+						.col-md-12
+							input(type="checkbox",id="checkbox-Acepto2" class="regular-checkbox big-checkbox")
+							label(for="checkbox-Acepto2")
+							span.labelgral Acepto el pago automático mensual con cargo a mi cuenta	
+								a(target="_BLANK",href="#")  formato de domiciliación
 				.row
 					br
 					.col-md-offset-1.col-md-10
@@ -904,7 +888,14 @@ html(lang="en")
 							.col-md-10
 								p.labelgral Institución bancaria*
 								input.acepto1#contrata.form-control(type='text' placeholder='Banamex',nombre='')
-				.space
+				.row
+					.col-md-offset-1.col-md-10.bgazul7
+						.col-md-12.text-center
+							h5.compra Confirmo que los datos que ingresé son correctos y verídicos, en caso de alguna omisión, ésta dará lugar a la terminación y pérdida de beneficios del contrato y, en consecuencia, a la perdida de los derechos a favor de los beneficiarios. 
+							h5.compra Otorgo mi consentimiento a Seguros BBVA Bancomer S.A. de C.V., Grupo Financiero BBVA Bancomer, para que se traten mis datos personales sensibles de conformidad con el Aviso de Privacidad Integral.
+							h5.compra Acepto la contratación y el cobro del Seguro.
+						.col-md-11
+							.space
 				.row
 					br
 					.col-md-offset-1.col-md-10

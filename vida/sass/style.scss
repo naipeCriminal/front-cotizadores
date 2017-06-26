@@ -90,7 +90,7 @@ h4{
 .naranja-tooltip + .tooltip > .tooltip-inner {
 	background-color: $naranja;
 	font-size: 13px;
-    width: 202px;
+    max-width: 250px !important;
     padding: 14px;
     text-align: left;
     ul,li{
@@ -176,6 +176,12 @@ input, select, textarea {
 		font-family: StagSans-Book;
 		font-size: 18px;
 		color: #094FA4;
+		font-weight: 100;
+	}
+	.compra{
+		font-family: StagSans-Book;
+		font-size: 18px;
+		color: $azul2;
 		font-weight: 100;
 	}
 }
@@ -415,6 +421,27 @@ input, select, textarea {
 		    border-top: 1px solid $azul6;
 		}
 	}
+	&.r-row2{
+		h1{
+		color:#fff;
+		font-size: 28px;
+		font-family: 'StagSans-Medium';
+	}
+	h4{
+		color:#fff;
+		font-size: 24px;
+		text-decoration: underline;
+		font-family: StagSans-Medium;
+	}
+		h5{color: $azul6;
+		font-size: 22px;
+		font-family: 'StagSans-Light';
+	}
+	h6{color: #fff;
+		font-family: 'StagSans-Book';
+		font-size: 22px;
+	}
+	}
 }
 .bgazul2{
 	background: $azul2;
@@ -455,10 +482,6 @@ input, select, textarea {
 			color: #FFFFFF;
 		}
 	}
-}
-.bgazul3{
-	background: rgba(0, 110, 193, 0.50);
-	border-bottom: 1px solid #fff;
 	&.resumen{
 	h4{
 		color:$azul6;
@@ -483,6 +506,27 @@ input, select, textarea {
 			font-size: 12px;
 			color: #FAFAFA;
 		}
+	}
+}
+.bgazul3{
+	background: rgba(0, 110, 193, 0.50);
+	border-bottom: 1px solid #fff;
+	p.labelgral{
+		color:$azul6;
+		font-family: StagSans-Book;
+		font-size: 14px;
+		line-height: 24px;
+	}	
+	p.dato{
+		font-family: StagSans-Book;
+		font-size: 18px;
+		color: #FFFFFF;
+		line-height: 24px;
+	}
+	p.dato.wig{
+		font-family: StagSans-Medium;
+		font-size: 20px;
+		color: #FFFFFF;	
 	}
 }
 .bgazul4{
