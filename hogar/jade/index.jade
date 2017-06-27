@@ -44,7 +44,7 @@ html(lang="en")
 					.space
 		
 		.container.bgwhite
-			form
+			form#registro
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-12
@@ -74,9 +74,10 @@ html(lang="en")
 						.col-md-4
 							label.labelgral Correo electrónico*
 							input#correoTitular.registro.form-control(type='text', disabled='',placeholder='Correo electrónico *',nombre="correoTitular")
-				.row
+				.row.carga
 					.col-md-offset-1.col-md-10
 						h4 Domicilio a asegurar
+			form#domicilio
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-4
@@ -106,7 +107,7 @@ html(lang="en")
 						.col-md-4
 							label.labelgral Estado*
 							input#edoasegurar.registro.form-control(type='text', disabled='',placeholder='Estado *',nombre="edoasegurar")
-				.row
+				.row.carga2
 					.col-md-offset-1.col-md-10
 						.col-md-12
 							h4 Suma asegurada
@@ -638,7 +639,7 @@ html(lang="en")
 			.row
 				h2 CONTRATA
 		.container.bgwhite
-			form
+			form#gene
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-8
@@ -688,7 +689,7 @@ html(lang="en")
 											input(type='radio',id="radio-cs2",name='optionsRadios', value='masculino',class="regular-radio")
 											label(for='radio-cs2')
 											| Masculino
-							.col-md-6
+							.col-md-6.ccc
 								.form-group
 									p.labelgral CURP*
 									input#qCurp.form-control(type="text",nombre="qCurp",placeholder="CURP")
@@ -1148,4 +1149,15 @@ html(lang="en")
 	script(src="https://code.jquery.com/ui/1.12.1/jquery-ui.js")
 	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
 	script(src="../js/app.js")
-	
+	script
+		|$(document).ready(function(){
+		|	
+		| 	$(".carga").click(function(){
+		|	    
+		|		$("form#registro")[0].reset();
+		|   })
+		|	$(".ccc").click(function(){
+		|	    alert("jjj")
+		|		$("#gene")[0].reset();
+		|   })
+		|});

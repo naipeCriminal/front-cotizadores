@@ -359,7 +359,7 @@ html(lang="en")
 					.col-md-6.text-right
 						button.btn-lg.btn-borde#regresaStep3 REGRESAR
 					.col-md-6.text-left
-						button.btn-lg.btn-solid(type='button', data-toggle='modal', data-target='#myModalDmc') CONTINUAR
+						button.btn-lg.btn-solid CONTINUAR
 				.space
 			// Modal
 		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
@@ -404,29 +404,19 @@ html(lang="en")
 							.col-md-6
 								.form-group
 									p.labelgral Nombre(s)*
-									input#qNombre.form-control(type="text",nombre="qNombre",placeholder="Nombre(s)")
+									input#qNombre.form-control(type="text",nombre="qNombre",placeholder="Nombre(s)",maxlength="10")
 								.form-group
 									p.labelgral Apellido Materno*
-									input#qMaterno.form-control(type="text",nombre="qMaterno",placeholder="Apellido Materno")
-								.form-group
-									p Fecha de nacimiento*
-									.col-xs-12
-										input#qFecha.selector2.form-control(type='text',nombre="qFecha")
-									.col-xs-4
-										input#day2.form-control(type='text', disabled='',nombre="qFechaD")
-									.col-xs-4
-										input#moth2.form-control(type='text', disabled='',nombre="qFechaM")
-									.col-xs-4
-										input#year2.form-control(type='text', disabled='',nombre="qFecha")
-								.form-group
-									p.labelgral Entidad federativa*
-									input#qEdo.form-control(type="text",nombre="qRfc",placeholder="Entidad federativa")
+									input#qMaterno.form-control(type="text",nombre="qMaterno",placeholder="Apellido Materno",minlength="5")
 								.form-group
 									p.labelgral RFC*
 									input#qCurp.form-control(type="text",nombre="qRfc",placeholder="RFC")
 								.form-group
 									p.labelgral Teléfono*
-									input#qNombre.form-control(type="text",nombre="qTelefono",placeholder="Teléfono")
+									.col-md-4
+										input#qNombre.form-control(type="text",nombre="qlada",placeholder="lada")
+									.col-md-8
+										input#qNombre.form-control(type="text",nombre="qTelefono",placeholder="Teléfono")
 							.col-md-6
 								.form-group
 									p.labelgral Apellido Paterno*
@@ -446,14 +436,6 @@ html(lang="en")
 											| Masculino
 							.col-md-6
 								.form-group
-									p.labelgral País de nacimiento*
-									input#qPais.form-control(type="text",nombre="qRfc",placeholder="País de nacimiento")
-							.col-md-6
-								br
-							.col-md-6
-								.form-group
-									br
-									br
 									p.labelgral CURP*
 									input#qCurp.form-control(type="text",nombre="qCurp",placeholder="CURP")
 							.col-md-6
@@ -797,7 +779,7 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-12
-							input(type="checkbox",id="checkbox-Acepto2" class="regular-checkbox big-checkbox")
+							input(type="checkbox",id="checkbox-Acepto2" class="regular-checkbox big-checkbox", disabled="true")
 							label(for="checkbox-Acepto2")
 							span.labelgral Acepto el pago automático mensual con cargo a mi cuenta	
 								a(target="_BLANK",href="#")  formato de domiciliación
