@@ -38,7 +38,7 @@ $h2SubColor:$gris2;
 
 $spriteurl:url(../assets/img/sprite.png);
 $imgExito:url(../assets/img/ico_poliza_exito.png);
-$imgExito1:url(../assets/img/ico_aviso.png);
+$imgExito1:url(../assets/img/ico_aviso2.png);
 $imgExito2:url(../assets/img/ico_comprobante.png);
 $selectMenu:url(../assets/img/select_menu.png);
 $stepspanbg:$gris4;
@@ -368,13 +368,7 @@ input, select, textarea {
     		margin-top: 68px;
     		background-position: center;
 		}
-		.exito1{
-			background-image: $imgExito1;
-		    background-repeat: no-repeat;
-		    height: 28px;
-		    margin-top: -1px;
-		    background-position: center;
-		}
+
 		.bgazul4{
 			padding: 10px; 
 			border-bottom: none;
@@ -1006,4 +1000,16 @@ ul.list-group{
 		font-size: 20px;
 		color: #B5E5F9;
 	}
+	span{
+		color:$azul6;
+		font-size: 15px;
+		font-weight: 400;
+	}
+}
+.exito1{
+	background-image: $imgExito1;
+	background-repeat: no-repeat;
+	height: 28px;
+	margin-top: -1px;
+	background-position: right;
 }
