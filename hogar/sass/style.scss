@@ -862,7 +862,12 @@ ul.list-group{
 		height: 28px;
 		margin-top: -1px;
 		background-position: right;
-	}		
+	}
+	span{
+		color:$azul6;
+		font-size: 15px;
+		font-weight: 400;
+	}
 }
 .bqblanco{
 	background:$azul5;
