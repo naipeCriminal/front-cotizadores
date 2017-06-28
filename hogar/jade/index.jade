@@ -48,7 +48,7 @@ html(lang="en")
 				.row
 					.col-md-offset-1.col-md-10
 						.col-md-12
-							h2.subt Para conocer la opción de 
+							h2.subt Para conocer la opción de seguro para el 
 								span
 									strong Hogar 
 								| que tenemos para ti, es necesario aceptar el Aviso de Privacidad y posteriormente completar los siguientes campos:
@@ -69,7 +69,7 @@ html(lang="en")
 							label.labelgral Apellido paterno*
 							input#paternoTitular.registro.form-control(type='text', disabled='',placeholder='Apellido paterno * ', nombre="paternoTitular")
 						.col-md-4
-							label.labelgral Apellido materno*
+							label.labelgral Apellido materno
 							input#maternoTitular.registro.form-control(type='text', disabled='',placeholder='Apellido materno *', nombre="#maternoTitular")
 						.col-md-4
 							label.labelgral Correo electrónico*
@@ -87,7 +87,7 @@ html(lang="en")
 							label.labelgral Número exterior*
 							input#nextasegurar.registro.form-control(type='text', disabled='',placeholder='No.Ext *',nombre="nextasegurar")
 						.col-md-4
-							label.labelgral Número anterior*
+							label.labelgral Número interior
 							input#nintasegurar.registro.form-control(type='text', disabled='',placeholder='No.Int',nombre="nextasegurar")
 						.col-md-4
 							label.labelgral Codigo postal*
@@ -104,6 +104,9 @@ html(lang="en")
 						.col-md-4
 							label.labelgral Delegacion / Municipio*
 							input#deleasegurar.registro.form-control(type='text', disabled='',placeholder='Delegación/Municipio * ',nombre="deleasegurar")
+						.col-md-4
+							label.labelgral Ciudad*
+							input#edoasegurar.registro.form-control(type='text', disabled='',placeholder='Estado *',nombre="edoasegurar")
 						.col-md-4
 							label.labelgral Estado*
 							input#edoasegurar.registro.form-control(type='text', disabled='',placeholder='Estado *',nombre="edoasegurar")
@@ -155,13 +158,13 @@ html(lang="en")
 						.col-md-6
 							.bqplanes.a.active
 								.row
-									.col-md-8
+									.col-md-7
 										h2
 											.radio
 												input.planAB(type='radio',id="radio-1",name='planes',value='option1',checked='true' class="regular-radio")
 												label(for='radio-1')
 												span	Plan A
-									.col-md-4
+									.col-md-5
 										h2 
 											span $3,000.°°
 								.row
@@ -169,7 +172,7 @@ html(lang="en")
 										h3 Coberturas
 									.col-md-5
 										br
-										h5 % Suma asegurada
+										h5 Suma asegurada
 									.col-md-7
 										h6 Por daños al inmueble
 												span.ayuda.azul(data-toggle='tooltip', data-placement='right', data-html="true",class="naranja-tooltip",title='Cuando el daño se presenta por: <ul> <li> Incendio</li> <li> Daños causados por tormentas e inundaciones, granizo de gran tamaño, nevadas (daños hidrometeorológicos)</li> <li> Más un 20% adicional de la suma asegurada para remover escombros</li> <li> Más 20% adicional de la suma asegurada para gastos extraordinarios (de hospedaje, almacenamiento de tus pertenencias entre otros)</li> </ul>')
@@ -201,21 +204,21 @@ html(lang="en")
 						.col-md-6
 							.bqplanes.b
 								.row
-									.col-md-8
+									.col-md-7
 										h2
 											.radio
 												input.planAB(type='radio',id="radio-2",name='planes',value='option2' class="regular-radio")
 												label(for='radio-2')
 												span	Plan B
-									.col-md-4
+									.col-md-5
 										h2
 											span 4,500.°°
 								.row
 									.col-md-7
-										h3.text-left Cobertura
+										h3.text-left Coberturas
 									.col-md-5
 										br
-										h5 % suma asegurada
+										h5 Suma asegurada
 									.col-md-7
 										h6 Por daños al inmueble
 												span.ayuda.azul(data-toggle='tooltip', data-placement='right', data-html="true",class="naranja-tooltip",title='Cuando el daño se presenta por: <ul> <li> Incendio</li> <li> Daños causados por tormentas e inundaciones, granizo de gran tamaño, nevadas (daños hidrometeorológicos)</li> <li> Más un 20% adicional de la suma asegurada para remover escombros</li> <li> Más 20% adicional de la suma asegurada para gastos extraordinarios (de hospedaje, almacenamiento de tus pertenencias entre otros)</li> </ul>')
@@ -236,11 +239,10 @@ html(lang="en")
 										h6 Por rotura de cristales
 									.col-md-5
 										h5 $ 90,000.°°
-										h5 % suma asegurada
 									.col-md-7
 										h6 Por responsabilidad civil privada y familiar
 									.col-md-5
-										h5 h5 $ 900,000.°°
+										h5 $ 900,000.°°
 									.col-md-7
 										h6 Por daños al equipo electrónico
 									.col-md-5
@@ -671,7 +673,10 @@ html(lang="en")
 									input#qCurp.form-control(type="text",nombre="qRfc",placeholder="RFC")
 								.form-group
 									p.labelgral Teléfono de contacto*
-									input#qTelefono.form-control(type="text",nombre="qTelefono",placeholder="Teléfono de contacto*")
+									.col-md-4
+										input#qTelefono.form-control(type="text",nombre="qTelefono",placeholder="lada*")
+									.col-md-8
+										input#qTelefono.form-control(type="text",nombre="qTelefono",placeholder="Teléfono*")
 							.col-md-6
 								.form-group
 									p.labelgral Apellido Paterno*
@@ -729,6 +734,11 @@ html(lang="en")
 										.form-group
 											p.labelgral Delegación/municipio*
 											input#qDeleg.form-control(type="text",nombre="qDeleg",placeholder="Delegación/municipio")
+									.col-md-6
+										.form-group
+											p.labelgral Ciudad*
+											input#qCiu.form-control(type="text",nombre="qCiu",placeholder="Ciudad")
+											.space
 									.col-md-6
 										.form-group
 											p.labelgral Estado*
@@ -834,7 +844,7 @@ html(lang="en")
 		.container.bgwhite
 			.row
 				.col-md-offset-1.col-md-6
-					h2.subt RESUMEN DE CONTRATACIÓN
+					h4 Resumen de contratación.
 				.col-md-4.bgazul1.poliza
 					.col-xs-7
 						h4 No. de cotización.
@@ -844,12 +854,12 @@ html(lang="en")
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-12
-						h4 DOMICILIO ASEGURADO
+						h4 Domicilio asegurado
 						P.dato.wig Exploradores Tonatiuh No. 304, Col. Alamos, C.p. 034500, Bénito Juárez, CDMX.
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-12
-						h4 DATOS DEL CONTRATANTE
+						h4 Datos del contratante
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-4
@@ -867,14 +877,14 @@ html(lang="en")
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-12
-						h4 DOMICILIO DEL CONTRATANTE
+						h4 Domicilio del contratante
 						P.dato.wig Exploradores Tonatiuh No. 304, Col. Alamos, C.p. 034500, Bénito Juárez, CDMX.
 		.container.bgazul2.resumen
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-12
 						br
-						h4 DETALLE DEL SEGURO DE HOGAR
+						h4 Detalle del Seguro Hogar
 			.row
 				.col-md-offset-1.col-md-10
 					.col-md-2
