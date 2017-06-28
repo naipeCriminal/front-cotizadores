@@ -165,7 +165,6 @@ input, select, textarea {
 	    .mov{
 	    	left: -15px;
 		    top: 11px;
-		    font-weight: 800;
 	    }
 	    .mov2{
 	    	left: -25px;
@@ -176,13 +175,11 @@ input, select, textarea {
 		font-family: StagSans-Book;
 		font-size: 18px;
 		color: #094FA4;
-		font-weight: 100;
 	}
 	.compra{
 		font-family: StagSans-Book;
-		font-size: 18px;
+		font-size: 15px;
 		color: $azul2;
-		font-weight: 100;
 	}
 }
 .regular-checkbox {
@@ -239,7 +236,6 @@ input, select, textarea {
     width: 200px;
     position: relative;
     top: 5px;
-    font-weight: bold;
     text-transform: uppercase;
     display: block;
     float: left;
@@ -271,22 +267,18 @@ input, select, textarea {
 	}
 	h5{
 	    font-size: 22px;
-    	font-weight: 600;
 	}
 	h4{
 	    font-size: 19px;
-    	font-weight: 600;
 	}
 	h2{
 		font-family:$h2SubFamily;
-	font-weight:$h2SubW;
 	color:$h2SubColor;
 	line-height: 20px;
 		font-size: 20px;
 	}
 	h3{
 	font-family:$h2SubFamily;
-	font-weight:$h2SubW;
 	color:$gris7;
 	line-height: 20px;
 	font-size: 16px;
@@ -311,7 +303,7 @@ input, select, textarea {
 		font-size: 12px;
 		color: #6C6F73;
 	}
-	label{font-weight: 200;font-family: StagSans-Light;
+	label{font-family: StagSans-Light;
 	font-size: 16px;
 	color: $gris3;
 	}
@@ -332,7 +324,6 @@ input, select, textarea {
 	&.poliza{
 		color:#fff;
 		h2{
-			font-weight: 700;
 			font-family: StagSans-Medium;
 			font-size: 30px;
 			color: #FFFFFF;
@@ -533,17 +524,14 @@ input, select, textarea {
 	&.envioPoliza{
 		h4{
 		    font-size: 22px;
-	    	font-weight: 600;
 		}
 		h2{
 			font-size: 20px;
 		}
 		label{
-			font-weight: 200;
     		color: #777;
 		}
 		p{
-			font-weight: 600;
 		}
 	}
 }
@@ -629,7 +617,6 @@ line-height: 28px;
 
 h2.subt{
 	font-family:$h2SubFamily;
-	font-weight:$h2SubW;
 	font-size:$h2SubSize;
 	color:$h2SubColor;
 	line-height: 20px;
@@ -743,14 +730,12 @@ h2.subt{
 	font-family: $pLabelFamily;
 	font-size:$pLabelSize;
 	color: $pLabelColor;
-	font-weight: $pLabelW;
 	white-space: inherit;
 }
 .labelgral2{
 	font-family: $pLabelFamily;
 	font-size: 14px;
 	color: $gris8;
-	font-weight: $pLabelW;
 	white-space: inherit;
 }
 .btn-borde{
@@ -847,14 +832,12 @@ ul.list-group{
 		& .badge{
 			color: $gris3;
 			background-color:transparent;
-			font-weight:400;
 	    	font-size: 15px;
 		}
 		& .tp{
 			 p.labelgral{
 			 	font-family: StagSans-Light;
 			    font-size: 13px;
-				font-weight: 700;
 				color: $azul2;
 			}
 			.badge strong{
@@ -1003,7 +986,6 @@ ul.list-group{
 	span{
 		color:$azul6;
 		font-size: 15px;
-		font-weight: 400;
 	}
 }
 .exito1{
