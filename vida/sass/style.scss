@@ -41,6 +41,7 @@ $imgExito:url(../assets/img/ico_poliza_exito.png);
 $imgExito1:url(../assets/img/ico_aviso2.png);
 $imgExito2:url(../assets/img/ico_comprobante.png);
 $selectMenu:url(../assets/img/select_menu.png);
+$cerrar:url(../assets/img/ico_cerrar.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
 $steph3:$gris9;
@@ -537,6 +538,9 @@ input, select, textarea {
 }
 #myModalAvPriv .modal-body {
     border: 4px solid $azul2;
+    border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
     h4{
     	font-family: StagSans-Book;
 		font-size: 28px;
@@ -548,6 +552,65 @@ font-size: 17px;
 color: $gris3;
 line-height: 28px;
     }
+}
+#myModal2 .modal-body {
+    border: 4px solid $amarillo;
+    border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+    h4{
+    	font-family: StagSans-Book;
+		font-size: 28px;
+		color: #094FA4;
+    }
+    h2{
+    	font-family: StagSans-Book;
+		font-size: 17px;
+		color: $gris3;
+		line-height: 28px;
+    }
+    h6{
+    	font-family: StagSans-Book;
+		font-size: 10px;
+		color: $gris3;
+    }
+    .reloj{
+			background-image: $imgExito2;
+			background-repeat: no-repeat;
+			height: 65px;
+    		margin-top: 5px;
+    		background-position: center;
+	}
+	.telefono{
+			background-image: $imgExito2;
+			background-repeat: no-repeat;
+			height: 65px;
+    		margin-top: 5px;
+    		background-position: center;
+	}
+    .close {
+	    opacity: 1;
+	}
+    .cerrar{
+    	background-image: $cerrar;
+		background-repeat: no-repeat;
+		height: 25px;
+		position: absolute;
+		margin-top: 0px;
+		background-position: right;
+		width: 47px;
+    }
+    .btn-solid{
+	width: 270px;
+	border: 2px solid $amarillo;
+	background: $amarillo;
+	background-color: $amarillo;
+	outline: none;
+	color:#fff;
+	font-family: StagSans-Book;
+	font-size: 16px;
+	letter-spacing: 0;
+	}
 }
 .steps{
 
@@ -926,6 +989,9 @@ ul.list-group{
 }
 #myModalDmc .modal-body {
     border: 4px solid $verde;
+    border-radius: 7px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
     .regular-checkbox + label {
     background-color: #fff;
     border: 2px solid $verde;

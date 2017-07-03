@@ -14,7 +14,82 @@ html(lang="en")
 	body
 		.callme
 			br
-			p.text-center Tengo dudas, Llámenme
+			p.text-center(data-toggle='modal', data-target='#myModal2', data-trigger='hover') Tengo dudas, Llámenme
+
+			// Modal
+		#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+					.modal-body
+						.col-md-offset-1.col-md-10
+							button.close(type='button', data-dismiss='modal', aria-label='Close')
+								span.cerrar(aria-hidden='true')
+							.col-md-12
+								h4 Apoyo vía telefónica.
+								h2 Te solicitamos que ingreses tu número telefónico y un horario adecuado para contactarte.
+							.col-md-12
+								p.labelgral ¿Cual es tu nombre?
+								input#contrata.form-control(type='text' placeholder='Ingresa tu nombre')
+	
+							.col-md-3.telefono
+							.col-md-9
+								.col-md-4
+									p.labelgral Lada*
+									input#contrata.form-control(type='text' placeholder='lada')
+								.col-md-8
+									p.labelgral Teléfono *
+									input#contrata.form-control(type='text' placeholder='98-98-98')
+							.col-md-3.reloj
+							.col-md-8
+								p.labelgral Horario a contactar*
+								.col-md-6
+									h6 A partir de las:
+									select#contrata.form-control
+											option(value="opcion-1",nombre="") 11:30
+											option(value="opcion-2",nombre="") 12:00
+											option(value="opcion-3",nombre="") 12:30
+											option(value="opcion-4",nombre="") 13:00
+											option(value="opcion-5",nombre="") 14:00
+								.col-md-6
+									h6 Hasta las:
+									select#contrata.form-control
+											option(value="opcion-1",nombre="") 11:30
+											option(value="opcion-2",nombre="") 12:00
+											option(value="opcion-3",nombre="") 12:30
+											option(value="opcion-4",nombre="") 13:00
+											option(value="opcion-5",nombre="") 14:00
+											option(value="opcion-6",nombre="") 14:30
+											option(value="opcion-7",nombre="") 15:00
+											option(value="opcion-8",nombre="") 15:30
+											option(value="opcion-9",nombre="") 16:00
+							.col-md-12
+								br
+						.text-center		
+							button.btn-lg.btn-solid(type='button', data-dismiss='modal',data-toggle='modal', data-target='#myModalDmc', data-trigger='hover') CONTACTARME
+
+			// Modal
+		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog.modal-lg(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						.row.text-left
+							.col-md-2.text-right
+								br
+								input(type="checkbox",id="checkbox-modal" class="regular-checkbox big-checkbox", checked="true")
+								label(for="checkbox-1")
+							.col-md-10
+								br
+								h4 Tu solicitud se ha generado correctamente, en breve nos pondremos en contacto contigo en el horario seleccionado.
+								br
+						button.btn-lg.btn-solid(type='button', data-dismiss='modal') Aceptar
+
 		hr
 		h1 pasos
 		.steps
