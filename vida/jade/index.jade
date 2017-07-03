@@ -131,10 +131,12 @@ html(lang="en")
 							label Consulta el 
 							a#AvPriv(target='_BLANK',href='#', data-toggle='modal', data-target='#myModalAvPriv', data-trigger='hover')  Aviso de Privacidad
 						.col-md-12
-							.col-md-11.text-left
-								h6 He leído y conozco el alcance del tratamiento de mis datos personales.
-									br
+							input(type="checkbox",id="checkbox-a12" class="regular-checkbox big-checkbox", checked="true")
+							label(for="checkbox-a12")
+							span.datos He leído y conozco el alcance del tratamiento de mis datos personales.
+								br
 						.col-md-12
+							br
 							small
 								u * Campos obligatorios
 							h4 Datos personales
