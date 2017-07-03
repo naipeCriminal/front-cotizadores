@@ -312,6 +312,13 @@ ul.list-group{
 	}	
 
 }
+.info-azul{
+	background-image: $imgExito1;
+    background-repeat: no-repeat;
+    height: 28px;
+    margin-top: -1px;
+    background-position: center;
+}
 .bgazul1{
 	background-color: $azul2;
 	border-bottom: 1px solid #fff;
@@ -924,7 +931,7 @@ ul.list-group{
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1);
 	border: 2px solid $azul1;
 }
-#myModalDmc .modal-body {
+#myModalDmc .modal-body,#myModalDmcNo .modal-body {
     border: 4px solid $verde;
     .regular-checkbox + label {
     background-color: #fff;
@@ -1020,6 +1027,7 @@ input, select, textarea {
 		font-weight: 100;
 	}
 }
+
 #myModal2 .modal-body {
     border: 4px solid $amarillo;
     border-radius: 7px;

@@ -558,26 +558,53 @@ html(lang="en")
 							button.btn-lg.btn-borde NO ME INTERESA
 						.col-md-6.text-left
 							button.btn-lg.btn-solid CONTINUAR
-
-		//- // Modal
-		//- #myModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
-		//- 	.modal-dialog(role='document')
-		//- 		.modal-content
-		//- 			//.modal-header
-		//- 				button.close(type='button', data-dismiss='modal', aria-label='Close')
-		//- 					span(aria-hidden='true') ×
-		//- 				h4#myModalLabel.modal-title Modal title
-		//- 			.modal-body
-		//- 				h4
-		//- 					strong
-		//- 						¡Buena elección!
-		//- 				p Para poder continuar y proteger tu informacion es importante que leas y aceptes las politicas de provacidad .
-		//- 				.checkbox
-		//- 					label
-		//- 						input(type='checkbox')
-		//- 						a(target="_BLANK",href="#") Aviso de Privacidad
-		//- 				h5 he leído y conozco el alcance del tratamiento de mis datos personales.
-		//- 				button.btn-lg.btn-solid.text-center aceptar
+		.space
+		.container.bgwhite
+			.row
+				.space
+				.col-xs-1
+					span
+						.info-azul 
+				.col-xs-11
+					h4 Tu opinión es importante para nosotros.
+					h2.subtitulo No me interesa por:
+					.radio
+						input.planAB(type='radio',id="radio-dudas",name='planes',value='option1', class="regular-radio")
+						label(for='radio-dudas')
+						span  Tengo dudas sobre la información
+					.radio
+						input.planAB(type='radio',id="radio-precio",name='planes',value='option1', class="regular-radio")
+						label(for='radio-precio')
+						span  Precio alto
+					.radio
+						input.planAB(type='radio',id="radio-noesta",name='planes',value='option1', class="regular-radio")
+						label(for='radio-noesta')
+						span  El motivo no esta en la lista
+			.row
+				.col-md-offset-1.col-md-10
+					br
+					br
+					.col-md-6.text-right
+						button.btn-lg.btn-borde NO DESEO CONTESTAR
+					.col-md-6.text-left
+						button.btn-lg.btn-solid(data-toggle='modal', data-target='#myModalDmcNo', data-trigger='hover') ENVIAR				
+			// Modal
+		#myModalDmcNo.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+			.modal-dialog.modal-lg(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						.row
+							.space
+							h2.text-center ¡Gracias por su opinión!
+							.space
+							h4 Seguimos generando ofertas para ti.
+							.space
+							button.btn-lg.btn-solid(type='button', data-dismiss='modal') Aceptar
+							.space
 
 		hr
 		h1 cuestionario
