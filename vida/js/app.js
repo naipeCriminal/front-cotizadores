@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	avisoPrivacidad();
+	$( ".registro" ).prop( "disabled", true );
 	formaPago();
 	envioP();
 	qBene();
@@ -7,7 +7,7 @@ $(document).ready(function(){
 	
 	$('[data-toggle="tooltip"]').tooltip();
 
-	$("#checkbox-1").click(function(){
+	$(".desbl").click(function(){
 		avisoPrivacidad();
 	})
 	$(".entregaP").click(function(){
@@ -49,13 +49,8 @@ $(document).ready(function(){
     });	
 })
 function avisoPrivacidad(){
-	if( $('#checkbox-1').prop('checked') ){
 			$( ".registro" ).prop( "enabled", true );
 			$( ".registro" ).prop( "disabled", false );
-		}else {
-			$( ".registro" ).prop( "disabled", true );
-			$( ".registro" ).prop( "enabled", false );
-		}
 }
 function formaPago(){
 	$(".row .plan button").click(function(){
