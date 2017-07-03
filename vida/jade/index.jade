@@ -282,9 +282,26 @@ html(lang="en")
 					br
 					br
 					.col-md-6.text-right
-						button.btn-lg.btn-borde NO ME INTERESA
+						button.btn-lg.btn-borde(data-toggle='modal', data-target='#myModalDmcNo', data-trigger='hover')  NO ME INTERESA
 					.col-md-6.text-left
-						button.btn-lg.btn-solid(id='MeInteresa') CONTINUAR
+						button.btn-lg.btn-solid ENVIAR				
+			// Modal
+		#myModalDmcNo.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalDmcNo')
+			.modal-dialog.modal-lg(role='document')
+				.modal-content
+					//.modal-header
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+						h4#myModalLabel.modal-title Modal title
+					.modal-body.text-center
+						.row
+							.space
+							h2.text-center ¡Gracias por su opinión!
+							.space
+							h4 Seguimos generando ofertas para ti.
+							.space
+							button.btn-lg.btn-solid(type='button', data-dismiss='modal') Aceptar
+							.space
 		hr
 		h1 cuestionario
 		.container
@@ -361,8 +378,38 @@ html(lang="en")
 					.col-md-6.text-left
 						button.btn-lg.btn-solid CONTINUAR
 				.space
+		.space
+		.container.bgwhite
+			.row
+				.space
+				.col-xs-1
+					span
+						.info-azul 
+				.col-xs-11
+					h4 Tu opinión es importante para nosotros.
+					h2.subtitulo No me interesa por:
+					.radio
+						input.planAB(type='radio',id="radio-dudas",name='planes',value='option1', class="regular-radio")
+						label(for='radio-dudas')
+						span  Tengo dudas sobre la información
+					.radio
+						input.planAB(type='radio',id="radio-precio",name='planes',value='option1', class="regular-radio")
+						label(for='radio-precio')
+						span  Precio alto
+					.radio
+						input.planAB(type='radio',id="radio-noesta",name='planes',value='option1', class="regular-radio")
+						label(for='radio-noesta')
+						span  El motivo no esta en la lista
+			.row
+				.col-md-offset-1.col-md-10
+					br
+					br
+					.col-md-6.text-right
+						button.btn-lg.btn-borde NO DESEO CONTESTAR
+					.col-md-6.text-left
+						button.btn-lg.btn-solid(data-toggle='modal', data-target='#myModalDmcNo', data-trigger='hover') ENVIAR				
 			// Modal
-		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+		#myModalDmcNo.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
 			.modal-dialog.modal-lg(role='document')
 				.modal-content
 					//.modal-header
@@ -370,21 +417,14 @@ html(lang="en")
 							span(aria-hidden='true') ×
 						h4#myModalLabel.modal-title Modal title
 					.modal-body.text-center
-						.row.text-left
-							.col-md-2.text-right
-								input(type="checkbox",id="checkbox-modal" class="regular-checkbox big-checkbox", checked="true")
-								label(for="checkbox-1")
-							.col-md-6
-								h2 ¡Felicidades!
-						br
-						h4 Tu cotización se ha realizado de manera correcta con el folio 
-							strong 123456789A
-							, el cual te recomendamos conserves para futuras consultas
-						br
-						button.btn-lg.btn-solid(type='button', data-dismiss='modal') Aceptar
-					//.modal-footer
-						button.btn.btn-default(type='button', data-dismiss='modal') Close
-						button.btn.btn-primary(type='button') Save changes
+						.row
+							.space
+							h2.text-center ¡Gracias por su opinión!
+							.space
+							h4 Seguimos generando ofertas para ti.
+							.space
+							button.btn-lg.btn-solid(type='button', data-dismiss='modal') Aceptar
+							.space
 		hr
 		h1 contrata
 		.container
