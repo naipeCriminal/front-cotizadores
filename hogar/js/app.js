@@ -6,6 +6,7 @@ $(document).ready(function(){
 	envioP();
 	planes();
 
+
 	$('[data-toggle="tooltip"]').tooltip();
 
 	$("#checkbox-1").click(function(){
@@ -28,6 +29,11 @@ $(document).ready(function(){
 	})
 	$("#sumaasegurar").click(function(){
 		planes();
+	})
+//solo prueba
+	$("#act").mouseover(function(){
+		console.log("asdasdasd")
+		cambioImg();
 	})
 
 })
@@ -103,5 +109,14 @@ function planes(){
 		$(".c").addClass("active");
 		$(".a,.b").removeClass("active");
 	 	$(".plus").fadeIn();
+	}
+}
+function cambioImg(){
+	if( $('#contrata1').val()==="" ){
+	   	$(".reloj").removeClass("reloj1");
+	 	$(".telefono").removeClass("telefono1");
+	}else {
+	 	$(".reloj").addClass("reloj1");
+	 	$(".telefono").addClass("telefono1");
 	}
 }

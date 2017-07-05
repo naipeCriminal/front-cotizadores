@@ -12,9 +12,9 @@ html(lang="en")
 		link(rel="stylesheet",href="style.css")
 		link(rel="stylesheet",href="../fonts/font.css")
 	body
-		.callme
+		.callme(data-toggle='modal', data-target='#myModal2', data-trigger='hover')
 			br
-			p.text-center(data-toggle='modal', data-target='#myModal2', data-trigger='hover') Tengo dudas, Llámenme
+			p.text-center Tengo dudas, Llámenme
 
 			// Modal
 		#myModal2.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
@@ -32,16 +32,16 @@ html(lang="en")
 								h2 Te solicitamos que ingreses tu número telefónico y un horario adecuado para contactarte.
 							.col-md-12
 								p.labelgral ¿Cual es tu nombre?
-								input#contrata.form-control(type='text' placeholder='Ingresa tu nombre')
+								input#contrata1.form-control(type='text' placeholder='Ingresa tu nombre')
 	
 							.col-md-3.telefono
 							.col-md-9
 								.col-md-4
 									p.labelgral Lada*
-									input#contrata.form-control(type='text' placeholder='lada')
+									input#contrata1.form-control(type='text' placeholder='lada')
 								.col-md-8
 									p.labelgral Teléfono *
-									input#contrata.form-control(type='text' placeholder='98-98-98')
+									input#contrata1.form-control(type='text' placeholder='98-98-98')
 							.col-md-3.reloj
 							.col-md-8
 								p.labelgral Horario a contactar*
@@ -68,7 +68,7 @@ html(lang="en")
 							.col-md-12
 								br
 						.text-center		
-							button.btn-lg.btn-solid(type='button', data-dismiss='modal',data-toggle='modal', data-target='#myModalDmc', data-trigger='hover') CONTACTARME
+							button#act.btn-lg.btn-solid(type='button', data-dismiss='modal',data-toggle='modal', data-target='#myModalDmc', data-trigger='hover') CONTACTARME
 
 			// Modal
 		#myModalDmc.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')

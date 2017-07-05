@@ -42,6 +42,10 @@ $imgExito1:url(../assets/img/ico_aviso2.png);
 $imgExito2:url(../assets/img/ico_comprobante.png);
 $selectMenu:url(../assets/img/select_menu.png);
 $cerrar:url(../assets/img/ico_cerrar.png);
+$reloj0:url(../assets/img/ico_horario_00.png);
+$reloj1:url(../assets/img/ico_horario_01.png);
+$telefono0:url(../assets/img/ico_telefono_00.png);
+$telefono1:url(../assets/img/ico_telefono_01.png);
 $stepspanbg:$gris4;
 $stepspan:$gris4;
 $steph3:$gris9;
@@ -79,6 +83,7 @@ body{
 	background-image: url(../assets/img/ico_llamame_0.png);
 	background-repeat: no-repeat;
 	background-position: center 10px;
+	cursor: pointer;
 }
 .azul3{
 	color: $azul3; 
@@ -580,18 +585,24 @@ line-height: 28px;
 		color: $gris3;
     }
     .reloj{
-			background-image: $imgExito2;
+			background-image: $reloj0;
 			background-repeat: no-repeat;
-			height: 65px;
+			height: 102px;
     		margin-top: 5px;
     		background-position: center;
 	}
 	.telefono{
-			background-image: $imgExito2;
+			background-image: $telefono0;
 			background-repeat: no-repeat;
-			height: 65px;
+			height: 68px;
     		margin-top: 5px;
     		background-position: center;
+	}
+	.reloj1{
+			background-image: $reloj1;
+	}
+	.telefono1{
+			background-image: $telefono1;
 	}
     .close {
 	    opacity: 1;

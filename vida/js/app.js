@@ -19,6 +19,11 @@ $(document).ready(function(){
 	$("#checkbox-Acepto").click(function(){
 		terminosCondiciones()
 	})
+	//solo prueba
+	$("#act").mouseover(function(){
+		console.log("asdasdasd")
+		cambioImg();
+	})
     $('.selector').datepicker({
 		changeMonth: true,
 		changeYear: true, 	
@@ -89,5 +94,14 @@ function formaPago1(){
 	}else if( $('#formaP').val()==2 ){
 	   	$(".tdc,.tdc1").fadeOut();
 	   	$(".ccb").fadeIn();
+	}
+}
+function cambioImg(){
+	if( $('#contrata1').val()==="" ){
+	   	$(".reloj").removeClass("reloj1");
+	 	$(".telefono").removeClass("telefono1");
+	}else {
+	 	$(".reloj").addClass("reloj1");
+	 	$(".telefono").addClass("telefono1");
 	}
 }
